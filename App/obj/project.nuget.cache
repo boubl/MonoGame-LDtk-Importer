@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "PlgJFhQF1HmkinNBzidbLSzsJBLeJhFEj1c+d3DPnixbFGb7tCdcTeLKVYEmZeIxg4H/yJltEk9KP03FSblPag==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Titou\\source\\repos\\MonoGame LDtk Importer\\App\\App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Titou\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\Titou\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+  ],
+  "logs": []
+}
