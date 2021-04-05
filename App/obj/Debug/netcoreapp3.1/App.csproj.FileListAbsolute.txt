@@ -22,3 +22,15 @@ C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\obj\Debug\netcoreapp3.1\A
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\obj\Debug\netcoreapp3.1\App.dll
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\obj\Debug\netcoreapp3.1\App.pdb
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\obj\Debug\netcoreapp3.1\App.genruntimeconfig.cache
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\Content\Test_file_for_API_showing_all_features.xnb
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\MonoGame LDtk Importer.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\MonoGame.Framework.Content.Pipeline.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\AssimpNet.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\ATI.TextureConverter.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\Nvidia.TextureTools.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\PVRTexLibNET.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\SharpFont.dll
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\MonoGame LDtk Importer.pdb
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\MonoGame LDtk Importer.dll.config
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\App\bin\Debug\netcoreapp3.1\AssimpNet.xml

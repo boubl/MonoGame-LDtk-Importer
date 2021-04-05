@@ -65,6 +65,67 @@
             "fileVersion": "0.0.0.0"
           }
         }
+      },
+      "MonoGame LDtk Importer/1.0.0": {
+        "runtime": {
+          "MonoGame LDtk Importer.dll": {}
+        }
+      },
+      "MonoGame.Framework.Content.Pipeline/3.8.0.1641": {
+        "runtime": {
+          "MonoGame.Framework.Content.Pipeline.dll": {
+            "assemblyVersion": "3.8.0.1641",
+            "fileVersion": "3.8.0.1641"
+          }
+        }
+      },
+      "AssimpNet/4.1.0.0": {
+        "runtime": {
+          "AssimpNet.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "Microsoft.Win32.Registry/4.1.1.0": {
+        "runtime": {
+          "Microsoft.Win32.Registry.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "ATI.TextureConverter/1.0.5522.26319": {
+        "runtime": {
+          "ATI.TextureConverter.dll": {
+            "assemblyVersion": "1.0.5522.26319",
+            "fileVersion": "1.0.5522.26319"
+          }
+        }
+      },
+      "Nvidia.TextureTools/1.0.0.0": {
+        "runtime": {
+          "Nvidia.TextureTools.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PVRTexLibNET/1.0.0.0": {
+        "runtime": {
+          "PVRTexLibNET.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "SharpFont/1.0.0.0": {
+        "runtime": {
+          "SharpFont.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -87,6 +148,46 @@
       "sha512": "sha512-rJQlrlHQbnOECYV6EcQ8GlGRQ2lzPTroXQcyyOZ0ki+BQRSJEN2zVBm9skqLiXya348aGAfTSSGTaSKjAy9NaA==",
       "path": "monogame.framework.desktopgl/3.8.0.1641",
       "hashPath": "monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    },
+    "MonoGame LDtk Importer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MonoGame.Framework.Content.Pipeline/3.8.0.1641": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AssimpNet/4.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Win32.Registry/4.1.1.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ATI.TextureConverter/1.0.5522.26319": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Nvidia.TextureTools/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PVRTexLibNET/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpFont/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

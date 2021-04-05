@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\MonoGame LDtk Importer\bin\Debug\MonoGame LDtk Importer.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -19,4 +20,9 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:font.spritefont
+
+#begin Test_file_for_API_showing_all_features.ldtk
+/importer:Importer1
+/processor:Processor1
+/build:Test_file_for_API_showing_all_features.ldtk
 

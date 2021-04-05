@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
-using TInput = System.Text.Json.JsonDocument;
+using TInput = System.Text.Json.JsonElement;
 using TOutput = MonoGame_LDtk_Importer.LDtkProject;
 
 namespace MonoGame_LDtk_Importer
@@ -13,19 +13,9 @@ namespace MonoGame_LDtk_Importer
         public override TOutput Process(TInput input, ContentProcessorContext context)
         {
             context.Logger.LogMessage("Processing Ogmo Map File");
-            TOutput project = new TOutput();
-
-            foreach (JsonProperty jsonProperty in input.RootElement.EnumerateObject().ToArray())
-            {
-                foreach(PropertyInfo property in typeof(TOutput).GetProperties())
-                {
-                    if (property.Name == jsonProperty.Name)
-                    {
-                        property.SetValue(project, jsonProperty.Value);
-                    }
-                }
-            }
-
+            System.Diagnostics.Debugger.Break();
+            TOutput project = TOutput.LoadProject(input);
+            
             return project;
         }
     }

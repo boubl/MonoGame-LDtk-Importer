@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame_LDtk_Importer;
 
 namespace App
 {
@@ -9,7 +10,7 @@ namespace App
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private SpriteFont font;
-
+        private LDtkProject project;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -28,6 +29,7 @@ namespace App
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             font = Content.Load<SpriteFont>("font");
+            project = Content.Load<LDtkProject>("Test_file_for_API_showing_all_features");
 
             // TODO: use this.Content to load your game content here
         }
@@ -54,7 +56,7 @@ namespace App
             }
             else
             {
-                _spriteBatch.DrawString(font, "No Controller detected", new Vector2(0, 0), Color.White);
+                _spriteBatch.DrawString(font, "LDtk Project loaded correctly :,)", new Vector2(0, 0), Color.White);
             }
             _spriteBatch.End();
 

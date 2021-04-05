@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Titou/source/repos/MonoGame LDtk Importer/App/Content/font.spritefont","C:/Users/Titou/source/repos/MonoGame LDtk Importer/App/Content/bin/DesktopGL/font.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0,2362903
+"C:/Users/Titou/source/repos/MonoGame LDtk Importer/App/Content/font.spritefont","C:/Users/Titou/source/repos/MonoGame LDtk Importer/App/Content/bin/DesktopGL/font.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0.3777796
+"C:/Users/Titou/source/repos/MonoGame LDtk Importer/App/Content/Test_file_for_API_showing_all_features.ldtk","C:/Users/Titou/source/repos/MonoGame LDtk Importer/App/Content/bin/DesktopGL/Test_file_for_API_showing_all_features.xnb","Processor1","LDtkProject",121328,66944,2.5016978

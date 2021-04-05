@@ -38,6 +38,6 @@ C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\bin\De
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\obj\Debug\MonoGame LDtk Importer.csproj.CopyComplete
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\obj\Debug\MonoGame LDtk Importer.dll
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\obj\Debug\MonoGame LDtk Importer.pdb
-C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\obj\Debug\MonoGame LDtk Importer.csprojAssemblyReference.cache
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\bin\Debug\MonoGame.Framework.dll
 C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\bin\Debug\MonoGame.Framework.xml
+C:\Users\Titou\source\repos\MonoGame LDtk Importer\MonoGame LDtk Importer\obj\Debug\MonoGame LDtk Importer.csprojAssemblyReference.cache
