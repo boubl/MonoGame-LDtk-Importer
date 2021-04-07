@@ -1,0 +1,9 @@
+- name: Documentation
+  href: index.md
+  items:
+    - name: Installation
+      href: install.md
+    - name: How to Use
+      href: how_to_use.md
+- name: Not finished
+  href: notfinished.md
