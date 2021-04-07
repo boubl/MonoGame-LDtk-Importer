@@ -1,4 +1,4 @@
-![](C:\Users\Titou\source\repos\MonoGame LDtk Importer\docfx_project\images\logo small.png)
+![LDtk Monogame Importer](/docfx_project/images/logo small.png)
 
 This is a MonoGame pipeline custom importer for [Ldtk](https://ldtk.io/) by [Deepnight](https://deepnight.net/).
 
