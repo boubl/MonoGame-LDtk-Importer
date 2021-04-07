@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installation ">
+    <meta name="generator" content="docfx 2.56.7.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo%20small.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="installation">Installation</h1>
+
+<h3 id="manually">Manually</h3>
+<p><a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/releases">Download</a> the latest version of the <code>MonoGame_LDtk_Importer.dll</code> file and place it in your project (or somewhere you can find it easily).</p>
+<p>Add the  <code>MonoGame_LDtk_Importer.dll</code> to your project references, and to your <code>Content.mgcb</code> file (<a href="#add-the-importer-to-the-pipeline">here</a> is an explanation of how to add references to your <code>Content.mgcb</code> file).</p>
+<h3 id="with-nuget">With NuGet</h3>
+<p>Add the package to your project with the Package Manager Console using this command:</p>
+<pre><code class="lang-txt">Install-Package MonoGame_LDtk_Importer
+</code></pre>
+<p>Or with the .NET CLI using this command:</p>
+<pre><code class="lang-txt">dotnet add package MonoGame_LDtk_Importer
+</code></pre>
+<p>Or just search for the <code>MonoGame_LDtk_Importer</code> package in the Package Manager GUI and install it to your project.</p>
+<h3 id="compiling">Compiling</h3>
+<p>This importer need the following packages:</p>
+<ul>
+<li><code>MonoGame.Framework.Content.Pipeline v3.8.0.*</code></li>
+<li><code>MonoGame.Framework.DesktopGL v3.8.0.*</code></li>
+<li><code>System.Drawing.Common v5.*</code></li>
+<li><code>System.Text.Json v4.7.2</code> <em><strong>Don't install v5 !!! MonoGame Pipeline don't support it</strong></em></li>
+</ul>
+<p>Also, let the project in the <code>netcoreapp3.1</code> framework target, don't change it.</p>
+<p>Compile the project with Visual Studio and do the steps listed in the <a href="#manually">Manually</a> installation but with your compiled version.</p>
+<h2 id="add-the-importer-to-the-pipeline">Add the importer to the Pipeline</h2>
+<p>You can do it manually by editing the file, or with the MGCB Editor</p>
+<h4 id="manually-1">Manually</h4>
+<p>Simply add this line in your file under the <strong>References</strong> tab:</p>
+<pre><code class="lang-txt">/reference:path\to\the\ddl\file.dll
+</code></pre>
+<p>It should look like this:</p>
+<pre><code class="lang-txt">#----------------------------- Global Properties ----------------------------#
+some stuff
+
+#-------------------------------- References --------------------------------#
+/reference:path\to\the\ddl\file.dll
+
+#---------------------------------- Content ---------------------------------#
+some stuff
+
+</code></pre>
+<p>You can add your <code>.ldtk</code> files to you <code>Content.mgcb</code> file, the MGCB should use the custom importer automatically.</p>
+<h4 id="using-the-mgcb-editor">Using the MGCB Editor</h4>
+<p>Open your <code>Content.mgcb</code> file and select the root of your project (usually called Content), and in the Properties go all way down to <code>References</code>. Click on it and a window should open:</p>
+<img src="../images/mgcb_editor_example.png" alt="Example" style="zoom:80%;">
+<p>Click on the <code>Add</code> button and find the <code>MonoGame_LDtk_Importer.ddl</code> file of the Importer (if you installed it with NuGet, you should find it) in this folder in your project folder <code>packages/MonoGame_LDtk_Importer.1.0.0/lib/net5/MonoGame_LDtk_Importer.dll</code>.</p>
+<p>And that's it, you can now add your LDtk projects files to your <code>Content.mgcb</code> file.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/docfx_project/articles/install.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
