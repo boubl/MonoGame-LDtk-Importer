@@ -1,3 +1,5 @@
+# **DOES NOT WORK COMPLETELY** i'm fixing it but i don't have the time rn 
+
 ![LDtk Monogame Importer](/docfx_project/images/logo%20small.png)
 
 This is a MonoGame pipeline custom importer for [Ldtk](https://ldtk.io/) by [Deepnight](https://deepnight.net/).
