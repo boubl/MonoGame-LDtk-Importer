@@ -14,6 +14,13 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:font.spritefont
+
 #begin Inca_front_by_Kronbits-extended.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -37,6 +44,11 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:RPG Graphics Icons by 7Soul's.png
+
+#begin SeparateLevelFiles.ldtk
+/importer:Importer
+/processor:Processor
+/build:SeparateLevelFiles.ldtk
 
 #begin Test_file_for_API_showing_all_features.ldtk
 /importer:Importer

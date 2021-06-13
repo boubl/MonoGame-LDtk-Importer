@@ -53,7 +53,7 @@ namespace Importer
             for (int i = 0; i < enumDefsCount; i++)
             {
                 EnumDef enumDef = new EnumDef();
-                if (input.ReadBoolean()) enumDef.ExternalRelPath = input.ReadString();
+                enumDef.ExternalRelPath = input.ReadString();
                 if (input.ReadBoolean()) enumDef.IconTilesetUid = input.ReadInt32();
                 enumDef.Identifier = input.ReadString();
                 enumDef.Uid = input.ReadInt32();
@@ -82,7 +82,7 @@ namespace Importer
             for (int i = 0; i < externalEnumDefsCount; i++)
             {
                 EnumDef enumDef = new EnumDef();
-                if (input.ReadBoolean()) enumDef.ExternalRelPath = input.ReadString();
+                enumDef.ExternalRelPath = input.ReadString();
                 if (input.ReadBoolean()) enumDef.IconTilesetUid = input.ReadInt32();
                 enumDef.Identifier = input.ReadString();
                 enumDef.Uid = input.ReadInt32();
@@ -128,13 +128,12 @@ namespace Importer
                 {
                     IntGridValueDef intGridValue = new IntGridValueDef();
                     intGridValue.Color = input.ReadColor();
-                    if (input.ReadBoolean()) intGridValue.Identifier = input.ReadString();
+                    intGridValue.Identifier = input.ReadString();
                     intGridValue.Value = input.ReadInt32();
                     layer.IntGridValues.Add(intGridValue);
                 }
                 project.Definitions.Layers.Add(layer);
             }
-
             //tilesets
             project.Definitions.Tilesets = new List<Tileset>();
             int tilesetCount = input.ReadInt32();
@@ -154,13 +153,12 @@ namespace Importer
             #endregion
 
             #region levels
-
             int levelCount = input.ReadInt32();
-            for (int i = 0; i < 0; i++)
+            for (int i = 0; i < levelCount; i++)
             {
                 Level level = new Level();
                 level.BackgroundColor = input.ReadColor();
-                if (input.ReadBoolean()) level.BackgroundRelPath = input.ReadString();
+                level.BackgroundRelPath = input.ReadString();
                 level.Identifier = input.ReadString();
                 level.Height = input.ReadInt32();
                 level.Width = input.ReadInt32();
@@ -199,13 +197,14 @@ namespace Importer
                 for (int j = 0; j < fieldInstancesCount; j++)
                 {
                     FieldInstance field = new FieldInstance();
+
                     field.Identifier = input.ReadString();
                     field.Type = (FieldType)input.ReadInt32();
                     field.Value = input.ReadString();
                     field.DefUid = input.ReadInt32();
                     if (input.ReadBoolean()) field.EnumName = input.ReadString();
                     field.IsArray = input.ReadBoolean();
-
+                    System.Diagnostics.Debugger.Break();
                     level.FieldInstances.Add(field);
                 }
 
@@ -222,7 +221,7 @@ namespace Importer
                     layer.Opacity = input.ReadSingle();
                     layer.TotalOffset = input.ReadVector2();
                     if (input.ReadBoolean()) layer.TilesetDefUid = input.ReadInt32();
-                    if (input.ReadBoolean()) layer.TilesetRelPath = input.ReadString();
+                    layer.TilesetRelPath = input.ReadString();
                     layer.Type = (LayerType)input.ReadInt32();
                     layer.LayerDefUid = input.ReadInt32();
                     layer.LevelId = input.ReadInt32();
@@ -275,7 +274,7 @@ namespace Importer
                         //field instances
                         entity.FieldInstances = new List<FieldInstance>();
                         int fieldInstancesCount2 = input.ReadInt32();
-                        for (int l = 0; j < fieldInstancesCount2; l++)
+                        for (int l = 0; l < fieldInstancesCount2; l++)
                         {
                             FieldInstance field = new FieldInstance();
                             field.Identifier = input.ReadString();

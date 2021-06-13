@@ -49,8 +49,8 @@ namespace Importer
             output.Write(value.Definitions.Enums.Count); //int
             foreach (EnumDef @enum in value.Definitions.Enums)
             {
-                output.Write(!String.IsNullOrEmpty(@enum.ExternalRelPath)); //bool
                 if (!String.IsNullOrEmpty(@enum.ExternalRelPath)) output.Write(@enum.ExternalRelPath); //string
+                else output.Write("");
 
                 output.Write(@enum.IconTilesetUid.HasValue); //bool
                 if (@enum.IconTilesetUid.HasValue) output.Write(@enum.IconTilesetUid.Value); //int
@@ -77,8 +77,8 @@ namespace Importer
             output.Write(value.Definitions.ExternalEnums.Count); //int
             foreach (EnumDef @enum in value.Definitions.ExternalEnums)
             {
-                output.Write(!String.IsNullOrEmpty(@enum.ExternalRelPath)); //bool
                 if (!String.IsNullOrEmpty(@enum.ExternalRelPath)) output.Write(@enum.ExternalRelPath); //string
+                else output.Write("");
 
                 output.Write(@enum.IconTilesetUid.HasValue); //bool
                 if (@enum.IconTilesetUid.HasValue) output.Write(@enum.IconTilesetUid.Value); //int
@@ -128,13 +128,12 @@ namespace Importer
                 foreach(IntGridValueDef intGridValue in layer.IntGridValues)
                 {
                     output.Write(intGridValue.Color); //color
-                    output.Write(!String.IsNullOrEmpty(intGridValue.Identifier)); //bool
                     if (!String.IsNullOrEmpty(intGridValue.Identifier)) output.Write(intGridValue.Identifier); //string
+                    else output.Write("");
                     output.Write(intGridValue.Value); //int
                 }
 
             }
-
             //tilesets
             output.Write(value.Definitions.Tilesets.Count);
             foreach(Tileset tileset in value.Definitions.Tilesets)
@@ -157,8 +156,8 @@ namespace Importer
             foreach (Level level in value.Levels)
             {
                 output.Write(level.BackgroundColor); //color
-                output.Write(!String.IsNullOrEmpty(level.BackgroundRelPath)); //bool
                 if (!String.IsNullOrEmpty(level.BackgroundRelPath)) output.Write(level.BackgroundRelPath); //string
+                else output.Write("");
                 output.Write(level.Identifier); //string
                 output.Write(level.Height); //int
                 output.Write(level.Width); //int
@@ -193,11 +192,11 @@ namespace Importer
                 {
                     output.Write(field.Identifier); //string
                     output.Write((int)field.Type); //int to enum
-                    output.Write(!String.IsNullOrEmpty(field.Value)); //bool
                     if (!String.IsNullOrEmpty(field.Value)) output.Write(field.Value); //string
+                    else output.Write("");
                     output.Write(field.DefUid); //int
-                    output.Write(!String.IsNullOrEmpty(field.EnumName)); //bool
                     if (!String.IsNullOrEmpty(field.EnumName)) output.Write(field.EnumName); //string
+                    else output.Write("");
                     output.Write(field.IsArray); //bool
                 }
 
@@ -216,8 +215,8 @@ namespace Importer
                     output.Write(layer.TilesetDefUid.HasValue); //bool
                     if (layer.TilesetDefUid.HasValue) output.Write(layer.TilesetDefUid.Value); //int
 
-                    output.Write(!String.IsNullOrEmpty(layer.TilesetRelPath)); //bool
                     if (!String.IsNullOrEmpty(layer.TilesetRelPath)) output.Write(layer.TilesetRelPath); //string
+                    else output.Write("");
 
                     output.Write((int)layer.Type); //int to enum
                     output.Write(layer.LayerDefUid); //int
@@ -274,11 +273,11 @@ namespace Importer
                         {
                             output.Write(field.Identifier); //string
                             output.Write((int)field.Type); //int to enum
-                            output.Write(!String.IsNullOrEmpty(field.Value)); //bool
                             if (!String.IsNullOrEmpty(field.Value)) output.Write(field.Value); //string
+                            else output.Write("");
                             output.Write(field.DefUid); //int
-                            output.Write(!String.IsNullOrEmpty(field.EnumName)); //bool
                             if (!String.IsNullOrEmpty(field.EnumName)) output.Write(field.EnumName); //string
+                            else output.Write("");
                             output.Write(field.IsArray); //bool
                         }
                     }

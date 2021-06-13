@@ -14,6 +14,8 @@ namespace Example
 
         private Dictionary<string, Texture2D> tilesets = new Dictionary<string, Texture2D>();
         private LDtkProject project;
+        private LDtkProject project2;
+        private SpriteFont font;
 
         public Game1()
         {
@@ -33,6 +35,8 @@ namespace Example
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             project = Content.Load<LDtkProject>("Test_file_for_API_showing_all_features");
+            project2 = Content.Load<LDtkProject>("SeparateLevelFiles");
+            font = Content.Load<SpriteFont>("font");
             tilesets.Add("_Soul_s_RPG_Graphics_Icons", Content.Load<Texture2D>("RPG Graphics Icons by 7Soul's"));
             tilesets.Add("Inca_front_by_Kronbits_extended", Content.Load<Texture2D>("Inca_front_by_Kronbits-extended"));
             // TODO: use this.Content to load your game content here
@@ -52,6 +56,9 @@ namespace Example
         {
             GraphicsDevice.Clear(project.BackgroundColor);
             // TODO: Add your drawing code here
+            _spriteBatch.Begin();
+            _spriteBatch.DrawString(font, project.Levels[0].Identifier, new Vector2(0, 0), Color.White);
+            _spriteBatch.End();
 
             base.Draw(gameTime);
         }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.Json;
 
@@ -47,9 +48,10 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="project">A json element containing the project</param>
         /// <returns></returns>
-        public static LDtkProject LoadProject(JsonElement project)
+        public static LDtkProject LoadProject(JsonElement project, string filename)
         {
             LDtkProject output = new LDtkProject();
+            bool LevelsAreExternals = false;
 
             foreach (JsonProperty property in project.EnumerateObject().ToArray())
             {
@@ -67,9 +69,13 @@ namespace MonoGame_LDtk_Importer
                     {
                         output.Definitions = Definitions.LoadDefinitions(property);
                     }
+                    else if (property.Name == "externalLevels")
+                    {
+                        LevelsAreExternals = property.Value.GetBoolean();
+                    }
                     else if (property.Name == "levels")
                     {
-                        output.Levels = Level.LoadLevels(property);
+                        output.Levels = Level.LoadLevels(property, LevelsAreExternals, filename);
                     }
                     else if (property.Name == "worldGridHeight")
                     {
@@ -105,7 +111,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// A level
     /// </summary>
-    public struct Level
+    public class Level
     {
         /// <summary>
         /// Background color of the level. If null, the project defaultLevelBgColor should be used.
@@ -162,12 +168,21 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="jsonProperty">A json property containing the entities instances</param>
         /// <returns></returns>
-        public static List<Level> LoadLevels(JsonProperty jsonProperty)
+        public static List<Level> LoadLevels(JsonProperty jsonProperty, bool levelsAreExternals, string filename)
         {
             List<Level> output = new List<Level>();
-            foreach (JsonElement jsonElement in jsonProperty.Value.EnumerateArray().ToArray())
+            foreach (JsonElement element in jsonProperty.Value.EnumerateArray().ToArray())
             {
+                JsonElement jsonElement = element;
                 Level level = new Level();
+
+                if (levelsAreExternals)
+                {
+                    string path = filename.Remove(filename.Length - Path.GetFileName(filename).Length);
+                    path = path + jsonElement.GetProperty("externalRelPath").GetString();
+                    jsonElement = JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(path));
+                }
+
                 foreach (JsonProperty property in jsonElement.EnumerateObject().ToArray())
                 {
                     if (property.Value.ValueKind != JsonValueKind.Null)
@@ -572,9 +587,11 @@ namespace MonoGame_LDtk_Importer
             List<TileInstance> output = new List<TileInstance>();
             foreach (JsonElement jsonElement in jsonProperty.Value.EnumerateArray().ToArray())
             {
+                int i = 0;
                 TileInstance tile = new TileInstance();
                 foreach (JsonProperty property in jsonElement.EnumerateObject().ToArray())
                 {
+                    
                     if (property.Value.ValueKind != JsonValueKind.Null)
                     {
                         if (property.Name == "f")
@@ -603,6 +620,7 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "px")
                         {
+                            if (i == 2943) System.Diagnostics.Debugger.Break();
                             tile.Coordinates = new Vector2(property.Value.EnumerateArray().ToArray()[0].GetInt32(), property.Value.EnumerateArray().ToArray()[1].GetInt32());
                         }
                         else if (property.Name == "src")
@@ -614,6 +632,7 @@ namespace MonoGame_LDtk_Importer
                             tile.TileId = property.Value.GetInt32();
                         }
                     }
+                    i++;
                 }
                 output.Add(tile);
             }

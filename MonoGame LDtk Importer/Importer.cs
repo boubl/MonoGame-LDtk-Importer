@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Content.Pipeline;
 using System.IO;
 using System.Text.Json;
+using System.Collections.Generic;
 
 namespace Importer
 {
@@ -8,18 +9,20 @@ namespace Importer
     /// A class to import ldtk files
     /// </summary>
     [ContentImporter(".ldtk", DisplayName = "LDtk Project Importer", DefaultProcessor = "LDtk Project Processor")]
-    public class Importer : ContentImporter<JsonElement>
+    public class Importer : ContentImporter<Dictionary<string, JsonElement>>
     {
         /// <summary>
-        /// Import the .ldtk file and parse it as a <see cref="JsonElement"/>
+        /// Import the .ldtk file and parse it as a <see cref="Dictionary"/>
         /// </summary>
         /// <param name="filename">Name of the .ldtk file</param>
         /// <param name="context"></param>
-        /// <returns>A <see cref="JsonElement"/> containing the values of the .ldtk file</returns>
-        public override JsonElement Import(string filename, ContentImporterContext context)
+        /// <returns>A <see cref="Dictionary"/> containing the values of the .ldtk file</returns>
+        public override Dictionary<string, JsonElement> Import(string filename, ContentImporterContext context)
         {
             context.Logger.LogMessage("Importing LDtk project: {0}", filename);
-            return JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(filename));
+            Dictionary<string, JsonElement> dico = new Dictionary<string, JsonElement>();
+            dico.Add(filename, JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(filename)));
+            return dico;
         }
     }
 }
