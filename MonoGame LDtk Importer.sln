@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGame LDtk Importer", "M
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{B74C7F15-43EA-47FD-8FC7-639D12A9B425}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{F5B552E7-6596-499B-8B3B-119FBDE6C050}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B74C7F15-43EA-47FD-8FC7-639D12A9B425}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B74C7F15-43EA-47FD-8FC7-639D12A9B425}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B74C7F15-43EA-47FD-8FC7-639D12A9B425}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B552E7-6596-499B-8B3B-119FBDE6C050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B552E7-6596-499B-8B3B-119FBDE6C050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B552E7-6596-499B-8B3B-119FBDE6C050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B552E7-6596-499B-8B3B-119FBDE6C050}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

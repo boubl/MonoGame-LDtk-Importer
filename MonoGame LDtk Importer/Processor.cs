@@ -11,7 +11,6 @@ namespace Importer
     [ContentProcessor(DisplayName = "LDtk Project Processor")]
     class Processor : ContentProcessor<Dictionary<string, JsonElement>, LDtkProject>
     {
-        string test;
         /// <summary>
         /// Process the imported <see cref="JsonElement"/> to load it into a <see cref="LDtkProject"/>
         /// </summary>

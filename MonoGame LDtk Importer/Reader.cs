@@ -148,11 +148,14 @@ namespace Importer
                 tileset.Spacing = input.ReadInt32();
                 tileset.TileGridSize = input.ReadInt32();
                 tileset.Uid = input.ReadInt32();
+
+                project.Definitions.Tilesets.Add(tileset);
             }
 
             #endregion
 
             #region levels
+            project.Levels = new List<Level>();
             int levelCount = input.ReadInt32();
             for (int i = 0; i < levelCount; i++)
             {
@@ -204,7 +207,6 @@ namespace Importer
                     field.DefUid = input.ReadInt32();
                     if (input.ReadBoolean()) field.EnumName = input.ReadString();
                     field.IsArray = input.ReadBoolean();
-                    System.Diagnostics.Debugger.Break();
                     level.FieldInstances.Add(field);
                 }
 
@@ -286,6 +288,8 @@ namespace Importer
 
                             entity.FieldInstances.Add(field);
                         }
+
+                        layer.EntityInstances.Add(entity);
                     }
 
                     //grid tiles
@@ -308,7 +312,11 @@ namespace Importer
                     {
                         layer.IntGridCsv.SetValue(input.ReadInt32(), k);
                     }
+
+                    level.LayerInstances.Add(layer);
                 }
+
+                project.Levels.Add(level);
             }
 
             #endregion

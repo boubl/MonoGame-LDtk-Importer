@@ -57,7 +57,8 @@ namespace Example
             GraphicsDevice.Clear(project.BackgroundColor);
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            _spriteBatch.DrawString(font, project.Levels[0].Identifier, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(tilesets["Inca_front_by_Kronbits_extended"], new Rectangle(0, 0, tilesets["Inca_front_by_Kronbits_extended"].Width, tilesets["Inca_front_by_Kronbits_extended"].Height), Color.White);
+            _spriteBatch.DrawString(font, project.Definitions.Layers.Count.ToString(), new Vector2(0, 0), Color.White);
             _spriteBatch.End();
 
             base.Draw(gameTime);

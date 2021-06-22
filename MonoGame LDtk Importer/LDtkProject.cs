@@ -521,10 +521,12 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "intGridCsv")
                         {
-                            int[] intgrid = new int[property.Value.GetArrayLength()];
+                            int[] intgrid = new int[property.Value.EnumerateArray().ToArray().Length];
+                            int compteur = 0;
                             foreach (JsonElement element in property.Value.EnumerateArray().ToArray())
                             {
-                                intgrid.Append(element.GetInt32());
+                                intgrid[compteur] = element.GetInt32();
+                                compteur++;
                             }
                             layer.IntGridCsv = intgrid;
                         }
