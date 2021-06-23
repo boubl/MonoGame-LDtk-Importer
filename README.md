@@ -4,6 +4,6 @@ This is a MonoGame pipeline custom importer for [Ldtk](https://ldtk.io/) by [Dee
 
 **This is not a renderer!** It's only a loader.
 
-Support for externals levels has been added! It work for LDtk 9.0 (not 9.3) but I'll update it soon, it shouldn't be too long.
+Support for externals levels has been added! It work for LDtk 9.3 (the last version as I'm writing this)
 
 You can find a [documentation](https://chamalowmoelleux.github.io/MonoGame-LDtk-Importer) here (not finished yet)
