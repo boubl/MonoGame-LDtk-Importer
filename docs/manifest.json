@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/Titou/source/repos/MonoGame LDtk Importer/docfx_project",
+  "source_base_path": "/Users/AlexisNicolas/Documents/GitHub/MonoGame-LDtk-Importer/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Importer.Importer.html",
-          "hash": "QR1+MPS5gHZMG3vdTVBCjw=="
+          "hash": "PnhvQoj+g/E8uYEBSe9OA4/F0gS/cjBbvmvSbzQrEsc="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Importer.Reader.html",
-          "hash": "Y62FVJaFTUWegYw798SG6w=="
+          "hash": "rymmyDthe9oT9zqtzXbdwvR6FsoAzD1fSaFpnJhMQDQ="
         }
       },
       "is_incremental": true,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Importer.html",
-          "hash": "4HJ6t50DQQHB8GpoqyIRaA=="
+          "hash": "AHFutkvnsQYspLadeqU8aJYUkgMcI0qhqgZkb1UF8h4="
         }
       },
       "is_incremental": true,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.BackgroundPosition.html",
-          "hash": "x8Nch0mFBvOn1jvCaGPcJQ=="
+          "hash": "7+Y9fSZNm663LyeA1SBCMXB1jNyk+xyX86EZFXFWdNI="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.Definitions.html",
-          "hash": "FlHw5BkyvVy+3/v3zh7TPQ=="
+          "hash": "PtTPLnyYMnbkeSCb0ahO0gwfS0qJm1T4pdYVxw5qS0M="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EntitieDef.html",
-          "hash": "01+ctB+Tn9lPUYb2Ak//HA=="
+          "hash": "u230czAvJw+UgAp9iRH1NMrqA0m2BupoyfAc0HT8h5I="
         }
       },
       "is_incremental": true,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EntityInstance.html",
-          "hash": "+gGornJAUiABJssgzdxSJA=="
+          "hash": "2xKq2IMFLOWCYL/5njj0NoT3kYk3T76yyV1gx7DGrsM="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EntityTile.html",
-          "hash": "dhTyhoA1soEk3JqK9dD1GA=="
+          "hash": "s65Vujhph+bqMvHdi2CZSUHmjwbmItcWaIbMtojgpF8="
         }
       },
       "is_incremental": true,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EnumDef.html",
-          "hash": "qOEYXT4eFZZ94pqnufHAGg=="
+          "hash": "SxTomGOsWTKv8Wl8U08scBuWMxSfIZuWkhAqfsHT+KU="
         }
       },
       "is_incremental": true,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EnumValueDef.html",
-          "hash": "b8oWtz1iEbcdRf/egSJbcQ=="
+          "hash": "Xv88DGx7JMFQ63vraNoWTzGMMCzYN+zhsg7ZD26s+gY="
         }
       },
       "is_incremental": true,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.FieldInstance.html",
-          "hash": "LAfFCaK6Yf347JmksWZ0WQ=="
+          "hash": "SPa+J2nCSGXpgua8XXuQ5Z8hdOOYlqmN6UB4k5nHB24="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.FieldType.html",
-          "hash": "FQy22AAC0lt5KebqSJ4bMQ=="
+          "hash": "QJhw+lYw6IeXI07o/PPRs95Kx+3Qyjow7cHWamAxruI="
         }
       },
       "is_incremental": true,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.IntGridValueDef.html",
-          "hash": "XgPj3JKGxp7qDR70iI628Q=="
+          "hash": "Cr3dy9x9EkR/BAiwGJIbMIxcZe88Awalc/B/QJlBSZI="
         }
       },
       "is_incremental": true,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LDtkProject.html",
-          "hash": "+MgiPlkx8eYldulp/UzbUg=="
+          "hash": "TcOqIbjTJmIZT3KXehGNfxXG2nJ8UMvtyoM/WaWT8Sw="
         }
       },
       "is_incremental": true,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LayerDef.html",
-          "hash": "aEBOlTbArGrA75NBjIYmng=="
+          "hash": "pVDMw6qHs3s0X9I0Uf8E2Is3L9iqMhZexnPdtsxGTnM="
         }
       },
       "is_incremental": true,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LayerInstance.html",
-          "hash": "KtgAWzCUlN07gmDLDw5xkw=="
+          "hash": "FLdNrmjg/ZNu81Quh8f+b8Le9otTIobbXExt/mIEla4="
         }
       },
       "is_incremental": true,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LayerType.html",
-          "hash": "6Mr/h7rsNe1oBycN5V6shg=="
+          "hash": "WXGZ4h4aGsQ2Vvd5YKSX1No/gYe/jNwf7D4LuvvjUM8="
         }
       },
       "is_incremental": true,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.Level.html",
-          "hash": "mbeT5QDgNq32PfKTnrS43w=="
+          "hash": "VBfQptyWrzEV/fXE79vyEtt+GN19Csv1nlDRW82tmHA="
         }
       },
       "is_incremental": true,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LevelNeighbour.html",
-          "hash": "tJYuoceHoapfcOAD8mSuSw=="
+          "hash": "neUdUlbR208tpHMEe8QUlIjuSasOf9zKQ/pyvISc6Fs="
         }
       },
       "is_incremental": true,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.NeighbourDirection.html",
-          "hash": "JCesiMJp2vgKUGBt0/fNVA=="
+          "hash": "4Hbj+elRZOQx/2PGKurnmp66UCanIn7OaXzRZBw8L/k="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.TileInstance.html",
-          "hash": "CqPO4TBmvnT1UUs9sd/+6A=="
+          "hash": "2F/u9BBcBr13yq8eqkAfsn9npo7quKbGWSErCuc48sg="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.Tileset.html",
-          "hash": "HA6WrBTa2ykKysxSSmAtZw=="
+          "hash": "x2dok5O8yhC8M47YsvZQjp2n+VIgoc+SiJM3lXRX90U="
         }
       },
       "is_incremental": true,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.worldLayoutTypes.html",
-          "hash": "2jD4otepKawnfiNjPdcjVw=="
+          "hash": "FFoLoCaDwSKZJ2fptF9WMEKyFFptllM/7M9elU2rQCU="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.html",
-          "hash": "3Lg729Qa8MB1W9aOLRHSoA=="
+          "hash": "TZJVuZi9GIItjDywd8391r0aYeqP2MDQuS6eu7iQxrk="
         }
       },
       "is_incremental": true,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "Bjw8qHJlbc+njB+oO23SdQ=="
+          "hash": "llV5VIaCP9t4wZVQu3ZHm9Siiurk2ou+cwVmb9Mm1co="
         }
       },
       "is_incremental": true,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "pa3ox7x2EAlhNecaeLalvw=="
+          "hash": "4YND3buIiqemJNH7Q5kBptNbK8FmMR19kdBAwgdlTfU="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/how_to_use.html",
-          "hash": "wvuAbfuo0nM9og3T0WmKtA=="
+          "hash": "IU1d7VNhbBkSDGKmadnCVq5RRY4RLqiwsd9N9kCkCxI="
         }
       },
       "is_incremental": true,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/index.html",
-          "hash": "n2nzBL9xyeZRUms+Bcqi+w=="
+          "hash": "S3m1n2eYf+fZ11ZswI8o8IDXI3IgbsCw8BYSN0HMiFs="
         }
       },
       "is_incremental": true,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/install.html",
-          "hash": "xoAXjyEnIO1WcWbs1ndp/g=="
+          "hash": "y0q2DVoefuAz53iRYM0DuSRMEq1XXSGk8IUZOmHUtRw="
         }
       },
       "is_incremental": true,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/notfinished.html",
-          "hash": "ieB2J6nhhujPnhR8E9GFmQ=="
+          "hash": "BCHYaTpyqyk/4iFF7RFi7iOcZgq7eFfj6bsUXR4KX4U="
         }
       },
       "is_incremental": true,
@@ -369,7 +369,40 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "kDRJWNdNC+mB3lUUOR7AZA=="
+          "hash": "vVeUGd4pDukUXqRArMx0DCyCCnBSh33LSQMN+ISEjo8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/LDtkMonogameImporter-vector.clip",
+      "output": {
+        "resource": {
+          "relative_path": "images/LDtkMonogameImporter-vector.clip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.clip",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.clip"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/icon.png"
         }
       },
       "is_incremental": false,
@@ -414,7 +447,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "bI8zEX+rgg5YPHRoxZcCTQ=="
+          "hash": "AMbX0xE0ZBYWBwKdg7q4FPTpQ/0nmrGTemTQ1roT2NA="
         }
       },
       "is_incremental": true,
@@ -426,7 +459,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "HQvwzdcTGbN/j5uwChGaKg=="
+          "hash": "tptOtmDVXiTJzXlKKE3WfWmVlHtX6Mrm0+pjjLeTzd4="
         }
       },
       "is_incremental": false,

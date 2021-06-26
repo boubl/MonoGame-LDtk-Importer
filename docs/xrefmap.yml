@@ -13,11 +13,11 @@ references:
   commentId: T:Importer.Importer
   fullName: Importer.Importer
   nameWithType: Importer
-- uid: Importer.Importer.Import(System.String,Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)
+- uid: Importer.Importer.Import(System.String,ContentImporterContext)
   name: Import(String, ContentImporterContext)
-  href: api/Importer.Importer.html#Importer_Importer_Import_System_String_Microsoft_Xna_Framework_Content_Pipeline_ContentImporterContext_
-  commentId: M:Importer.Importer.Import(System.String,Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)
-  fullName: Importer.Importer.Import(System.String, Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)
+  href: api/Importer.Importer.html#Importer_Importer_Import_System_String_ContentImporterContext_
+  commentId: M:Importer.Importer.Import(System.String,ContentImporterContext)
+  fullName: Importer.Importer.Import(System.String, ContentImporterContext)
   nameWithType: Importer.Import(String, ContentImporterContext)
 - uid: Importer.Importer.Import*
   name: Import
@@ -32,11 +32,11 @@ references:
   commentId: T:Importer.Reader
   fullName: Importer.Reader
   nameWithType: Reader
-- uid: Importer.Reader.Read(Microsoft.Xna.Framework.Content.ContentReader,MonoGame_LDtk_Importer.LDtkProject)
+- uid: Importer.Reader.Read(ContentReader,MonoGame_LDtk_Importer.LDtkProject)
   name: Read(ContentReader, LDtkProject)
-  href: api/Importer.Reader.html#Importer_Reader_Read_Microsoft_Xna_Framework_Content_ContentReader_MonoGame_LDtk_Importer_LDtkProject_
-  commentId: M:Importer.Reader.Read(Microsoft.Xna.Framework.Content.ContentReader,MonoGame_LDtk_Importer.LDtkProject)
-  fullName: Importer.Reader.Read(Microsoft.Xna.Framework.Content.ContentReader, MonoGame_LDtk_Importer.LDtkProject)
+  href: api/Importer.Reader.html#Importer_Reader_Read_ContentReader_MonoGame_LDtk_Importer_LDtkProject_
+  commentId: M:Importer.Reader.Read(ContentReader,MonoGame_LDtk_Importer.LDtkProject)
+  fullName: Importer.Reader.Read(ContentReader, MonoGame_LDtk_Importer.LDtkProject)
   nameWithType: Reader.Read(ContentReader, LDtkProject)
 - uid: Importer.Reader.Read*
   name: Read
@@ -57,11 +57,11 @@ references:
   commentId: T:MonoGame_LDtk_Importer.BackgroundPosition
   fullName: MonoGame_LDtk_Importer.BackgroundPosition
   nameWithType: BackgroundPosition
-- uid: MonoGame_LDtk_Importer.BackgroundPosition.#ctor(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
+- uid: MonoGame_LDtk_Importer.BackgroundPosition.#ctor(Rectangle,Vector2,Vector2)
   name: BackgroundPosition(Rectangle, Vector2, Vector2)
-  href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition__ctor_Microsoft_Xna_Framework_Rectangle_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
-  commentId: M:MonoGame_LDtk_Importer.BackgroundPosition.#ctor(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
-  fullName: MonoGame_LDtk_Importer.BackgroundPosition.BackgroundPosition(Microsoft.Xna.Framework.Rectangle, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
+  href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition__ctor_Rectangle_Vector2_Vector2_
+  commentId: M:MonoGame_LDtk_Importer.BackgroundPosition.#ctor(Rectangle,Vector2,Vector2)
+  fullName: MonoGame_LDtk_Importer.BackgroundPosition.BackgroundPosition(Rectangle, Vector2, Vector2)
   nameWithType: BackgroundPosition.BackgroundPosition(Rectangle, Vector2, Vector2)
 - uid: MonoGame_LDtk_Importer.BackgroundPosition.#ctor*
   name: BackgroundPosition
@@ -96,11 +96,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.BackgroundPosition.CropRectangle
   nameWithType: BackgroundPosition.CropRectangle
-- uid: MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(JsonProperty)
   name: LoadBackgroundPos(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition_LoadBackgroundPos_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition_LoadBackgroundPos_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(JsonProperty)
   nameWithType: BackgroundPosition.LoadBackgroundPos(JsonProperty)
 - uid: MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos*
   name: LoadBackgroundPos
@@ -180,11 +180,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Definitions.Layers
   nameWithType: Definitions.Layers
-- uid: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(JsonProperty)
   name: LoadDefinitions(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_LoadDefinitions_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_LoadDefinitions_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.LoadDefinitions(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(JsonProperty)
   nameWithType: Definitions.LoadDefinitions(JsonProperty)
 - uid: MonoGame_LDtk_Importer.Definitions.LoadDefinitions*
   name: LoadDefinitions
@@ -251,11 +251,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EntitieDef.Identifier
   nameWithType: EntitieDef.Identifier
-- uid: MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef(JsonProperty)
   name: LoadEntitiesDef(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.EntitieDef.html#MonoGame_LDtk_Importer_EntitieDef_LoadEntitiesDef_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.EntitieDef.html#MonoGame_LDtk_Importer_EntitieDef_LoadEntitiesDef_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef(JsonProperty)
   nameWithType: EntitieDef.LoadEntitiesDef(JsonProperty)
 - uid: MonoGame_LDtk_Importer.EntitieDef.LoadEntitiesDef*
   name: LoadEntitiesDef
@@ -413,11 +413,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EntityInstance.Identifier
   nameWithType: EntityInstance.Identifier
-- uid: MonoGame_LDtk_Importer.EntityInstance.LoadEntities(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.EntityInstance.LoadEntities(JsonProperty)
   name: LoadEntities(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_LoadEntities_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.EntityInstance.LoadEntities(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.EntityInstance.LoadEntities(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_LoadEntities_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.EntityInstance.LoadEntities(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.EntityInstance.LoadEntities(JsonProperty)
   nameWithType: EntityInstance.LoadEntities(JsonProperty)
 - uid: MonoGame_LDtk_Importer.EntityInstance.LoadEntities*
   name: LoadEntities
@@ -542,11 +542,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EnumDef.Identifier
   nameWithType: EnumDef.Identifier
-- uid: MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef(JsonProperty)
   name: LoadEnumsDef(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.EnumDef.html#MonoGame_LDtk_Importer_EnumDef_LoadEnumsDef_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.EnumDef.html#MonoGame_LDtk_Importer_EnumDef_LoadEnumsDef_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef(JsonProperty)
   nameWithType: EnumDef.LoadEnumsDef(JsonProperty)
 - uid: MonoGame_LDtk_Importer.EnumDef.LoadEnumsDef*
   name: LoadEnumsDef
@@ -600,11 +600,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EnumValueDef.Id
   nameWithType: EnumValueDef.Id
-- uid: MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef(JsonProperty)
   name: LoadEnumsValuesDef(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.EnumValueDef.html#MonoGame_LDtk_Importer_EnumValueDef_LoadEnumsValuesDef_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.EnumValueDef.html#MonoGame_LDtk_Importer_EnumValueDef_LoadEnumsValuesDef_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef(JsonProperty)
   nameWithType: EnumValueDef.LoadEnumsValuesDef(JsonProperty)
 - uid: MonoGame_LDtk_Importer.EnumValueDef.LoadEnumsValuesDef*
   name: LoadEnumsValuesDef
@@ -697,11 +697,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.FieldInstance.IsArray
   nameWithType: FieldInstance.IsArray
-- uid: MonoGame_LDtk_Importer.FieldInstance.LoadFields(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.FieldInstance.LoadFields(JsonProperty)
   name: LoadFields(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_LoadFields_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.FieldInstance.LoadFields(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.FieldInstance.LoadFields(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_LoadFields_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.FieldInstance.LoadFields(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.FieldInstance.LoadFields(JsonProperty)
   nameWithType: FieldInstance.LoadFields(JsonProperty)
 - uid: MonoGame_LDtk_Importer.FieldInstance.LoadFields*
   name: LoadFields
@@ -828,11 +828,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.IntGridValueDef.Identifier
   nameWithType: IntGridValueDef.Identifier
-- uid: MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef(JsonProperty)
   name: LoadIntGridValuesDef(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.IntGridValueDef.html#MonoGame_LDtk_Importer_IntGridValueDef_LoadIntGridValuesDef_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.IntGridValueDef.html#MonoGame_LDtk_Importer_IntGridValueDef_LoadIntGridValuesDef_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef(JsonProperty)
   nameWithType: IntGridValueDef.LoadIntGridValuesDef(JsonProperty)
 - uid: MonoGame_LDtk_Importer.IntGridValueDef.LoadIntGridValuesDef*
   name: LoadIntGridValuesDef
@@ -938,11 +938,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LayerDef.IntGridValues
   nameWithType: LayerDef.IntGridValues
-- uid: MonoGame_LDtk_Importer.LayerDef.LoadLayersDef(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.LayerDef.LoadLayersDef(JsonProperty)
   name: LoadLayersDef(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.LayerDef.html#MonoGame_LDtk_Importer_LayerDef_LoadLayersDef_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.LayerDef.LoadLayersDef(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.LayerDef.LoadLayersDef(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.LayerDef.html#MonoGame_LDtk_Importer_LayerDef_LoadLayersDef_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.LayerDef.LoadLayersDef(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.LayerDef.LoadLayersDef(JsonProperty)
   nameWithType: LayerDef.LoadLayersDef(JsonProperty)
 - uid: MonoGame_LDtk_Importer.LayerDef.LoadLayersDef*
   name: LoadLayersDef
@@ -1139,11 +1139,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LayerInstance.LevelId
   nameWithType: LayerInstance.LevelId
-- uid: MonoGame_LDtk_Importer.LayerInstance.LoadLayers(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.LayerInstance.LoadLayers(JsonProperty)
   name: LoadLayers(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LoadLayers_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.LayerInstance.LoadLayers(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LoadLayers(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LoadLayers_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.LayerInstance.LoadLayers(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.LayerInstance.LoadLayers(JsonProperty)
   nameWithType: LayerInstance.LoadLayers(JsonProperty)
 - uid: MonoGame_LDtk_Importer.LayerInstance.LoadLayers*
   name: LoadLayers
@@ -1331,12 +1331,12 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LDtkProject.Levels
   nameWithType: LDtkProject.Levels
-- uid: MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement)
-  name: LoadProject(JsonElement)
-  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_LoadProject_System_Text_Json_JsonElement_
-  commentId: M:MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement)
-  fullName: MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement)
-  nameWithType: LDtkProject.LoadProject(JsonElement)
+- uid: MonoGame_LDtk_Importer.LDtkProject.LoadProject(JsonElement,System.String)
+  name: LoadProject(JsonElement, String)
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_LoadProject_JsonElement_System_String_
+  commentId: M:MonoGame_LDtk_Importer.LDtkProject.LoadProject(JsonElement,System.String)
+  fullName: MonoGame_LDtk_Importer.LDtkProject.LoadProject(JsonElement, System.String)
+  nameWithType: LDtkProject.LoadProject(JsonElement, String)
 - uid: MonoGame_LDtk_Importer.LDtkProject.LoadProject*
   name: LoadProject
   href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_LoadProject_
@@ -1480,12 +1480,12 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Level.LayerInstances
   nameWithType: Level.LayerInstances
-- uid: MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty)
-  name: LoadLevels(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_LoadLevels_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty)
-  nameWithType: Level.LoadLevels(JsonProperty)
+- uid: MonoGame_LDtk_Importer.Level.LoadLevels(JsonProperty,System.Boolean,System.String)
+  name: LoadLevels(JsonProperty, Boolean, String)
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_LoadLevels_JsonProperty_System_Boolean_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Level.LoadLevels(JsonProperty,System.Boolean,System.String)
+  fullName: MonoGame_LDtk_Importer.Level.LoadLevels(JsonProperty, System.Boolean, System.String)
+  nameWithType: Level.LoadLevels(JsonProperty, Boolean, String)
 - uid: MonoGame_LDtk_Importer.Level.LoadLevels*
   name: LoadLevels
   href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_LoadLevels_
@@ -1577,11 +1577,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LevelNeighbour.LevelUid
   nameWithType: LevelNeighbour.LevelUid
-- uid: MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours(JsonProperty)
   name: LoadLevelNeighbours(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.LevelNeighbour.html#MonoGame_LDtk_Importer_LevelNeighbour_LoadLevelNeighbours_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.LevelNeighbour.html#MonoGame_LDtk_Importer_LevelNeighbour_LoadLevelNeighbours_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours(JsonProperty)
   nameWithType: LevelNeighbour.LoadLevelNeighbours(JsonProperty)
 - uid: MonoGame_LDtk_Importer.LevelNeighbour.LoadLevelNeighbours*
   name: LoadLevelNeighbours
@@ -1665,11 +1665,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY
   nameWithType: TileInstance.IsFlippedOnY
-- uid: MonoGame_LDtk_Importer.TileInstance.LoadTiles(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.TileInstance.LoadTiles(JsonProperty)
   name: LoadTiles(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_LoadTiles_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.TileInstance.LoadTiles(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.TileInstance.LoadTiles(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_LoadTiles_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.TileInstance.LoadTiles(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.TileInstance.LoadTiles(JsonProperty)
   nameWithType: TileInstance.LoadTiles(JsonProperty)
 - uid: MonoGame_LDtk_Importer.TileInstance.LoadTiles*
   name: LoadTiles
@@ -1736,11 +1736,11 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Tileset.Identifier
   nameWithType: Tileset.Identifier
-- uid: MonoGame_LDtk_Importer.Tileset.LoadTilesets(System.Text.Json.JsonProperty)
+- uid: MonoGame_LDtk_Importer.Tileset.LoadTilesets(JsonProperty)
   name: LoadTilesets(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_LoadTilesets_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.Tileset.LoadTilesets(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.Tileset.LoadTilesets(System.Text.Json.JsonProperty)
+  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_LoadTilesets_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.Tileset.LoadTilesets(JsonProperty)
+  fullName: MonoGame_LDtk_Importer.Tileset.LoadTilesets(JsonProperty)
   nameWithType: Tileset.LoadTilesets(JsonProperty)
 - uid: MonoGame_LDtk_Importer.Tileset.LoadTilesets*
   name: LoadTilesets

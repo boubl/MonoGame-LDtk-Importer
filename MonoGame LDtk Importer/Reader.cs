@@ -24,7 +24,7 @@ namespace Importer
             project.BackgroundColor = input.ReadColor();
             project.WorldGridHeight = input.ReadInt32();
             project.WorldGridWidth = input.ReadInt32();
-            project.WorldLayout = (worldLayoutTypes)input.ReadInt32();
+            project.WorldLayout = (WorldLayoutTypes)input.ReadInt32();
 
             #region definitions
 
@@ -195,11 +195,11 @@ namespace Importer
                 }
 
                 //field instances
-                level.FieldInstances = new List<FieldInstance>();
+                level.FieldInstances = new List<Field>();
                 int fieldInstancesCount = input.ReadInt32();
                 for (int j = 0; j < fieldInstancesCount; j++)
                 {
-                    FieldInstance field = new FieldInstance();
+                    Field field = new Field();
 
                     field.Identifier = input.ReadString();
                     field.Type = (FieldType)input.ReadInt32();
@@ -211,11 +211,11 @@ namespace Importer
                 }
 
                 //layers
-                level.LayerInstances = new List<LayerInstance>();
+                level.LayerInstances = new List<Layer>();
                 int layersCount = input.ReadInt32();
                 for (int j = 0; j < layersCount; j++)
                 {
-                    LayerInstance layer = new LayerInstance();
+                    Layer layer = new Layer();
                     layer.Height = input.ReadInt32();
                     layer.Width = input.ReadInt32();
                     layer.GridSize = input.ReadInt32();
@@ -232,11 +232,11 @@ namespace Importer
                     layer.IsVisible = input.ReadBoolean();
 
                     //auto layer tiles
-                    layer.AutoLayerTiles = new List<TileInstance>();
+                    layer.AutoLayerTiles = new List<Tile>();
                     int autoTilesCount = input.ReadInt32();
                     for (int k = 0; k < autoTilesCount; k++)
                     {
-                        TileInstance tile = new TileInstance();
+                        Tile tile = new Tile();
                         tile.IsFlippedOnX = input.ReadBoolean();
                         tile.IsFlippedOnY = input.ReadBoolean();
                         tile.Coordinates = input.ReadVector2();
@@ -247,11 +247,11 @@ namespace Importer
                     }
 
                     //entities
-                    layer.EntityInstances = new List<EntityInstance>();
+                    layer.EntityInstances = new List<Entity>();
                     int entitieCount = input.ReadInt32();
                     for (int k = 0; k < entitieCount; k++)
                     {
-                        EntityInstance entity = new EntityInstance();
+                        Entity entity = new Entity();
                         entity.GridCoordinates = input.ReadVector2();
                         entity.Identifier = input.ReadString();
                         entity.PivotCoordinates = input.ReadVector2();
@@ -274,11 +274,11 @@ namespace Importer
                         }
 
                         //field instances
-                        entity.FieldInstances = new List<FieldInstance>();
+                        entity.FieldInstances = new List<Field>();
                         int fieldInstancesCount2 = input.ReadInt32();
                         for (int l = 0; l < fieldInstancesCount2; l++)
                         {
-                            FieldInstance field = new FieldInstance();
+                            Field field = new Field();
                             field.Identifier = input.ReadString();
                             field.Type = (FieldType)input.ReadInt32();
                             field.Value = input.ReadString();
@@ -293,11 +293,11 @@ namespace Importer
                     }
 
                     //grid tiles
-                    layer.GridTilesInstances = new List<TileInstance>();
+                    layer.GridTilesInstances = new List<Tile>();
                     int gridTilesCount = input.ReadInt32();
                     for (int k = 0; k < gridTilesCount; k++)
                     {
-                        TileInstance tile = new TileInstance();
+                        Tile tile = new Tile();
                         tile.IsFlippedOnX = input.ReadBoolean();
                         tile.IsFlippedOnY = input.ReadBoolean();
                         tile.Coordinates = input.ReadVector2();

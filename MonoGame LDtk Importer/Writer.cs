@@ -188,7 +188,7 @@ namespace Importer
 
                 //field instances
                 output.Write(level.FieldInstances.Count); //int
-                foreach (FieldInstance field in level.FieldInstances)
+                foreach (Field field in level.FieldInstances)
                 {
                     output.Write(field.Identifier); //string
                     output.Write((int)field.Type); //int to enum
@@ -202,7 +202,7 @@ namespace Importer
 
                 //layers
                 output.Write(level.LayerInstances.Count); //int
-                foreach (LayerInstance layer in level.LayerInstances)
+                foreach (Layer layer in level.LayerInstances)
                 {
                     output.Write(layer.Height); //int
                     output.Write(layer.Width); //int
@@ -231,7 +231,7 @@ namespace Importer
 
                     // auto layer tiles
                     output.Write(layer.AutoLayerTiles.Count); //int
-                    foreach(TileInstance tile in layer.AutoLayerTiles)
+                    foreach(Tile tile in layer.AutoLayerTiles)
                     {
                         output.Write(tile.IsFlippedOnX); //bool
                         output.Write(tile.IsFlippedOnY); //bool
@@ -245,7 +245,7 @@ namespace Importer
 
                     //entities
                     output.Write(layer.EntityInstances.Count); //int
-                    foreach (EntityInstance entity in layer.EntityInstances)
+                    foreach (Entity entity in layer.EntityInstances)
                     {
                         output.Write(entity.GridCoordinates); //Vector2
                         output.Write(entity.Identifier); //string
@@ -269,7 +269,7 @@ namespace Importer
 
                         //field instances
                         output.Write(level.FieldInstances.Count); //int
-                        foreach (FieldInstance field in level.FieldInstances)
+                        foreach (Field field in level.FieldInstances)
                         {
                             output.Write(field.Identifier); //string
                             output.Write((int)field.Type); //int to enum
@@ -284,7 +284,7 @@ namespace Importer
 
                     //grid tiles
                     output.Write(layer.GridTilesInstances.Count); //int
-                    foreach (TileInstance tile in layer.GridTilesInstances)
+                    foreach (Tile tile in layer.GridTilesInstances)
                     {
                         output.Write(tile.IsFlippedOnX); //bool
                         output.Write(tile.IsFlippedOnY); //bool

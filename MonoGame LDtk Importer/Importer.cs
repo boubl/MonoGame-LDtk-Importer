@@ -12,11 +12,11 @@ namespace Importer
     public class Importer : ContentImporter<Dictionary<string, JsonElement>>
     {
         /// <summary>
-        /// Import the .ldtk file and parse it as a <see cref="Dictionary"/>
+        /// Import the .ldtk file and parse it as a Dictionary
         /// </summary>
         /// <param name="filename">Name of the .ldtk file</param>
         /// <param name="context"></param>
-        /// <returns>A <see cref="Dictionary"/> containing the values of the .ldtk file</returns>
+        /// <returns>A Dictionary containing the values of the .ldtk file</returns>
         public override Dictionary<string, JsonElement> Import(string filename, ContentImporterContext context)
         {
             context.Logger.LogMessage("Importing LDtk project: {0}", filename);
