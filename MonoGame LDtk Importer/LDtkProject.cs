@@ -374,6 +374,13 @@ namespace MonoGame_LDtk_Importer
             }
             return bgPos;
         }
+
+        public BackgroundPosition(Rectangle cropRectangle, Vector2 scale, Vector2 coordinates)
+        {
+            CropRectangle = cropRectangle;
+            Scale = scale;
+            Coordinates = coordinates;
+        }
     }
 
     /// <summary>

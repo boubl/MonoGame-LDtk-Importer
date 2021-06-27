@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 using System;
 using MonoGame_LDtk_Importer;
+using Microsoft.Xna.Framework;
 
 namespace Importer
 {
@@ -136,7 +137,7 @@ namespace Importer
             }
             //tilesets
             output.Write(value.Definitions.Tilesets.Count);
-            foreach(Tileset tileset in value.Definitions.Tilesets)
+            foreach(TilesetDef tileset in value.Definitions.Tilesets)
             {
                 output.Write(tileset.Identifier); //string
                 output.Write(tileset.Padding); //int
@@ -192,12 +193,65 @@ namespace Importer
                 {
                     output.Write(field.Identifier); //string
                     output.Write((int)field.Type); //int to enum
-                    if (!String.IsNullOrEmpty(field.Value)) output.Write(field.Value); //string
-                    else output.Write("");
                     output.Write(field.DefUid); //int
                     if (!String.IsNullOrEmpty(field.EnumName)) output.Write(field.EnumName); //string
                     else output.Write("");
                     output.Write(field.IsArray); //bool
+
+                    if (field.Type == FieldType.Int)
+                    {
+                        IntField intField = field as IntField;
+                        output.Write(intField.Value.Count);
+                        foreach(int i in intField.Value)
+                        {
+                            output.Write(i);
+                        }
+                    }
+                    else if (field.Type == FieldType.Float)
+                    {
+                        FloatField floatField = field as FloatField;
+                        output.Write(floatField.Value.Count);
+                        foreach (float f in floatField.Value)
+                        {
+                            output.Write(f);
+                        }
+                    }
+                    else if (field.Type == FieldType.Bool)
+                    {
+                        BoolField boolField = field as BoolField;
+                        output.Write(boolField.Value.Count);
+                        foreach (bool b in boolField.Value)
+                        {
+                            output.Write(b);
+                        }
+                    }
+                    else if (field.Type == FieldType.Color)
+                    {
+                        ColorField colorField = field as ColorField;
+                        output.Write(colorField.Value.Count);
+                        foreach (Color c in colorField.Value)
+                        {
+                            output.Write(c);
+                        }
+                    }
+                    else if (field.Type == FieldType.Point)
+                    {
+                        PointField pointField = field as PointField;
+                        output.Write(pointField.Value.Count);
+                        foreach (Point p in pointField.Value)
+                        {
+                            output.Write(p.ToVector2());
+                        }
+                    }
+                    else
+                    {
+                        StringField stringField = field as StringField;
+                        output.Write(stringField.Value.Count);
+                        foreach (string s in stringField.Value)
+                        {
+                            output.Write(s);
+                        }
+                    }
                 }
 
                 //layers
@@ -228,20 +282,6 @@ namespace Importer
                     output.Write(layer.Offset); //Vector2
 
                     output.Write(layer.IsVisible); //bool
-
-                    // auto layer tiles
-                    output.Write(layer.AutoLayerTiles.Count); //int
-                    foreach(Tile tile in layer.AutoLayerTiles)
-                    {
-                        output.Write(tile.IsFlippedOnX); //bool
-                        output.Write(tile.IsFlippedOnY); //bool
-
-                        output.Write(tile.Coordinates); //Vector2
-
-                        output.Write(tile.Source); //Vector2
-
-                        output.Write(tile.TileId); //int
-                    }
 
                     //entities
                     output.Write(layer.EntityInstances.Count); //int
@@ -301,6 +341,45 @@ namespace Importer
                     foreach (int i in layer.IntGridCsv)
                     {
                         output.Write(i); //int
+                    }
+
+                    if (layer.Type == LayerType.AutoLayer)
+                    {
+                        AutoLayer autoLayer = layer as AutoLayer;
+                        output.Write(autoLayer.TilesetDefUid.HasValue);
+                        if(autoLayer.TilesetDefUid.HasValue)
+                        {
+                            output.Write(autoLayer.TilesetDefUid.Value);
+                        }
+                        output.Write(autoLayer.TilesetRelPath.Length > 0);
+                        if (autoLayer.TilesetRelPath.Length > 0)
+                        {
+                            output.Write(autoLayer.TilesetRelPath);
+                        }
+                        output.Write(autoLayer.AutoLayerTiles.Count); //int
+                        foreach (Tile tile in autoLayer.AutoLayerTiles)
+                        {
+                            output.Write(tile.IsFlippedOnX); //bool
+                            output.Write(tile.IsFlippedOnY); //bool
+
+                            output.Write(tile.Coordinates); //Vector2
+
+                            output.Write(tile.Source); //Vector2
+
+                            output.Write(tile.TileId); //int
+                        }
+                    }
+                    else if (layer.Type == LayerType.Entities)
+                    {
+                        EntitieLayer entitieLayer = layer as EntitieLayer;
+                    }
+                    else if (layer.Type == LayerType.IntGrid)
+                    {
+
+                    }
+                    else if (layer.Type == LayerType.Tiles)
+                    {
+
                     }
                 }
             }

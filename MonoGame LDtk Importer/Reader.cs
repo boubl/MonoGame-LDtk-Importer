@@ -135,11 +135,11 @@ namespace Importer
                 project.Definitions.Layers.Add(layer);
             }
             //tilesets
-            project.Definitions.Tilesets = new List<Tileset>();
+            project.Definitions.Tilesets = new List<TilesetDef>();
             int tilesetCount = input.ReadInt32();
             for (int i = 0; i < tilesetCount; i++)
             {
-                Tileset tileset = new Tileset();
+                TilesetDef tileset = new TilesetDef();
                 tileset.Identifier = input.ReadString();
                 tileset.Padding = input.ReadInt32();
                 tileset.Height = input.ReadInt32();
@@ -208,6 +208,8 @@ namespace Importer
                     if (input.ReadBoolean()) field.EnumName = input.ReadString();
                     field.IsArray = input.ReadBoolean();
                     level.FieldInstances.Add(field);
+
+                    if (field.Type == FieldType.)
                 }
 
                 //layers
