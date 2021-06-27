@@ -94,6 +94,24 @@ namespace MonoGame_LDtk_Importer
             }
             return output;
         }
+
+        /// <summary>
+        /// Return the level matching the given identifier <i>(return null if not found)</i>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Level GetLevelByIdentifier(string id)
+        {
+            Level level = null;
+            foreach(Level lv in Levels)
+            {
+                if(lv.Identifier == id)
+                {
+                    level = lv;
+                }
+            }
+            return level;
+        }
     }
 
     /// <summary>
@@ -106,8 +124,6 @@ namespace MonoGame_LDtk_Importer
         LinearHorizontal,
         LinearVertical
     }
-
-
 
     /// <summary>
     /// A level
@@ -130,9 +146,6 @@ namespace MonoGame_LDtk_Importer
         /// The <i>optional</i> relative path to the level background image
         /// </summary>
         public string BackgroundRelPath { get; set; }
-
-        //The externalRelPath value is used to load the level only, no need to load it.
-
         /// <summary>
         /// An array containing all Layer instances.
         /// <b>IMPORTANT</b>: if the project option "<i>Save levels separately</i>" is enabled, this field will be null.<br/>
@@ -281,6 +294,30 @@ namespace MonoGame_LDtk_Importer
             }
             return list;
         }
+
+        /// <summary>
+        /// Load the background image and crop it for you <br/>
+        /// <b>WARNING: You need to apply the scale when rendering with <i>spriteBatch.Draw()</i> !</b>
+        /// </summary>
+        /// <param name="graphicsDevice"></param>
+        /// <returns></returns>
+        public Texture2D GetCroppedBackground(GraphicsDevice graphicsDevice)
+        {
+            if (BackgroundPosition.HasValue)
+            {
+                BackgroundPosition bgPos = BackgroundPosition.Value;
+                Texture2D bg = Texture2D.FromFile(graphicsDevice, BackgroundRelPath);
+                Texture2D bgTx = new Texture2D(graphicsDevice, bgPos.CropRectangle.Width, bgPos.CropRectangle.Height);
+                Color[] data = new Color[bgPos.CropRectangle.Width * bgPos.CropRectangle.Height];
+                bg.GetData(0, bgPos.CropRectangle, data, 0, bgPos.CropRectangle.Width * bgPos.CropRectangle.Height);
+                bgTx.SetData(data);
+                return bgTx;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 
     /// <summary>
@@ -399,6 +436,9 @@ namespace MonoGame_LDtk_Importer
         }
     }
 
+    /// <summary>
+    /// Direction of a neighbour level
+    /// </summary>
     public enum NeighbourDirection
     {
         North,
@@ -586,6 +626,7 @@ namespace MonoGame_LDtk_Importer
 
     }
 
+    #region Layer Children
     /// <summary>
     /// A entitie layer instance 
     /// </summary>
@@ -897,6 +938,7 @@ namespace MonoGame_LDtk_Importer
             return dico;
         }
     }
+    #endregion
 
     /// <summary>
     /// A tile instance
@@ -1312,6 +1354,7 @@ namespace MonoGame_LDtk_Importer
         }
     }
 
+    #region Field Children
     /// <summary>
     /// Int field instance
     /// </summary>
@@ -1393,6 +1436,7 @@ namespace MonoGame_LDtk_Importer
         Point,
         FilePath
     }
+    #endregion
 
     /// <summary>
     /// A structure containing all the definitions of a project
@@ -1457,8 +1501,97 @@ namespace MonoGame_LDtk_Importer
             }
             return output;
         }
+
+        /// <summary>
+        /// Return the entitie definition matching the given identifier <i>(return null if not found)</i>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public EntitieDef GetEntitiesDefById(string id)
+        {
+            EntitieDef def = new EntitieDef();
+            foreach(EntitieDef entitie in Entities)
+            {
+                if (entitie.Identifier == id)
+                {
+                    def = entitie;
+                }
+            }
+            return def;
+        }
+        /// <summary>
+        /// Return the enum definition matching the given identifier <i>(return null if not found)</i>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public EnumDef GetEnumDefById(string id)
+        {
+            EnumDef def = new EnumDef();
+            foreach (EnumDef enumm in Enums)
+            {
+                if (enumm.Identifier == id)
+                {
+                    def = enumm;
+                }
+            }
+            return def;
+        }
+        /// <summary>
+        /// Return the external enum definition matching the given identifier <i>(return null if not found)</i>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public EnumDef GetExtEnumDefById(string id)
+        {
+            EnumDef def = new EnumDef();
+            foreach (EnumDef enumm in ExternalEnums)
+            {
+                if (enumm.Identifier == id)
+                {
+                    def = enumm;
+                }
+            }
+            return def;
+        }
+        /// <summary>
+        /// Return the layer definition matching the given identifier <i>(return null if not found)</i>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public LayerDef GetLayersDefById(string id)
+        {
+            LayerDef def = new LayerDef();
+            foreach (LayerDef layer in Layers)
+            {
+                if (layer.Identifier == id)
+                {
+                    def = layer;
+                }
+            }
+            return def;
+        }
+        /// <summary>
+        /// Return the tileset definition matching the given identifier <i>(return null if not found)</i>
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public TilesetDef GetTilesetDefById(string id)
+        {
+            TilesetDef def = new TilesetDef();
+            foreach (TilesetDef tileset in Tilesets)
+            {
+                if (tileset.Identifier == id)
+                {
+                    def = tileset;
+                }
+            }
+            return def;
+        }
     }
 
+    /// <summary>
+    /// A enum definiton
+    /// </summary>
     public class EnumDef
     {
         /// <summary>
@@ -1522,6 +1655,23 @@ namespace MonoGame_LDtk_Importer
                 output.Add(enumDef);
             }
             return output;
+        }
+
+        /// <summary>
+        /// Return the value definition of the given id
+        /// </summary>
+        /// <returns></returns>
+        public EnumValueDef GetValueByType(string id)
+        {
+            EnumValueDef val = new();
+            foreach (EnumValueDef value in Values)
+            {
+                if (value.Id == id)
+                {
+                    val = value;
+                }
+            }
+            return val;
         }
     }
 
@@ -1632,7 +1782,6 @@ namespace MonoGame_LDtk_Importer
         /// Unique Int identifier
         /// </summary>
         public int Uid { get; set; }
-
         /// <summary>
         /// Load the layers definitions of project
         /// </summary>
@@ -1693,6 +1842,23 @@ namespace MonoGame_LDtk_Importer
                 output.Add(layerDef);
             }
             return output;
+        }
+
+        /// <summary>
+        /// Return the int grid value definition of the given id
+        /// </summary>
+        /// <returns></returns>
+        public IntGridValueDef GetIntGridValueById(string id)
+        {
+            IntGridValueDef val = new();
+            foreach (IntGridValueDef value in IntGridValues)
+            {
+                if (value.Identifier == id)
+                {
+                    val = value;
+                }
+            }
+            return val;
         }
     }
 
@@ -1994,6 +2160,60 @@ namespace MonoGame_LDtk_Importer
                 output.Add(tileset);
             }
             return output;
+        }
+
+        /// <summary>
+        /// Return the tile metadata of the given tile ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public TileMetadata GetTileMetadataByTileId(int id)
+        {
+            TileMetadata tm = new();
+            foreach (TileMetadata tileMetadata in CustomData)
+            {
+                if (tileMetadata.TileId == id)
+                {
+                    tm = tileMetadata;
+                }
+            }
+            return tm;
+        }
+
+        /// <summary>
+        /// Return the tileset tag of the given enum value ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public TilesetTag GetTilesetTagByEnumValueId(string id)
+        {
+            TilesetTag tst = new();
+            foreach (TilesetTag tilesetTag in EnumTags)
+            {
+                if (tilesetTag.EnumValueId == id)
+                {
+                    tst = tilesetTag;
+                }
+            }
+            return tst;
+        }
+
+        /// <summary>
+        /// Return all the enum value IDs for a given tile ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public List<string> GetEnumValueIdsByTileId(int id)
+        {
+            List<string> values = new();
+            foreach (TilesetTag tag in EnumTags)
+            {
+                if(tag.TileIds.Contains(id))
+                {
+                    values.Add(tag.EnumValueId);
+                }
+            }
+            return values;
         }
     }
 
