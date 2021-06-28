@@ -208,8 +208,6 @@ namespace Importer
                     if (input.ReadBoolean()) field.EnumName = input.ReadString();
                     field.IsArray = input.ReadBoolean();
                     level.FieldInstances.Add(field);
-
-                    if (field.Type == FieldType.)
                 }
 
                 //layers

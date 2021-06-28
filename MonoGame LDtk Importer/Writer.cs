@@ -67,6 +67,7 @@ namespace Importer
                     output.Write(valueDef.TileSourceRectangle.Width); //int
                     output.Write(valueDef.TileSourceRectangle.Height); //int
 
+                    output.Write(valueDef.Color); //color
                     output.Write(valueDef.Id); //string
 
                     output.Write(valueDef.TileId.HasValue); //bool
@@ -95,6 +96,7 @@ namespace Importer
                     output.Write(valueDef.TileSourceRectangle.Width); //int
                     output.Write(valueDef.TileSourceRectangle.Height); //int
 
+                    output.Write(valueDef.Color); //color
                     output.Write(valueDef.Id); //string
 
                     output.Write(valueDef.TileId.HasValue); //bool
@@ -139,12 +141,40 @@ namespace Importer
             output.Write(value.Definitions.Tilesets.Count);
             foreach(TilesetDef tileset in value.Definitions.Tilesets)
             {
+                output.Write(tileset.GridHeight); //int
+                output.Write(tileset.GridWidth); //int
+
+                output.Write(tileset.CustomData.Count); //int
+                foreach(TileMetadata metadata in tileset.CustomData)
+                {
+                    output.Write(metadata.Data); //string
+                    output.Write(metadata.TileId); //int
+                }
+
+                output.Write(tileset.EnumTags.Count); //int
+                foreach (TilesetTag tag in tileset.EnumTags)
+                {
+                    output.Write(tag.TileIds.Count); //int
+                    foreach (int i in tag.TileIds)
+                    {
+                        output.Write(i); //int
+                    }
+                    output.Write(tag.EnumValueId); //string
+                }
+
                 output.Write(tileset.Identifier); //string
                 output.Write(tileset.Padding); //int
                 output.Write(tileset.Height); //int
                 output.Write(tileset.Width); //int
                 output.Write(tileset.RelPath); //string
                 output.Write(tileset.Spacing); //int
+
+                output.Write(tileset.TagSourceEnumUid.HasValue);
+                if(tileset.TagSourceEnumUid.HasValue)
+                {
+                    output.Write(tileset.TagSourceEnumUid.Value); //int
+                }
+
                 output.Write(tileset.TileGridSize); //int
                 output.Write(tileset.Uid); //int
             }
@@ -266,82 +296,15 @@ namespace Importer
 
                     output.Write(layer.TotalOffset); //Vector2
 
-                    output.Write(layer.TilesetDefUid.HasValue); //bool
-                    if (layer.TilesetDefUid.HasValue) output.Write(layer.TilesetDefUid.Value); //int
-
-                    if (!String.IsNullOrEmpty(layer.TilesetRelPath)) output.Write(layer.TilesetRelPath); //string
-                    else output.Write("");
-
                     output.Write((int)layer.Type); //int to enum
                     output.Write(layer.LayerDefUid); //int
                     output.Write(layer.LevelId); //int
-
-                    output.Write(layer.OverrideTilesetUid.HasValue); //bool
-                    if (layer.OverrideTilesetUid.HasValue) output.Write(layer.OverrideTilesetUid.Value); //int
 
                     output.Write(layer.Offset); //Vector2
 
                     output.Write(layer.IsVisible); //bool
 
-                    //entities
-                    output.Write(layer.EntityInstances.Count); //int
-                    foreach (Entity entity in layer.EntityInstances)
-                    {
-                        output.Write(entity.GridCoordinates); //Vector2
-                        output.Write(entity.Identifier); //string
-                        output.Write(entity.PivotCoordinates); //Vector2
-                        output.Write(entity.DefUid); //int
-                        output.Write(entity.Height); //int
-                        output.Write(entity.Width); //int
-                        output.Write(entity.Coordinates); //Vector2
-
-                        //entity tile
-                        output.Write(entity.Tile.HasValue); //bool
-                        if (entity.Tile.HasValue)
-                        {
-                            output.Write(entity.Tile.Value.SourceRectangle.X); //int
-                            output.Write(entity.Tile.Value.SourceRectangle.Y); //int
-                            output.Write(entity.Tile.Value.SourceRectangle.Height); //int
-                            output.Write(entity.Tile.Value.SourceRectangle.Width); //int
-
-                            output.Write(entity.Tile.Value.TilesetUid); //int
-                        }
-
-                        //field instances
-                        output.Write(level.FieldInstances.Count); //int
-                        foreach (Field field in level.FieldInstances)
-                        {
-                            output.Write(field.Identifier); //string
-                            output.Write((int)field.Type); //int to enum
-                            if (!String.IsNullOrEmpty(field.Value)) output.Write(field.Value); //string
-                            else output.Write("");
-                            output.Write(field.DefUid); //int
-                            if (!String.IsNullOrEmpty(field.EnumName)) output.Write(field.EnumName); //string
-                            else output.Write("");
-                            output.Write(field.IsArray); //bool
-                        }
-                    }
-
-                    //grid tiles
-                    output.Write(layer.GridTilesInstances.Count); //int
-                    foreach (Tile tile in layer.GridTilesInstances)
-                    {
-                        output.Write(tile.IsFlippedOnX); //bool
-                        output.Write(tile.IsFlippedOnY); //bool
-
-                        output.Write(tile.Coordinates); //Vector2
-
-                        output.Write(tile.Source); //Vector2
-
-                        output.Write(tile.TileId); //int
-                    }
-
-                    //IntGridCsv
-                    output.Write(layer.IntGridCsv.Length); //int
-                    foreach (int i in layer.IntGridCsv)
-                    {
-                        output.Write(i); //int
-                    }
+                    
 
                     if (layer.Type == LayerType.AutoLayer)
                     {
@@ -372,6 +335,96 @@ namespace Importer
                     else if (layer.Type == LayerType.Entities)
                     {
                         EntitieLayer entitieLayer = layer as EntitieLayer;
+                        output.Write(entitieLayer.EntityInstances.Count);
+                        foreach(Entity entity in entitieLayer.EntityInstances)
+                        {
+                            output.Write(entity.GridCoordinates); //Vector2
+                            output.Write(entity.Identifier); //string
+                            output.Write(entity.PivotCoordinates); //Vector2
+                            output.Write(entity.DefUid); //int
+                            output.Write(entity.Height); //int
+                            output.Write(entity.Width); //int
+                            output.Write(entity.Coordinates); //Vector2
+
+                            //entity tile
+                            output.Write(entity.Tile.HasValue); //bool
+                            if (entity.Tile.HasValue)
+                            {
+                                output.Write(entity.Tile.Value.SourceRectangle.X); //int
+                                output.Write(entity.Tile.Value.SourceRectangle.Y); //int
+                                output.Write(entity.Tile.Value.SourceRectangle.Height); //int
+                                output.Write(entity.Tile.Value.SourceRectangle.Width); //int
+
+                                output.Write(entity.Tile.Value.TilesetUid); //int
+                            }
+
+                            //field instances
+                            output.Write(level.FieldInstances.Count); //int
+                            foreach (Field field in level.FieldInstances)
+                            {
+                                output.Write(field.Identifier); //string
+                                output.Write((int)field.Type); //int to enum
+                                output.Write(field.DefUid); //int
+                                if (!String.IsNullOrEmpty(field.EnumName)) output.Write(field.EnumName); //string
+                                else output.Write("");
+                                output.Write(field.IsArray); //bool
+
+                                if (field.Type == FieldType.Int)
+                                {
+                                    IntField intField = field as IntField;
+                                    output.Write(intField.Value.Count);
+                                    foreach (int i in intField.Value)
+                                    {
+                                        output.Write(i);
+                                    }
+                                }
+                                else if (field.Type == FieldType.Float)
+                                {
+                                    FloatField floatField = field as FloatField;
+                                    output.Write(floatField.Value.Count);
+                                    foreach (float f in floatField.Value)
+                                    {
+                                        output.Write(f);
+                                    }
+                                }
+                                else if (field.Type == FieldType.Bool)
+                                {
+                                    BoolField boolField = field as BoolField;
+                                    output.Write(boolField.Value.Count);
+                                    foreach (bool b in boolField.Value)
+                                    {
+                                        output.Write(b);
+                                    }
+                                }
+                                else if (field.Type == FieldType.Color)
+                                {
+                                    ColorField colorField = field as ColorField;
+                                    output.Write(colorField.Value.Count);
+                                    foreach (Color c in colorField.Value)
+                                    {
+                                        output.Write(c);
+                                    }
+                                }
+                                else if (field.Type == FieldType.Point)
+                                {
+                                    PointField pointField = field as PointField;
+                                    output.Write(pointField.Value.Count);
+                                    foreach (Point p in pointField.Value)
+                                    {
+                                        output.Write(p.ToVector2());
+                                    }
+                                }
+                                else
+                                {
+                                    StringField stringField = field as StringField;
+                                    output.Write(stringField.Value.Count);
+                                    foreach (string s in stringField.Value)
+                                    {
+                                        output.Write(s);
+                                    }
+                                }
+                            }
+                        }
                     }
                     else if (layer.Type == LayerType.IntGrid)
                     {

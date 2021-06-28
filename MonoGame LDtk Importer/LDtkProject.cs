@@ -1703,7 +1703,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Optional color
         /// </summary>
-        public int color { get; set; }
+        public int Color { get; set; }
 
         /// <summary>
         /// Load the enums values definitions of project
@@ -1734,7 +1734,7 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "color")
                         {
-                            enumValue.color = property.Value.GetInt32();
+                            enumValue.Color = property.Value.GetInt32();
                         }
                     }
                 }
