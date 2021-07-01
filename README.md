@@ -1,3 +1,5 @@
+# THIS IS DEPRECATED, PIPELINE IS PAIN, THIS IS AN ABANDONED VERSION (it doesn't work anyway lol, fix it if you want)
+
 ![LDtk Monogame Importer](/docfx_project/images/logo%20small.png)
 
 This is a MonoGame pipeline custom importer for [Ldtk](https://ldtk.io/) by [Deepnight](https://deepnight.net/).
