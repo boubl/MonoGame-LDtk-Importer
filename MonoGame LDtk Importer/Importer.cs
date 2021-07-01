@@ -8,7 +8,7 @@ namespace Importer
     /// <summary>
     /// A class to import ldtk files
     /// </summary>
-    [ContentImporter(".ldtk", DisplayName = "LDtk Project Importer", DefaultProcessor = "LDtk Project Processor")]
+    [ContentImporter(".ldtk", DisplayName = "LDtk Project Importer", DefaultProcessor = "Processor")]
     public class Importer : ContentImporter<Dictionary<string, JsonElement>>
     {
         /// <summary>

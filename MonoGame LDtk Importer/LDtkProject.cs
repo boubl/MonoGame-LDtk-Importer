@@ -95,6 +95,13 @@ namespace MonoGame_LDtk_Importer
             return output;
         }
 
+        public LDtkProject(string filePath)
+        {
+            LoadProject(JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(filePath)), filePath);
+        }
+
+        public LDtkProject() { }
+
         /// <summary>
         /// Return the level matching the given identifier <i>(return null if not found)</i>
         /// </summary>
@@ -511,6 +518,27 @@ namespace MonoGame_LDtk_Importer
             foreach (JsonElement jsonElement in jsonProperty.Value.EnumerateArray().ToArray())
             {
                 Layer layer = new Layer();
+
+                LayerType type = (LayerType)Enum.Parse(typeof(LayerType), jsonElement.GetProperty("__type").GetString());
+
+                if (type == LayerType.AutoLayer)
+                {
+                    layer = new AutoLayer();
+                }
+                if (type == LayerType.Entities)
+                {
+                    layer = new EntitieLayer();
+                }
+                if (type == LayerType.IntGrid)
+                {
+                    layer = new IntGridLayer();
+                }
+                if (type == LayerType.Tiles)
+                {
+                    layer = new TileLayer();
+                }
+                layer.Type = type;
+
                 foreach (JsonProperty property in jsonElement.EnumerateObject().ToArray())
                 {
                     if (property.Value.ValueKind != JsonValueKind.Null)
@@ -539,10 +567,6 @@ namespace MonoGame_LDtk_Importer
                         {
                             layer.TotalOffset = new Vector2(property.Value.GetInt32(), jsonElement.GetProperty("__pxTotalOffsetY").GetInt32());
                         }
-                        else if (property.Name == "__type")
-                        {
-                            layer.Type = (LayerType)Enum.Parse(typeof(LayerType), property.Value.GetString());
-                        }
                         else if (property.Name == "levelId")
                         {
                             layer.LevelId = property.Value.GetInt32();
@@ -569,11 +593,11 @@ namespace MonoGame_LDtk_Importer
                     {
                         autoLayer.TilesetDefUid = jsonElement.GetProperty("__tilesetDefUid").GetInt32();
                     }
-                    else if (jsonElement.GetProperty("__tilesetRelPath").ValueKind != JsonValueKind.Null)
+                    if (jsonElement.GetProperty("__tilesetRelPath").ValueKind != JsonValueKind.Null)
                     {
                         autoLayer.TilesetRelPath = jsonElement.GetProperty("__tilesetRelPath").GetString();
                     }
-                    else if (jsonElement.GetProperty("autoLayerTiles").ValueKind != JsonValueKind.Null)
+                    if (jsonElement.GetProperty("autoLayerTiles").ValueKind != JsonValueKind.Null)
                     {
                         autoLayer.AutoLayerTiles = Tile.LoadTiles(jsonElement.GetProperty("autoLayerTiles"));
                     }
@@ -593,12 +617,10 @@ namespace MonoGame_LDtk_Importer
                     IntGridLayer intGridLayer = layer as IntGridLayer;
                     if (jsonElement.GetProperty("intGridCsv").ValueKind != JsonValueKind.Null)
                     {
-                        int[] intgrid = new int[jsonElement.GetProperty("intGridCsv").EnumerateArray().ToArray().Length];
-                        int compteur = 0;
+                        List<int> intgrid = new List<int>();
                         foreach (JsonElement element in jsonElement.GetProperty("intGridCsv").EnumerateArray().ToArray())
                         {
-                            intgrid[compteur] = element.GetInt32();
-                            compteur++;
+                            intgrid.Add(element.GetInt32());
                         }
                         intGridLayer.IntGridCsv = intgrid;
                     }
@@ -611,15 +633,15 @@ namespace MonoGame_LDtk_Importer
                     {
                         tileLayer.TilesetDefUid = jsonElement.GetProperty("__tilesetDefUid").GetInt32();
                     }
-                    else if (jsonElement.GetProperty("__tilesetRelPath").ValueKind != JsonValueKind.Null)
+                    if (jsonElement.GetProperty("__tilesetRelPath").ValueKind != JsonValueKind.Null)
                     {
                         tileLayer.TilesetRelPath = jsonElement.GetProperty("__tilesetRelPath").GetString();
                     }
-                    else if (jsonElement.GetProperty("gridTiles").ValueKind != JsonValueKind.Null)
+                    if (jsonElement.GetProperty("gridTiles").ValueKind != JsonValueKind.Null)
                     {
                         tileLayer.GridTilesInstances = Tile.LoadTiles(jsonElement.GetProperty("gridTiles"));
                     }
-                    else if (jsonElement.GetProperty("overrideTilesetUid").ValueKind != JsonValueKind.Null)
+                    if (jsonElement.GetProperty("overrideTilesetUid").ValueKind != JsonValueKind.Null)
                     {
                         tileLayer.OverrideTilesetUid = jsonElement.GetProperty("overrideTilesetUid").GetInt32();
                     }
@@ -673,7 +695,7 @@ namespace MonoGame_LDtk_Importer
         /// and top to bottom: <b>-1</b> means "empty cell" and IntGrid values start at 0.
         /// <br/>This array size is <b>__cWid</b> x <b>__cHei</b> cells.
         /// </summary>
-        public int[] IntGridCsv { get; set; }
+        public List<int> IntGridCsv { get; set; }
 
         /// <summary>
         /// Return the value at the given position
@@ -693,7 +715,7 @@ namespace MonoGame_LDtk_Importer
         public List<Point> GetPointsByValue(int value)
         {
             List<Point> list = new List<Point>();
-            for(int i = 0; i < IntGridCsv.Length; i++)
+            for(int i = 0; i < IntGridCsv.Count; i++)
             {
                 if (IntGridCsv[i] == value)
                 {
@@ -1176,58 +1198,110 @@ namespace MonoGame_LDtk_Importer
             foreach (JsonElement jsonElement in jsonProperty.Value.EnumerateArray().ToArray())
             {
                 Field field = new Field();
-                foreach (JsonProperty property in jsonElement.EnumerateObject().ToArray())
+
+                string typeString = jsonElement.GetProperty("__type").GetString();
+
+                if (typeString.StartsWith("Enum"))
                 {
-                    if (property.Value.ValueKind != JsonValueKind.Null)
+                    field = new StringField();
+                    field.Type = FieldType.Enum;
+                    field.IsArray = false;
+                    field.EnumName = typeString.Substring(5, typeString.Length - 6);
+                }
+                else if (typeString.StartsWith("LocalEnum"))
+                {
+                    field = new StringField();
+                    field.Type = FieldType.Enum;
+                    field.IsArray = false;
+                    field.EnumName = typeString.Substring(("LocalEnum").Length + 1);
+                }
+                else if (typeString.StartsWith("Array"))
+                {
+                    string arrayType = typeString.Substring(6, typeString.Length - 7);
+                    if (arrayType.StartsWith("Enum"))
                     {
-                        if (property.Name == "__identifier")
-                        {
-                            field.Identifier = property.Value.GetString();
-                        }
-                        else if (property.Name == "__type")
-                        {
-                            if (property.Value.GetString().StartsWith("Enum"))
-                            {
-                                field.Type = FieldType.Enum;
-                                field.IsArray = false;
-                                field.EnumName = property.Value.GetString().Substring(5, property.Value.GetString().Length - 6);
-                            }
-                            else if (property.Value.GetString().StartsWith("LocalEnum"))
-                            {
-                                field.Type = FieldType.Enum;
-                                field.IsArray = false;
-                                field.EnumName = property.Value.GetString().Substring(("LocalEnum").Length + 1);
-                            }
-                            else if (property.Value.GetString().StartsWith("Array"))
-                            {
-                                field.IsArray = true;
-                                string arrayType = property.Value.GetString().Substring(6, property.Value.GetString().Length - 7);
-                                if (arrayType.StartsWith("Enum"))
-                                {
-                                    field.Type = FieldType.Enum;
-                                    field.EnumName = arrayType.Substring(5, property.Value.GetString().Length - 1);
-                                }
-                                else if (arrayType.StartsWith("LocalEnum"))
-                                {
-                                    field.Type = FieldType.Enum;
-                                    field.EnumName = arrayType.Substring(("LocalEnum").Length + 1);
-                                }
-                                else
-                                {
-                                    field.Type = (FieldType)Enum.Parse(typeof(FieldType), arrayType);
-                                }
-                            }
-                            else
-                            {
-                                field.Type = (FieldType)Enum.Parse(typeof(FieldType), property.Value.GetString());
-                                field.IsArray = false;
-                            }
-                        }
-                        else if (property.Name == "defUid")
-                        {
-                            field.DefUid = property.Value.GetInt32();
-                        }
+                        field = new StringField();
+                        field.IsArray = true;
+                        field.Type = FieldType.Enum;
+                        field.EnumName = arrayType.Substring(5, typeString.Length - 1);
                     }
+                    else if (arrayType.StartsWith("LocalEnum"))
+                    {
+                        field = new StringField();
+                        field.IsArray = true;
+                        field.Type = FieldType.Enum;
+                        field.EnumName = arrayType.Substring(("LocalEnum").Length + 1);
+                    }
+                    else
+                    {
+                        FieldType type = (FieldType)Enum.Parse(typeof(FieldType), arrayType);
+                        if (type == FieldType.Int)
+                        {
+                            field = new IntField();
+                            field.IsArray = true;
+                        }
+                        else if (type == FieldType.Float)
+                        {
+                            field = new FloatField();
+                            field.IsArray = true;
+                        }
+                        else if (type == FieldType.Bool)
+                        {
+                            field = new BoolField();
+                            field.IsArray = true;
+                        }
+                        else if (type == FieldType.Color)
+                        {
+                            field = new ColorField();
+                            field.IsArray = true;
+                        }
+                        else if (type == FieldType.Point)
+                        {
+                            field = new PointField();
+                            field.IsArray = true;
+                        }
+                        else if (type == FieldType.FilePath || type == FieldType.String || type == FieldType.Text)
+                        {
+                            field = new StringField();
+                            field.IsArray = true;
+                        }
+                        field.Type = type;
+                    }
+                }
+                else
+                {
+                    FieldType type = (FieldType)Enum.Parse(typeof(FieldType), typeString);
+                    if (type == FieldType.Int)
+                    {
+                        field = new IntField();
+                        field.IsArray = false;
+                    }
+                    else if (type == FieldType.Float)
+                    {
+                        field = new FloatField();
+                        field.IsArray = false;
+                    }
+                    else if (type == FieldType.Bool)
+                    {
+                        field = new BoolField();
+                        field.IsArray = false;
+                    }
+                    else if (type == FieldType.Color)
+                    {
+                        field = new ColorField();
+                        field.IsArray = false;
+                    }
+                    else if (type == FieldType.Point)
+                    {
+                        field = new PointField();
+                        field.IsArray = false;
+                    }
+                    else if (type == FieldType.FilePath || type == FieldType.String || type == FieldType.Text)
+                    {
+                        field = new StringField();
+                        field.IsArray = false;
+                    }
+                    field.Type = type;
                 }
 
                 if (!field.IsArray)
@@ -1274,7 +1348,7 @@ namespace MonoGame_LDtk_Importer
                             f.Value.Add(new Point(el.GetProperty("cx").GetInt32(), el.GetProperty("cy").GetInt32()));
                             field = f;
                         }
-                        else
+                        else if (field.Type == FieldType.String || field.Type == FieldType.Text || field.Type == FieldType.FilePath)
                         {
                             StringField f = field as StringField;
                             f.Value = new List<string>();
@@ -1355,6 +1429,21 @@ namespace MonoGame_LDtk_Importer
                     }
                 }
 
+                foreach (JsonProperty property in jsonElement.EnumerateObject().ToArray())
+                {
+                    if (property.Value.ValueKind != JsonValueKind.Null)
+                    {
+                        if (property.Name == "__identifier")
+                        {
+                            field.Identifier = property.Value.GetString();
+                        }
+                        else if (property.Name == "defUid")
+                        {
+                            field.DefUid = property.Value.GetInt32();
+                        }
+                    }
+                }
+
                 output.Add(field);
             }
             return output;
@@ -1370,7 +1459,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Value of the field instance.
         /// </summary>
-        public List<int> Value;
+        public List<int> Value { get; set; }
     }
 
     /// <summary>
@@ -1381,7 +1470,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Value of the field instance.
         /// </summary>
-        public List<float> Value;
+        public List<float> Value { get; set; }
     }
 
     /// <summary>
@@ -1392,7 +1481,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Value of the field instance.
         /// </summary>
-        public List<bool> Value;
+        public List<bool> Value { get; set; }
     }
 
     /// <summary>
@@ -1403,7 +1492,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Value of the field instance.
         /// </summary>
-        public List<string> Value;
+        public List<string> Value { get; set; }
     }
 
     /// <summary>
@@ -1414,7 +1503,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Value of the field instance.
         /// </summary>
-        public List<Color> Value;
+        public List<Color> Value { get; set; }
     }
 
     /// <summary>
@@ -1425,7 +1514,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Value of the field instance.
         /// </summary>
-        public List<Point> Value;
+        public List<Point> Value { get; set; }
     }
 
     /// <summary>
@@ -1670,7 +1759,7 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public EnumValueDef GetValueByType(string id)
         {
-            EnumValueDef val = new();
+            EnumValueDef val = new EnumValueDef();
             foreach (EnumValueDef value in Values)
             {
                 if (value.Id == id)
@@ -1703,7 +1792,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Optional color
         /// </summary>
-        public int Color { get; set; }
+        public Color Color { get; set; }
 
         /// <summary>
         /// Load the enums values definitions of project
@@ -1734,7 +1823,11 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "color")
                         {
-                            enumValue.Color = property.Value.GetInt32();
+                            enumValue.Color = new Color(
+                                System.Drawing.ColorTranslator.FromHtml("#" + property.Value.GetInt32().ToString("x")).R,
+                                System.Drawing.ColorTranslator.FromHtml("#" + property.Value.GetInt32().ToString("x")).G,
+                                System.Drawing.ColorTranslator.FromHtml("#" + property.Value.GetInt32().ToString("x")).B
+                                );
                         }
                     }
                 }
@@ -1857,7 +1950,7 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public IntGridValueDef GetIntGridValueById(string id)
         {
-            IntGridValueDef val = new();
+            IntGridValueDef val = new IntGridValueDef();
             foreach (IntGridValueDef value in IntGridValues)
             {
                 if (value.Identifier == id)
@@ -2176,7 +2269,7 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public TileMetadata GetTileMetadataByTileId(int id)
         {
-            TileMetadata tm = new();
+            TileMetadata tm = new TileMetadata();
             foreach (TileMetadata tileMetadata in CustomData)
             {
                 if (tileMetadata.TileId == id)
@@ -2194,7 +2287,7 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public TilesetTag GetTilesetTagByEnumValueId(string id)
         {
-            TilesetTag tst = new();
+            TilesetTag tst = new TilesetTag();
             foreach (TilesetTag tilesetTag in EnumTags)
             {
                 if (tilesetTag.EnumValueId == id)
@@ -2212,7 +2305,7 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public List<string> GetEnumValueIdsByTileId(int id)
         {
-            List<string> values = new();
+            List<string> values = new List<string>();
             foreach (TilesetTag tag in EnumTags)
             {
                 if(tag.TileIds.Contains(id))

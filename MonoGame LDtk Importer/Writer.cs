@@ -231,55 +231,79 @@ namespace Importer
                     if (field.Type == FieldType.Int)
                     {
                         IntField intField = field as IntField;
-                        output.Write(intField.Value.Count);
-                        foreach(int i in intField.Value)
+                        output.Write(intField.Value != null);
+                        if (intField.Value != null)
                         {
-                            output.Write(i);
+                            output.Write(intField.Value.Count);
+                            foreach (int i in intField.Value)
+                            {
+                                output.Write(i);
+                            }
                         }
                     }
                     else if (field.Type == FieldType.Float)
                     {
                         FloatField floatField = field as FloatField;
-                        output.Write(floatField.Value.Count);
-                        foreach (float f in floatField.Value)
+                        output.Write(floatField.Value != null);
+                        if (floatField.Value != null)
                         {
-                            output.Write(f);
+                            output.Write(floatField.Value.Count);
+                            foreach (float f in floatField.Value)
+                            {
+                                output.Write(f);
+                            }
                         }
                     }
                     else if (field.Type == FieldType.Bool)
                     {
                         BoolField boolField = field as BoolField;
-                        output.Write(boolField.Value.Count);
-                        foreach (bool b in boolField.Value)
+                        output.Write(boolField.Value != null);
+                        if (boolField.Value != null)
                         {
-                            output.Write(b);
+                            output.Write(boolField.Value.Count);
+                            foreach (bool b in boolField.Value)
+                            {
+                                output.Write(b);
+                            }
                         }
                     }
                     else if (field.Type == FieldType.Color)
                     {
                         ColorField colorField = field as ColorField;
-                        output.Write(colorField.Value.Count);
-                        foreach (Color c in colorField.Value)
+                        output.Write(colorField.Value != null);
+                        if (colorField.Value != null)
                         {
-                            output.Write(c);
+                            output.Write(colorField.Value.Count);
+                            foreach (Color c in colorField.Value)
+                            {
+                                output.Write(c);
+                            }
                         }
                     }
                     else if (field.Type == FieldType.Point)
                     {
                         PointField pointField = field as PointField;
-                        output.Write(pointField.Value.Count);
-                        foreach (Point p in pointField.Value)
+                        output.Write(pointField.Value != null);
+                        if (pointField.Value != null)
                         {
-                            output.Write(p.ToVector2());
+                            output.Write(pointField.Value.Count);
+                            foreach (Point p in pointField.Value)
+                            {
+                                output.Write(p.ToVector2());
+                            }
                         }
                     }
                     else
                     {
                         StringField stringField = field as StringField;
-                        output.Write(stringField.Value.Count);
-                        foreach (string s in stringField.Value)
+                        output.Write(stringField.Value != null);
+                        if (stringField.Value != null)
                         {
-                            output.Write(s);
+                            output.Write(stringField.Value.Count);
+                            foreach (string s in stringField.Value)
+                            {
+                                output.Write(s);
+                            }
                         }
                     }
                 }
@@ -288,20 +312,19 @@ namespace Importer
                 output.Write(level.LayerInstances.Count); //int
                 foreach (Layer layer in level.LayerInstances)
                 {
+                    output.Write((int)layer.Type); //int to enum
+
                     output.Write(layer.Height); //int
                     output.Write(layer.Width); //int
                     output.Write(layer.GridSize); //int
                     output.Write(layer.Identifier); //string
                     output.Write(layer.Opacity); //float
-
                     output.Write(layer.TotalOffset); //Vector2
 
-                    output.Write((int)layer.Type); //int to enum
                     output.Write(layer.LayerDefUid); //int
                     output.Write(layer.LevelId); //int
 
                     output.Write(layer.Offset); //Vector2
-
                     output.Write(layer.IsVisible); //bool
 
                     
@@ -372,55 +395,79 @@ namespace Importer
                                 if (field.Type == FieldType.Int)
                                 {
                                     IntField intField = field as IntField;
-                                    output.Write(intField.Value.Count);
-                                    foreach (int i in intField.Value)
+                                    output.Write(intField.Value != null);
+                                    if (intField.Value != null)
                                     {
-                                        output.Write(i);
+                                        output.Write(intField.Value.Count);
+                                        foreach (int i in intField.Value)
+                                        {
+                                            output.Write(i);
+                                        }
                                     }
                                 }
                                 else if (field.Type == FieldType.Float)
                                 {
                                     FloatField floatField = field as FloatField;
-                                    output.Write(floatField.Value.Count);
-                                    foreach (float f in floatField.Value)
+                                    output.Write(floatField.Value != null);
+                                    if (floatField.Value != null)
                                     {
-                                        output.Write(f);
+                                        output.Write(floatField.Value.Count);
+                                        foreach (float f in floatField.Value)
+                                        {
+                                            output.Write(f);
+                                        }
                                     }
                                 }
                                 else if (field.Type == FieldType.Bool)
                                 {
                                     BoolField boolField = field as BoolField;
-                                    output.Write(boolField.Value.Count);
-                                    foreach (bool b in boolField.Value)
+                                    output.Write(boolField.Value != null);
+                                    if (boolField.Value != null)
                                     {
-                                        output.Write(b);
+                                        output.Write(boolField.Value.Count);
+                                        foreach (bool b in boolField.Value)
+                                        {
+                                            output.Write(b);
+                                        }
                                     }
                                 }
                                 else if (field.Type == FieldType.Color)
                                 {
                                     ColorField colorField = field as ColorField;
-                                    output.Write(colorField.Value.Count);
-                                    foreach (Color c in colorField.Value)
+                                    output.Write(colorField.Value != null);
+                                    if (colorField.Value != null)
                                     {
-                                        output.Write(c);
+                                        output.Write(colorField.Value.Count);
+                                        foreach (Color c in colorField.Value)
+                                        {
+                                            output.Write(c);
+                                        }
                                     }
                                 }
                                 else if (field.Type == FieldType.Point)
                                 {
                                     PointField pointField = field as PointField;
-                                    output.Write(pointField.Value.Count);
-                                    foreach (Point p in pointField.Value)
+                                    output.Write(pointField.Value != null);
+                                    if (pointField.Value != null)
                                     {
-                                        output.Write(p.ToVector2());
+                                        output.Write(pointField.Value.Count);
+                                        foreach (Point p in pointField.Value)
+                                        {
+                                            output.Write(p.ToVector2());
+                                        }
                                     }
                                 }
                                 else
                                 {
                                     StringField stringField = field as StringField;
-                                    output.Write(stringField.Value.Count);
-                                    foreach (string s in stringField.Value)
+                                    output.Write(stringField.Value != null);
+                                    if (stringField.Value != null)
                                     {
-                                        output.Write(s);
+                                        output.Write(stringField.Value.Count);
+                                        foreach (string s in stringField.Value)
+                                        {
+                                            output.Write(s);
+                                        }
                                     }
                                 }
                             }
@@ -428,11 +475,39 @@ namespace Importer
                     }
                     else if (layer.Type == LayerType.IntGrid)
                     {
-
+                        IntGridLayer intGridLayer = layer as IntGridLayer;
+                        output.Write(intGridLayer.IntGridCsv.Count);
+                        foreach(int i in intGridLayer.IntGridCsv)
+                        {
+                            output.Write(i);
+                        }
                     }
                     else if (layer.Type == LayerType.Tiles)
                     {
+                        TileLayer tileLayer = layer as TileLayer;
+                        output.Write(tileLayer.GridTilesInstances.Count);
+                        foreach(Tile tile in tileLayer.GridTilesInstances)
+                        {
+                            output.Write(tile.IsFlippedOnX);
+                            output.Write(tile.IsFlippedOnY);
+                            output.Write(tile.Coordinates);
+                            output.Write(tile.Source);
+                            output.Write(tile.TileId);
+                        }
 
+                        output.Write(tileLayer.TilesetDefUid.HasValue);
+                        if (tileLayer.TilesetDefUid.HasValue)
+                        {
+                            output.Write(tileLayer.TilesetDefUid.Value);
+                        }
+
+                        output.Write(tileLayer.TilesetRelPath);
+
+                        output.Write(tileLayer.OverrideTilesetUid.HasValue);
+                        if (tileLayer.OverrideTilesetUid.HasValue)
+                        {
+                            output.Write(tileLayer.OverrideTilesetUid.Value);
+                        }
                     }
                 }
             }

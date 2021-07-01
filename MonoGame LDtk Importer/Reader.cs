@@ -69,6 +69,8 @@ namespace Importer
                         input.ReadInt32(),
                         input.ReadInt32()
                         );
+
+                    value.Color = input.ReadColor();
                     value.Id = input.ReadString();
                     if (input.ReadBoolean()) value.TileId = input.ReadInt32();
                     enumDef.Values.Add(value);
@@ -98,6 +100,8 @@ namespace Importer
                         input.ReadInt32(),
                         input.ReadInt32()
                         );
+
+                    value.Color = input.ReadColor();
                     value.Id = input.ReadString();
                     if (input.ReadBoolean()) value.TileId = input.ReadInt32();
                     enumDef.Values.Add(value);
@@ -140,6 +144,36 @@ namespace Importer
             for (int i = 0; i < tilesetCount; i++)
             {
                 TilesetDef tileset = new TilesetDef();
+
+                tileset.GridHeight = input.ReadInt32();
+                tileset.GridWidth = input.ReadInt32();
+
+                int metadataCount = input.ReadInt32();
+                tileset.CustomData = new List<TileMetadata>();
+                for (int j = 0; j < metadataCount; j++)
+                {
+                    TileMetadata metadata = new TileMetadata();
+                    metadata.Data = input.ReadString();
+                    metadata.TileId = input.ReadInt32();
+                    tileset.CustomData.Add(metadata);
+                }
+
+                int tagCount = input.ReadInt32();
+                tileset.EnumTags = new List<TilesetTag>();
+                for (int j = 0; j < tagCount; j++)
+                {
+                    TilesetTag tag = new TilesetTag();
+
+                    int tileIdsCount = input.ReadInt32();
+                    tag.TileIds = new List<int>();
+                    for (int k = 0; k < tileIdsCount; k++)
+                    {
+                        tag.TileIds.Add(input.ReadInt32());
+                    }
+
+                    tag.EnumValueId = input.ReadString();
+                }
+
                 tileset.Identifier = input.ReadString();
                 tileset.Padding = input.ReadInt32();
                 tileset.Height = input.ReadInt32();
@@ -201,13 +235,129 @@ namespace Importer
                 {
                     Field field = new Field();
 
-                    field.Identifier = input.ReadString();
-                    field.Type = (FieldType)input.ReadInt32();
-                    field.Value = input.ReadString();
+                    string identifier = input.ReadString();
+                    FieldType type = (FieldType)input.ReadInt32();
+
+                    if (type == FieldType.Int)
+                    {
+                        field = new IntField();
+                        field.Type = type;
+                        field.Identifier = identifier;
+                    }
+                    else if (type == FieldType.Float)
+                    {
+                        field = new FloatField();
+                        field.Type = type;
+                        field.Identifier = identifier;
+                    }
+                    else if (type == FieldType.Bool)
+                    {
+                        field = new BoolField();
+                        field.Type = type;
+                        field.Identifier = identifier;
+                    }
+                    else if (type == FieldType.Point)
+                    {
+                        field = new PointField();
+                        field.Type = type;
+                        field.Identifier = identifier;
+                    }
+                    else if (type == FieldType.Color)
+                    {
+                        field = new ColorField();
+                        field.Type = type;
+                        field.Identifier = identifier;
+                    }
+                    else
+                    {
+                        field = new StringField();
+                        field.Type = type;
+                        field.Identifier = identifier;
+                    }
+
                     field.DefUid = input.ReadInt32();
                     if (input.ReadBoolean()) field.EnumName = input.ReadString();
                     field.IsArray = input.ReadBoolean();
                     level.FieldInstances.Add(field);
+
+                    if (field.Type == FieldType.Int)
+                    {
+                        IntField intField = field as IntField;
+                        if (input.ReadBoolean())
+                        {
+                            int valueCount = input.ReadInt32();
+                            intField.Value = new List<int>();
+                            for (int k = 0; k < valueCount; k++)
+                            {
+                                intField.Value.Add(input.ReadInt32());
+                            }
+                        }
+                    }
+                    else if (field.Type == FieldType.Float)
+                    {
+                        FloatField floatField = field as FloatField;
+                        if (input.ReadBoolean())
+                        {
+                            int valueCount = input.ReadInt32();
+                            floatField.Value = new List<float>();
+                            for (int k = 0; k < valueCount; k++)
+                            {
+                                floatField.Value.Add(input.ReadSingle());
+                            }
+                        }
+                    }
+                    else if (field.Type == FieldType.Bool)
+                    {
+                        BoolField boolField = field as BoolField;
+                        if (input.ReadBoolean())
+                        {
+                            int valueCount = input.ReadInt32();
+                            boolField.Value = new List<bool>();
+                            for (int k = 0; k < valueCount; k++)
+                            {
+                                boolField.Value.Add(input.ReadBoolean());
+                            }
+                        }
+                    }
+                    else if (field.Type == FieldType.Color)
+                    {
+                        ColorField colorField = field as ColorField;
+                        if (input.ReadBoolean())
+                        {
+                            int valueCount = input.ReadInt32();
+                            colorField.Value = new List<Color>();
+                            for (int k = 0; k < valueCount; k++)
+                            {
+                                colorField.Value.Add(input.ReadColor());
+                            }
+                        }
+                    }
+                    else if (field.Type == FieldType.Point)
+                    {
+                        PointField pointField = field as PointField;
+                        if (input.ReadBoolean())
+                        {
+                            int valueCount = input.ReadInt32();
+                            pointField.Value = new List<Point>();
+                            for (int k = 0; k < valueCount; k++)
+                            {
+                                pointField.Value.Add(input.ReadVector2().ToPoint());
+                            }
+                        }
+                    }
+                    else
+                    {
+                        StringField stringField = field as StringField;
+                        if (input.ReadBoolean())
+                        {
+                            int valueCount = input.ReadInt32();
+                            stringField.Value = new List<string>();
+                            for (int k = 0; k < valueCount; k++)
+                            {
+                                stringField.Value.Add(input.ReadString());
+                            }
+                        }
+                    }
                 }
 
                 //layers
@@ -216,101 +366,236 @@ namespace Importer
                 for (int j = 0; j < layersCount; j++)
                 {
                     Layer layer = new Layer();
+                    LayerType type = (LayerType)input.ReadInt32();
+
+                    if (type == LayerType.AutoLayer)
+                    {
+                        layer = new AutoLayer();
+                    }
+                    else if (type == LayerType.Entities)
+                    {
+                        layer = new EntitieLayer();
+                    }
+                    else if (type == LayerType.IntGrid)
+                    {
+                        layer = new IntGridLayer();
+                    }
+                    else
+                    {
+                        layer = new TileLayer();
+                    }
+
+                    layer.Type = type;
+
                     layer.Height = input.ReadInt32();
                     layer.Width = input.ReadInt32();
                     layer.GridSize = input.ReadInt32();
                     layer.Identifier = input.ReadString();
                     layer.Opacity = input.ReadSingle();
                     layer.TotalOffset = input.ReadVector2();
-                    if (input.ReadBoolean()) layer.TilesetDefUid = input.ReadInt32();
-                    layer.TilesetRelPath = input.ReadString();
-                    layer.Type = (LayerType)input.ReadInt32();
+
                     layer.LayerDefUid = input.ReadInt32();
                     layer.LevelId = input.ReadInt32();
-                    if (input.ReadBoolean()) layer.OverrideTilesetUid = input.ReadInt32();
+
                     layer.Offset = input.ReadVector2();
                     layer.IsVisible = input.ReadBoolean();
 
-                    //auto layer tiles
-                    layer.AutoLayerTiles = new List<Tile>();
-                    int autoTilesCount = input.ReadInt32();
-                    for (int k = 0; k < autoTilesCount; k++)
+                    if (layer.Type == LayerType.AutoLayer)
                     {
-                        Tile tile = new Tile();
-                        tile.IsFlippedOnX = input.ReadBoolean();
-                        tile.IsFlippedOnY = input.ReadBoolean();
-                        tile.Coordinates = input.ReadVector2();
-                        tile.Source = input.ReadVector2();
-                        tile.TileId = input.ReadInt32();
-
-                        layer.AutoLayerTiles.Add(tile);
-                    }
-
-                    //entities
-                    layer.EntityInstances = new List<Entity>();
-                    int entitieCount = input.ReadInt32();
-                    for (int k = 0; k < entitieCount; k++)
-                    {
-                        Entity entity = new Entity();
-                        entity.GridCoordinates = input.ReadVector2();
-                        entity.Identifier = input.ReadString();
-                        entity.PivotCoordinates = input.ReadVector2();
-                        entity.DefUid = input.ReadInt32();
-                        entity.Height = input.ReadInt32();
-                        entity.Width = input.ReadInt32();
-                        entity.Coordinates = input.ReadVector2();
+                        AutoLayer autoLayer = layer as AutoLayer;
 
                         if (input.ReadBoolean())
                         {
-                            EntityTile tile = new EntityTile();
-                            tile.SourceRectangle = new Rectangle(
-                                input.ReadInt32(),
-                                input.ReadInt32(),
-                                input.ReadInt32(),
-                                input.ReadInt32()
-                                );
-                            tile.TilesetUid = input.ReadInt32();
-                            entity.Tile = tile;
+                            autoLayer.TilesetDefUid = input.ReadInt32();
                         }
-
-                        //field instances
-                        entity.FieldInstances = new List<Field>();
-                        int fieldInstancesCount2 = input.ReadInt32();
-                        for (int l = 0; l < fieldInstancesCount2; l++)
+                        if (input.ReadInt32() > 0)
                         {
-                            Field field = new Field();
-                            field.Identifier = input.ReadString();
-                            field.Type = (FieldType)input.ReadInt32();
-                            field.Value = input.ReadString();
-                            field.DefUid = input.ReadInt32();
-                            field.EnumName = input.ReadString();
-                            field.IsArray = input.ReadBoolean();
+                            autoLayer.TilesetRelPath = input.ReadString();
+                        }
+                        int tileCount = input.ReadInt32();
+                        for (int k = 0; k < tileCount; k++)
+                        {
+                            Tile tile = new Tile();
+                            tile.IsFlippedOnX = input.ReadBoolean();
+                            tile.IsFlippedOnY = input.ReadBoolean();
+                            tile.Coordinates = input.ReadVector2();
+                            tile.Source = input.ReadVector2();
+                            tile.TileId = input.ReadInt32();
 
-                            entity.FieldInstances.Add(field);
+                            autoLayer.AutoLayerTiles.Add(tile);
                         }
 
-                        layer.EntityInstances.Add(entity);
+                        layer = autoLayer;
                     }
-
-                    //grid tiles
-                    layer.GridTilesInstances = new List<Tile>();
-                    int gridTilesCount = input.ReadInt32();
-                    for (int k = 0; k < gridTilesCount; k++)
+                    else if (layer.Type == LayerType.Entities)
                     {
-                        Tile tile = new Tile();
-                        tile.IsFlippedOnX = input.ReadBoolean();
-                        tile.IsFlippedOnY = input.ReadBoolean();
-                        tile.Coordinates = input.ReadVector2();
-                        tile.Source = input.ReadVector2();
-                        tile.TileId = input.ReadInt32();
+                        EntitieLayer entitieLayer = layer as EntitieLayer;
+                        entitieLayer.EntityInstances = new List<Entity>();
+                        int entitieCount = input.ReadInt32();
+                        for (int k = 0; k < entitieCount; k++)
+                        {
+                            Entity entity = new Entity();
+                            entity.GridCoordinates = input.ReadVector2();
+                            entity.Identifier = input.ReadString();
+                            entity.PivotCoordinates = input.ReadVector2();
+                            entity.DefUid = input.ReadInt32();
+                            entity.Height = input.ReadInt32();
+                            entity.Width = input.ReadInt32();
+                            entity.Coordinates = input.ReadVector2();
 
-                        layer.AutoLayerTiles.Add(tile);
+                            //entity tile
+                            if (input.ReadBoolean())
+                            {
+                                EntityTile tile = new EntityTile();
+                                tile.SourceRectangle = new Rectangle(
+                                    input.ReadInt32(),
+                                    input.ReadInt32(),
+                                    input.ReadInt32(),
+                                    input.ReadInt32()
+                                    );
+                                tile.TilesetUid = input.ReadInt32();
+                                entity.Tile = tile;
+                            }
+
+                            //field instances
+                            entity.FieldInstances = new List<Field>();
+                            int fieldInstancesCount2 = input.ReadInt32();
+                            for (int l = 0; l < fieldInstancesCount2; l++)
+                            {
+                                Field field = new Field();
+                                field.Identifier = input.ReadString();
+                                field.Type = (FieldType)input.ReadInt32();
+                                field.DefUid = input.ReadInt32();
+                                field.EnumName = input.ReadString();
+                                field.IsArray = input.ReadBoolean();
+
+                                if (field.Type == FieldType.Int)
+                                {
+                                    IntField intField = field as IntField;
+                                    if (input.ReadBoolean())
+                                    {
+                                        int valueCount = input.ReadInt32();
+                                        intField.Value = new List<int>();
+                                        for (int m = 0; m < valueCount; m++)
+                                        {
+                                            intField.Value.Add(input.ReadInt32());
+                                        }
+                                    }
+                                }
+                                else if (field.Type == FieldType.Float)
+                                {
+                                    FloatField floatField = field as FloatField;
+                                    if (input.ReadBoolean())
+                                    {
+                                        int valueCount = input.ReadInt32();
+                                        floatField.Value = new List<float>();
+                                        for (int m = 0; m < valueCount; m++)
+                                        {
+                                            floatField.Value.Add(input.ReadSingle());
+                                        }
+                                    }
+                                }
+                                else if (field.Type == FieldType.Bool)
+                                {
+                                    BoolField boolField = field as BoolField;
+                                    if (input.ReadBoolean())
+                                    {
+                                        int valueCount = input.ReadInt32();
+                                        boolField.Value = new List<bool>();
+                                        for (int m = 0; m < valueCount; m++)
+                                        {
+                                            boolField.Value.Add(input.ReadBoolean());
+                                        }
+                                    }
+                                }
+                                else if (field.Type == FieldType.Color)
+                                {
+                                    ColorField colorField = field as ColorField;
+                                    if (input.ReadBoolean())
+                                    {
+                                        int valueCount = input.ReadInt32();
+                                        colorField.Value = new List<Color>();
+                                        for (int m = 0; m < valueCount; m++)
+                                        {
+                                            colorField.Value.Add(input.ReadColor());
+                                        }
+                                    }
+                                }
+                                else if (field.Type == FieldType.Point)
+                                {
+                                    PointField pointField = field as PointField;
+                                    if (input.ReadBoolean())
+                                    {
+                                        int valueCount = input.ReadInt32();
+                                        pointField.Value = new List<Point>();
+                                        for (int m = 0; m < valueCount; m++)
+                                        {
+                                            pointField.Value.Add(input.ReadVector2().ToPoint());
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    StringField stringField = field as StringField;
+                                    if (input.ReadBoolean())
+                                    {
+                                        int valueCount = input.ReadInt32();
+                                        stringField.Value = new List<string>();
+                                        for (int m = 0; m < valueCount; m++)
+                                        {
+                                            stringField.Value.Add(input.ReadString());
+                                        }
+                                    }
+                                }
+
+                                entity.FieldInstances.Add(field);
+                            }
+
+                            entitieLayer.EntityInstances.Add(entity);
+                        }
+
+                        layer = entitieLayer;
                     }
-
-                    layer.IntGridCsv = new int[input.ReadInt32()];
-                    for (int k = 0; k < layer.IntGridCsv.Length; k++)
+                    else if (layer.Type == LayerType.IntGrid)
                     {
-                        layer.IntGridCsv.SetValue(input.ReadInt32(), k);
+                        IntGridLayer intGridLayer = layer as IntGridLayer;
+                        int valueCount = input.ReadInt32();
+                        intGridLayer.IntGridCsv = new List<int>();
+                        for (int k = 0; k < valueCount; k++)
+                        {
+                            intGridLayer.IntGridCsv.Add(input.ReadInt32());
+                        }
+                        layer = intGridLayer;
+                    }
+                    else
+                    {
+                        TileLayer tileLayer = layer as TileLayer;
+                        int tileCount = new int();
+                        tileLayer.GridTilesInstances = new List<Tile>();
+                        for (int k = 0; k < tileCount; k++)
+                        {
+                            Tile tile = new Tile();
+                            tile.IsFlippedOnX = input.ReadBoolean();
+                            tile.IsFlippedOnY = input.ReadBoolean();
+                            tile.Coordinates = input.ReadVector2();
+                            tile.Source = input.ReadVector2();
+                            tile.TileId = input.ReadInt32();
+                            tileLayer.GridTilesInstances.Add(tile);
+                        }
+
+                        if (input.ReadBoolean())
+                        {
+                            tileLayer.TilesetDefUid = input.ReadInt32();
+                        }
+
+                        tileLayer.TilesetRelPath = input.ReadString();
+
+                        if (input.ReadBoolean())
+                        {
+                            tileLayer.OverrideTilesetUid = input.ReadInt32();
+                        }
+
+                        layer = tileLayer;
                     }
 
                     level.LayerInstances.Add(layer);
