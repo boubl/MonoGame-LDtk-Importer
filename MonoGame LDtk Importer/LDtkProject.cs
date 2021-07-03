@@ -49,10 +49,11 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="project">A json element containing the project</param>
         /// <returns></returns>
-        public static LDtkProject LoadProject(JsonElement project, string filename)
+        public static LDtkProject LoadProject(JsonElement project, string filePath)
         {
             LDtkProject output = new LDtkProject();
             bool LevelsAreExternals = false;
+            string baseFolder = filePath.Remove(filePath.Length - Path.GetFileName(filePath).Length);
 
             foreach (JsonProperty property in project.EnumerateObject().ToArray())
             {
@@ -68,7 +69,7 @@ namespace MonoGame_LDtk_Importer
                     }
                     else if (property.Name == "defs")
                     {
-                        output.Definitions = Definitions.LoadDefinitions(property);
+                        output.Definitions = Definitions.LoadDefinitions(property, baseFolder);
                     }
                     else if (property.Name == "externalLevels")
                     {
@@ -76,7 +77,7 @@ namespace MonoGame_LDtk_Importer
                     }
                     else if (property.Name == "levels")
                     {
-                        output.Levels = Level.LoadLevels(property, LevelsAreExternals, filename);
+                        output.Levels = Level.LoadLevels(property, LevelsAreExternals, baseFolder);
                     }
                     else if (property.Name == "worldGridHeight")
                     {
@@ -97,7 +98,13 @@ namespace MonoGame_LDtk_Importer
 
         public LDtkProject(string filePath)
         {
-            LoadProject(JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(filePath)), filePath);
+            LDtkProject project = LoadProject(JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(filePath)), filePath);
+            BackgroundColor = project.BackgroundColor;
+            Definitions = project.Definitions;
+            Levels = project.Levels;
+            WorldGridHeight = project.WorldGridHeight;
+            WorldGridWidth = project.WorldGridWidth;
+            WorldLayout = project.WorldLayout;
         }
 
         public LDtkProject() { }
@@ -144,7 +151,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Position informations of the background image, if there is one
         /// </summary>
-        public BackgroundPosition? BackgroundPosition { get; set; }
+        public BackgroundPosition BackgroundPosition { get; set; }
         /// <summary>
         /// An array listing all other levels touching this one on the world map
         /// </summary>
@@ -189,7 +196,7 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="jsonProperty">A json property containing the entities instances</param>
         /// <returns></returns>
-        public static List<Level> LoadLevels(JsonProperty jsonProperty, bool levelsAreExternals, string filename)
+        public static List<Level> LoadLevels(JsonProperty jsonProperty, bool levelsAreExternals, string baseFolder)
         {
             List<Level> output = new List<Level>();
             foreach (JsonElement element in jsonProperty.Value.EnumerateArray().ToArray())
@@ -199,8 +206,7 @@ namespace MonoGame_LDtk_Importer
 
                 if (levelsAreExternals)
                 {
-                    string path = filename.Remove(filename.Length - Path.GetFileName(filename).Length);
-                    path = path + jsonElement.GetProperty("externalRelPath").GetString();
+                    string path = baseFolder + jsonElement.GetProperty("externalRelPath").GetString();
                     jsonElement = JsonSerializer.Deserialize<JsonElement>(File.ReadAllText(path));
                 }
 
@@ -216,7 +222,7 @@ namespace MonoGame_LDtk_Importer
                                 System.Drawing.ColorTranslator.FromHtml(property.Value.GetString()).B
                                 );
                         }
-                        if (property.Name == "_bgPos")
+                        if (property.Name == "__bgPos")
                         {
                             level.BackgroundPosition = MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(property);
                         }
@@ -226,9 +232,8 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "bgRelPath")
                         {
-                            level.BackgroundRelPath = property.Value.GetString();
+                            level.BackgroundRelPath = baseFolder + property.Value.GetString();
                         }
-                        // load here externalRelPath
                         else if (property.Name == "bgRelPath")
                         {
                             level.BackgroundRelPath = property.Value.GetString();
@@ -243,7 +248,7 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "layerInstances")
                         {
-                            level.LayerInstances = Layer.LoadLayers(property);
+                            level.LayerInstances = Layer.LoadLayers(property, baseFolder);
                         }
                         else if (property.Name == "pxHei")
                         {
@@ -310,14 +315,15 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public Texture2D GetCroppedBackground(GraphicsDevice graphicsDevice)
         {
-            if (BackgroundPosition.HasValue)
+            if (BackgroundPosition != null)
             {
-                BackgroundPosition bgPos = BackgroundPosition.Value;
+                BackgroundPosition bgPos = BackgroundPosition;
                 Texture2D bg = Texture2D.FromFile(graphicsDevice, BackgroundRelPath);
                 Texture2D bgTx = new Texture2D(graphicsDevice, bgPos.CropRectangle.Width, bgPos.CropRectangle.Height);
                 Color[] data = new Color[bgPos.CropRectangle.Width * bgPos.CropRectangle.Height];
                 bg.GetData(0, bgPos.CropRectangle, data, 0, bgPos.CropRectangle.Width * bgPos.CropRectangle.Height);
                 bgTx.SetData(data);
+                bg.Dispose();
                 return bgTx;
             }
             else
@@ -330,7 +336,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// Position informations of a background image
     /// </summary>
-    public struct BackgroundPosition
+    public class BackgroundPosition
     {
         /// <summary>
         /// The coordinates of the cropped sub-rectangle of the displayed background image
@@ -360,16 +366,16 @@ namespace MonoGame_LDtk_Importer
                     if (property.Name == "cropRect")
                     {
                         bgPos.CropRectangle = new Rectangle(
-                            property.Value.EnumerateArray().ToArray()[0].GetInt32(),
-                            property.Value.EnumerateArray().ToArray()[1].GetInt32(),
-                            property.Value.EnumerateArray().ToArray()[2].GetInt32(),
-                            property.Value.EnumerateArray().ToArray()[3].GetInt32());
+                            (int)property.Value.EnumerateArray().ToArray()[0].GetSingle(),
+                            (int)property.Value.EnumerateArray().ToArray()[1].GetSingle(),
+                            (int)property.Value.EnumerateArray().ToArray()[2].GetSingle(),
+                            (int)property.Value.EnumerateArray().ToArray()[3].GetSingle());
                     }
                     else if (property.Name == "scale")
                     {
                         bgPos.Scale = new Vector2(
-                            property.Value.EnumerateArray().ToArray()[0].GetInt32(),
-                            property.Value.EnumerateArray().ToArray()[1].GetInt32());
+                            property.Value.EnumerateArray().ToArray()[0].GetSingle(),
+                            property.Value.EnumerateArray().ToArray()[1].GetSingle());
                     }
                     else if (property.Name == "topLeftPx")
                     {
@@ -381,19 +387,12 @@ namespace MonoGame_LDtk_Importer
             }
             return bgPos;
         }
-
-        public BackgroundPosition(Rectangle cropRectangle, Vector2 scale, Vector2 coordinates)
-        {
-            CropRectangle = cropRectangle;
-            Scale = scale;
-            Coordinates = coordinates;
-        }
     }
 
     /// <summary>
     /// A level neighbour
     /// </summary>
-    public struct LevelNeighbour
+    public class LevelNeighbour
     {
         /// <summary>
         /// An enum indicating the level location (North, South, West, East)
@@ -512,7 +511,7 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         public bool IsVisible { get; set; }
 
-        public static List<Layer> LoadLayers(JsonProperty jsonProperty)
+        public static List<Layer> LoadLayers(JsonProperty jsonProperty, string baseFolder)
         {
             List<Layer> output = new List<Layer>();
             foreach (JsonElement jsonElement in jsonProperty.Value.EnumerateArray().ToArray())
@@ -595,7 +594,7 @@ namespace MonoGame_LDtk_Importer
                     }
                     if (jsonElement.GetProperty("__tilesetRelPath").ValueKind != JsonValueKind.Null)
                     {
-                        autoLayer.TilesetRelPath = jsonElement.GetProperty("__tilesetRelPath").GetString();
+                        autoLayer.TilesetRelPath = baseFolder + jsonElement.GetProperty("__tilesetRelPath").GetString();
                     }
                     if (jsonElement.GetProperty("autoLayerTiles").ValueKind != JsonValueKind.Null)
                     {
@@ -635,7 +634,7 @@ namespace MonoGame_LDtk_Importer
                     }
                     if (jsonElement.GetProperty("__tilesetRelPath").ValueKind != JsonValueKind.Null)
                     {
-                        tileLayer.TilesetRelPath = jsonElement.GetProperty("__tilesetRelPath").GetString();
+                        tileLayer.TilesetRelPath = baseFolder + jsonElement.GetProperty("__tilesetRelPath").GetString();
                     }
                     if (jsonElement.GetProperty("gridTiles").ValueKind != JsonValueKind.Null)
                     {
@@ -704,7 +703,7 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public int GetValueAt(Point position)
         {
-            return IntGridCsv[Width * (position.Y - 1) + position.X];
+            return IntGridCsv[Width * (position.Y / GridSize) + (position.X / GridSize)];
         }
 
         /// <summary>
@@ -760,7 +759,21 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public Tile GetTileAt(Point position)
         {
-            return GridTilesInstances[Width * (position.Y - 1) + position.X];
+            if (GridTilesInstances.Count > 0)
+            {
+                foreach (Tile tile in GridTilesInstances)
+                {
+                    if (tile.Coordinates == position)
+                    {
+                        return tile;
+                    }
+                }
+                throw new ArgumentException("Tile not found");
+            }
+            else
+            {
+                throw new ArgumentException("Tile not found (This layer is empty)");
+            }
         }
 
         /// <summary>
@@ -771,13 +784,11 @@ namespace MonoGame_LDtk_Importer
         public List<Point> GetPointsByTileId(int id)
         {
             List<Point> list = new List<Point>();
-            for (int i = 0; i < GridTilesInstances.Count; i++)
+            foreach (Tile tile in GridTilesInstances)
             {
-                if (GridTilesInstances[i].TileId == id)
+                if (tile.TileId == id)
                 {
-                    int y = (int)Math.Ceiling((double)(i / Width));
-                    int x = i - Width * y;
-                    list.Add(new Point(x, y));
+                    list.Add(tile.Coordinates);
                 }
             }
             return list;
@@ -797,7 +808,7 @@ namespace MonoGame_LDtk_Importer
         /// Return a list with all the used tile id in the layer
         /// </summary>
         /// <returns></returns>
-        public List<int> GetUsedTilesId()
+        public List<int> GetUsedTileIds()
         {
             List<int> list = new List<int>();
             foreach(Tile tile in GridTilesInstances)
@@ -813,8 +824,6 @@ namespace MonoGame_LDtk_Importer
 
         /// <summary>
         /// Return a dictionnary with the tile's textures corresponding to they ID
-        /// <br/>
-        /// Not recommended for rendering, use instead the <i>sourceRectangle</i> parameter while using <i>SpriteBatch.Draw()</i> to render a tile from a tileset
         /// </summary>
         /// <param name="graphicsDevice"></param>
         /// <returns></returns>
@@ -822,16 +831,17 @@ namespace MonoGame_LDtk_Importer
         {
             Dictionary<int, Texture2D> dico = new Dictionary<int, Texture2D>();
             Texture2D tileset = GetTilesetTexture(graphicsDevice);
-            foreach (int id in GetUsedTilesId())
+            foreach (int id in GetUsedTileIds())
             {
                 Tile tile = GetTileAt(GetPointsByTileId(id)[0]);
-                Rectangle tileRectangle = new Rectangle((int)tile.Source.X, (int)tile.Source.Y, (int)(tile.Source.X * GridSize), (int)(tile.Source.Y * GridSize));
+                Rectangle tileRectangle = new Rectangle((int)tile.Source.X, (int)tile.Source.Y, GridSize, GridSize);
                 Texture2D tileTx = new Texture2D(graphicsDevice, tileRectangle.Width, tileRectangle.Height);
                 Color[] data = new Color[tileRectangle.Width * tileRectangle.Height];
                 tileset.GetData(0, tileRectangle, data, 0, tileRectangle.Width * tileRectangle.Height);
                 tileTx.SetData(data);
                 dico.Add(id, tileTx);
             }
+            tileset.Dispose();
             return dico;
         }
     }
@@ -866,7 +876,21 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public Tile GetTileAt(Point position)
         {
-            return AutoLayerTiles[Width * (position.Y - 1) + position.X];
+            if (AutoLayerTiles.Count > 0)
+            {
+                foreach(Tile tile in AutoLayerTiles)
+                {
+                    if (tile.Coordinates == position)
+                    {
+                        return tile;
+                    }
+                }
+                throw new ArgumentException("Tile not found");
+            }
+            else
+            {
+                throw new ArgumentException("Tile not found (This layer is empty)");
+            }
         }
 
         /// <summary>
@@ -877,13 +901,11 @@ namespace MonoGame_LDtk_Importer
         public List<Point> GetPointsByTileId(int id)
         {
             List<Point> list = new List<Point>();
-            for (int i = 0; i < AutoLayerTiles.Count; i++)
+            foreach (Tile tile in AutoLayerTiles)
             {
-                if (AutoLayerTiles[i].TileId == id)
+                if (tile.TileId == id)
                 {
-                    int y = (int)Math.Ceiling((double)(i / Width));
-                    int x = i - Width * y;
-                    list.Add(new Point(x, y));
+                    list.Add(tile.Coordinates);
                 }
             }
             return list;
@@ -903,7 +925,7 @@ namespace MonoGame_LDtk_Importer
         /// Return a list with all the used tile id in the layer
         /// </summary>
         /// <returns></returns>
-        public List<int> GetUsedTilesId()
+        public List<int> GetUsedTileIds()
         {
             List<int> list = new List<int>();
             foreach (Tile tile in AutoLayerTiles)
@@ -919,8 +941,6 @@ namespace MonoGame_LDtk_Importer
 
         /// <summary>
         /// Return a dictionnary with the tile's textures corresponding to they ID
-        /// <br/>
-        /// Not recommended for rendering, use instead the <i>sourceRectangle</i> parameter while using <i>SpriteBatch.Draw()</i> to render a tile from a tileset
         /// </summary>
         /// <param name="graphicsDevice"></param>
         /// <returns></returns>
@@ -928,42 +948,17 @@ namespace MonoGame_LDtk_Importer
         {
             Dictionary<int, Texture2D> dico = new Dictionary<int, Texture2D>();
             Texture2D tileset = GetTilesetTexture(graphicsDevice);
-            foreach (int id in GetUsedTilesId())
+            foreach (int id in GetUsedTileIds())
             {
                 Tile tile = GetTileAt(GetPointsByTileId(id)[0]);
-                Rectangle tileRectangle = new Rectangle((int)tile.Source.X, (int)tile.Source.Y, (int)(tile.Source.X * GridSize), (int)(tile.Source.Y * GridSize));
+                Rectangle tileRectangle = new Rectangle((int)tile.Source.X, (int)tile.Source.Y, GridSize, GridSize);
                 Texture2D tileTx = new Texture2D(graphicsDevice, tileRectangle.Width, tileRectangle.Height);
                 Color[] data = new Color[tileRectangle.Width * tileRectangle.Height];
                 tileset.GetData(0, tileRectangle, data, 0, tileRectangle.Width * tileRectangle.Height);
                 tileTx.SetData(data);
                 dico.Add(id, tileTx);
             }
-            return dico;
-        }
-
-        /// <summary>
-        /// Return a dictionnary with the tile's textures corresponding to they ID
-        /// <br/>
-        /// Not recommended for rendering, use instead the <i>sourceRectangle</i> parameter while using <i>SpriteBatch.Draw()</i> to render a tile from a tileset
-        /// </summary>
-        /// <param name="graphicsDevice"></param>
-        /// <returns></returns>
-        public List<Texture2D> GetAllTilesTextures(GraphicsDevice graphicsDevice)
-        {
-            List<Texture2D> dico = new List<Texture2D>();
-            Texture2D tileset = GetTilesetTexture(graphicsDevice);
-            for (int x = 0; x < Width; x++)
-            {
-                for (int y = 0; y < Height; y++)
-                {
-                    Rectangle tileRectangle = new Rectangle(x * GridSize, y * GridSize, GridSize, GridSize);
-                    Texture2D tileTx = new Texture2D(graphicsDevice, tileRectangle.Width, tileRectangle.Height);
-                    Color[] data = new Color[tileRectangle.Width * tileRectangle.Height];
-                    tileset.GetData(0, tileRectangle, data, 0, tileRectangle.Width * tileRectangle.Height);
-                    tileTx.SetData(data);
-                    dico.Add(tileTx);
-                }
-            }
+            tileset.Dispose();
             return dico;
         }
     }
@@ -972,7 +967,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// A tile instance
     /// </summary>
-    public struct Tile
+    public class Tile
     {
         /// <summary>
         /// True if the tile is flipped on x axis
@@ -985,7 +980,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Pixel coordinates of the tile in the layer. Don't forget optional layer offsets, if they exist!
         /// </summary>
-        public Vector2 Coordinates { get; set; }
+        public Point Coordinates { get; set; }
         /// <summary>
         /// Pixel coordinates of the tile in the <b>tileset</b>
         /// </summary>
@@ -1033,7 +1028,7 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "px")
                         {
-                            tile.Coordinates = new Vector2(property.Value.EnumerateArray().ToArray()[0].GetInt32(), property.Value.EnumerateArray().ToArray()[1].GetInt32());
+                            tile.Coordinates = new Point(property.Value.EnumerateArray().ToArray()[0].GetInt32(), property.Value.EnumerateArray().ToArray()[1].GetInt32());
                         }
                         else if (property.Name == "src")
                         {
@@ -1055,7 +1050,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// An entity instance
     /// </summary>
-    public struct Entity
+    public class Entity
     {
         /// <summary>
         /// Grid-based coordinates
@@ -1072,7 +1067,7 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Optional Tile used to display this entity (it could either be the default Entity tile, or some tile provided by a field value, like an Enum)
         /// </summary>
-        public EntityTile? Tile { get; set; }
+        public EntityTile Tile { get; set; }
         /// <summary>
         /// Reference of the <b>Entity definition</b> UID
         /// </summary>
@@ -1149,12 +1144,29 @@ namespace MonoGame_LDtk_Importer
             }
             return output;
         }
+
+        /// <summary>
+        /// Return all the fields of the given type of the entity
+        /// </summary>
+        /// <returns></returns>
+        public List<Field> GetFieldsByType(FieldType type)
+        {
+            List<Field> list = new List<Field>();
+            foreach (Field field in FieldInstances)
+            {
+                if (field.Type == type)
+                {
+                    list.Add(field);
+                }
+            }
+            return list;
+        }
     }
 
     /// <summary>
     /// An entity tile
     /// </summary>
-    public struct EntityTile
+    public class EntityTile
     {
         /// <summary>
         /// An array of 4 Int values that refers to the tile in the tileset image: <c>[x, y, width, height]</c>
@@ -1260,7 +1272,7 @@ namespace MonoGame_LDtk_Importer
                             field = new PointField();
                             field.IsArray = true;
                         }
-                        else if (type == FieldType.FilePath || type == FieldType.String || type == FieldType.Text)
+                        else
                         {
                             field = new StringField();
                             field.IsArray = true;
@@ -1296,7 +1308,7 @@ namespace MonoGame_LDtk_Importer
                         field = new PointField();
                         field.IsArray = false;
                     }
-                    else if (type == FieldType.FilePath || type == FieldType.String || type == FieldType.Text)
+                    else
                     {
                         field = new StringField();
                         field.IsArray = false;
@@ -1348,7 +1360,7 @@ namespace MonoGame_LDtk_Importer
                             f.Value.Add(new Point(el.GetProperty("cx").GetInt32(), el.GetProperty("cy").GetInt32()));
                             field = f;
                         }
-                        else if (field.Type == FieldType.String || field.Type == FieldType.Text || field.Type == FieldType.FilePath)
+                        else
                         {
                             StringField f = field as StringField;
                             f.Value = new List<string>();
@@ -1524,7 +1536,6 @@ namespace MonoGame_LDtk_Importer
     {
         Int,
         Float,
-        Text,
         Bool,
         String,
         Enum,
@@ -1565,7 +1576,7 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="jsonProperty">A json property containing the definitions</param>
         /// <returns></returns>
-        public static Definitions LoadDefinitions(JsonProperty jsonProperty)
+        public static Definitions LoadDefinitions(JsonProperty jsonProperty, string baseFolder)
         {
             Definitions output = new Definitions();
             foreach (JsonProperty property in jsonProperty.Value.EnumerateObject().ToArray())
@@ -1591,7 +1602,7 @@ namespace MonoGame_LDtk_Importer
                     }
                     else if (property.Name == "tilesets")
                     {
-                        output.Tilesets = TilesetDef.LoadTilesets(property);
+                        output.Tilesets = TilesetDef.LoadTilesets(property, baseFolder);
                     }
                 }
             }
@@ -1603,15 +1614,19 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public EntitieDef GetEntitiesDefById(string id)
+        public EntitieDef GetEntitieDefById(string id)
         {
-            EntitieDef def = new EntitieDef();
+            EntitieDef def = null;
             foreach(EntitieDef entitie in Entities)
             {
                 if (entitie.Identifier == id)
                 {
                     def = entitie;
                 }
+            }
+            if (def == null)
+            {
+                throw new ArgumentException("EntityDef not found");
             }
             return def;
         }
@@ -1622,13 +1637,17 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public EnumDef GetEnumDefById(string id)
         {
-            EnumDef def = new EnumDef();
+            EnumDef def = null;
             foreach (EnumDef enumm in Enums)
             {
                 if (enumm.Identifier == id)
                 {
                     def = enumm;
                 }
+            }
+            if (def == null)
+            {
+                throw new ArgumentException("EnumDef not found");
             }
             return def;
         }
@@ -1639,13 +1658,17 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public EnumDef GetExtEnumDefById(string id)
         {
-            EnumDef def = new EnumDef();
+            EnumDef def = null;
             foreach (EnumDef enumm in ExternalEnums)
             {
                 if (enumm.Identifier == id)
                 {
                     def = enumm;
                 }
+            }
+            if (def == null)
+            {
+                throw new ArgumentException("EnumDef not found");
             }
             return def;
         }
@@ -1654,15 +1677,19 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public LayerDef GetLayersDefById(string id)
+        public LayerDef GetLayerDefById(string id)
         {
-            LayerDef def = new LayerDef();
+            LayerDef def = null;
             foreach (LayerDef layer in Layers)
             {
                 if (layer.Identifier == id)
                 {
                     def = layer;
                 }
+            }
+            if (def == null)
+            {
+                throw new ArgumentException("LayerDef not found");
             }
             return def;
         }
@@ -1673,13 +1700,17 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public TilesetDef GetTilesetDefById(string id)
         {
-            TilesetDef def = new TilesetDef();
+            TilesetDef def = null;
             foreach (TilesetDef tileset in Tilesets)
             {
                 if (tileset.Identifier == id)
                 {
                     def = tileset;
                 }
+            }
+            if (def == null)
+            {
+                throw new ArgumentException("TilesetDef not found");
             }
             return def;
         }
@@ -1767,6 +1798,10 @@ namespace MonoGame_LDtk_Importer
                     val = value;
                 }
             }
+            if (val == null)
+            {
+                throw new ArgumentException("EnumValueDef not found");
+            }
             return val;
         }
     }
@@ -1774,7 +1809,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// An enum value, with the optional Tile infos
     /// </summary>
-    public struct EnumValueDef
+    public class EnumValueDef
     {
         /// <summary>
         /// An rectangle that refers to the tile in the tileset image
@@ -1840,7 +1875,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// A layer of project
     /// </summary>
-    public struct LayerDef
+    public class LayerDef
     {
         /// <summary>
         /// Type of the layer (IntGrid, Entities, Tiles or AutoLayer)
@@ -1950,13 +1985,17 @@ namespace MonoGame_LDtk_Importer
         /// <returns></returns>
         public IntGridValueDef GetIntGridValueById(string id)
         {
-            IntGridValueDef val = new IntGridValueDef();
+            IntGridValueDef val = null;
             foreach (IntGridValueDef value in IntGridValues)
             {
                 if (value.Identifier == id)
                 {
                     val = value;
                 }
+            }
+            if (val == null)
+            {
+                throw new ArgumentException("IntGridValueDef not found");
             }
             return val;
         }
@@ -1976,14 +2015,14 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// Values for a IntGrid layer
     /// </summary>
-    public struct IntGridValueDef
+    public class IntGridValueDef
     {
         /// <summary>
         /// Hex color "#rrggbb"
         /// </summary>
         public Color Color { get; set; }
         /// <summary>
-        /// Unique String identifier
+        /// Unique optional String identifier
         /// </summary>
         public string Identifier { get; set; }
         /// <summary>
@@ -2033,7 +2072,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     ///  An entity definition
     /// </summary>
-    public struct EntitieDef
+    public class EntitieDef
     {
         /// <summary>
         /// Base entity color
@@ -2130,7 +2169,7 @@ namespace MonoGame_LDtk_Importer
     /// <summary>
     /// A tileset
     /// </summary>
-    public struct TilesetDef
+    public class TilesetDef
     {
         /// <summary>
         /// Grid-based height
@@ -2168,7 +2207,7 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         public int Width { get; set; }
         /// <summary>
-        /// Path to the source file, relative to the current project JSON file
+        /// Path to the source file
         /// </summary>
         public string RelPath { get; set; }
         /// <summary>
@@ -2184,16 +2223,14 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         public int TileGridSize { get; set; }
         /// <summary>
-        /// Unique Intidentifier
+        /// Unique Int identifier
         /// </summary>
         public int Uid { get; set; }
 
         /// <summary>
         /// Load the tilesets of a project
         /// </summary>
-        /// <param name="jsonProperty">A json property containing the Tilesets defintions</param>
-        /// <returns></returns>
-        public static List<TilesetDef> LoadTilesets(JsonProperty jsonProperty)
+        public static List<TilesetDef> LoadTilesets(JsonProperty jsonProperty, string baseFolder)
         {
             List<TilesetDef> output = new List<TilesetDef>();
             foreach (JsonElement jsonElement in jsonProperty.Value.EnumerateArray().ToArray())
@@ -2205,11 +2242,11 @@ namespace MonoGame_LDtk_Importer
                     {
                         if (property.Name == "__cHei")
                         {
-                            tileset.Height = property.Value.GetInt32();
+                            tileset.GridHeight = property.Value.GetInt32();
                         }
                         else if (property.Name == "__cWid")
                         {
-                            tileset.Height = property.Value.GetInt32();
+                            tileset.GridWidth = property.Value.GetInt32();
                         }
                         else if (property.Name == "customData")
                         {
@@ -2237,7 +2274,7 @@ namespace MonoGame_LDtk_Importer
                         }
                         else if (property.Name == "relPath")
                         {
-                            tileset.RelPath = property.Value.GetString();
+                            tileset.RelPath = baseFolder + property.Value.GetString();
                         }
                         else if (property.Name == "spacing")
                         {
@@ -2265,8 +2302,6 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Return the tile metadata of the given tile ID
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public TileMetadata GetTileMetadataByTileId(int id)
         {
             TileMetadata tm = new TileMetadata();
@@ -2283,8 +2318,6 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Return the tileset tag of the given enum value ID
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public TilesetTag GetTilesetTagByEnumValueId(string id)
         {
             TilesetTag tst = new TilesetTag();
@@ -2301,8 +2334,6 @@ namespace MonoGame_LDtk_Importer
         /// <summary>
         /// Return all the enum value IDs for a given tile ID
         /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public List<string> GetEnumValueIdsByTileId(int id)
         {
             List<string> values = new List<string>();
@@ -2314,6 +2345,36 @@ namespace MonoGame_LDtk_Importer
                 }
             }
             return values;
+        }
+
+        /// <summary>
+        /// Return the texture2D correspoo
+        /// </summary>
+        /// <param name="graphicsDevice"></param>
+        /// <returns></returns>
+        public Texture2D GetTilesetTexture(GraphicsDevice graphicsDevice)
+        {
+            return Texture2D.FromFile(graphicsDevice, RelPath);
+        }
+
+        public List<Texture2D> GetTilesTextures(GraphicsDevice graphicsDevice)
+        {
+            Texture2D tileset = GetTilesetTexture(graphicsDevice);
+            List<Texture2D> tileList = new List<Texture2D>();
+            for (int y = 0; y < GridHeight; y++)
+            {
+                for (int x = 0; x < GridWidth; x++)
+                {
+                    Rectangle tileRectangle = new Rectangle(Padding + x * (Spacing + TileGridSize), Padding + y * (Spacing + TileGridSize), TileGridSize, TileGridSize);
+                    Texture2D tile = new Texture2D(graphicsDevice, tileRectangle.Width, tileRectangle.Height);
+                    Color[] data = new Color[tileRectangle.Width * tileRectangle.Height];
+                    tileset.GetData(0, tileRectangle, data, 0, tileRectangle.Width * tileRectangle.Height);
+                    tile.SetData(data);
+                    tileList.Add(tile);
+                }
+            }
+            tileset.Dispose();
+            return tileList;
         }
     }
 

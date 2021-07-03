@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct TileInstance
+    <title>Class Tile
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct TileInstance
+    <meta name="title" content="Class Tile
    ">
     <meta name="generator" content="docfx 2.58.0.0">
     
@@ -68,37 +68,66 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MonoGame_LDtk_Importer.TileInstance">
+            <article class="content wrap" id="_content" data-uid="MonoGame_LDtk_Importer.Tile">
   
   
-  <h1 id="MonoGame_LDtk_Importer_TileInstance" data-uid="MonoGame_LDtk_Importer.TileInstance" class="text-break">Struct TileInstance
+  <h1 id="MonoGame_LDtk_Importer_Tile" data-uid="MonoGame_LDtk_Importer.Tile" class="text-break">Class Tile
   </h1>
   <div class="markdown level0 summary"><p>A tile instance</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Tile</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MonoGame_LDtk_Importer.html">MonoGame_LDtk_Importer</a></h6>
   <h6><strong>Assembly</strong>: MonoGame LDtk Importer.dll</h6>
-  <h5 id="MonoGame_LDtk_Importer_TileInstance_syntax">Syntax</h5>
+  <h5 id="MonoGame_LDtk_Importer_Tile_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct TileInstance</code></pre>
+    <pre><code class="lang-csharp hljs">public class Tile</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance_Coordinates.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance.Coordinates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile_Coordinates.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile.Coordinates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L577">View Source</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L983">View Source</a>
   </span>
-  <a id="MonoGame_LDtk_Importer_TileInstance_Coordinates_" data-uid="MonoGame_LDtk_Importer.TileInstance.Coordinates*"></a>
-  <h4 id="MonoGame_LDtk_Importer_TileInstance_Coordinates" data-uid="MonoGame_LDtk_Importer.TileInstance.Coordinates">Coordinates</h4>
+  <a id="MonoGame_LDtk_Importer_Tile_Coordinates_" data-uid="MonoGame_LDtk_Importer.Tile.Coordinates*"></a>
+  <h4 id="MonoGame_LDtk_Importer_Tile_Coordinates" data-uid="MonoGame_LDtk_Importer.Tile.Coordinates">Coordinates</h4>
   <div class="markdown level1 summary"><p>Pixel coordinates of the tile in the layer. Don't forget optional layer offsets, if they exist!</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 Coordinates { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Point Coordinates { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -110,26 +139,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector2</span></td>
+        <td><span class="xref">Microsoft.Xna.Framework.Point</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance_IsFlippedOnX.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile_IsFlippedOnX.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile.IsFlippedOnX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L569">View Source</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L975">View Source</a>
   </span>
-  <a id="MonoGame_LDtk_Importer_TileInstance_IsFlippedOnX_" data-uid="MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX*"></a>
-  <h4 id="MonoGame_LDtk_Importer_TileInstance_IsFlippedOnX" data-uid="MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX">IsFlippedOnX</h4>
+  <a id="MonoGame_LDtk_Importer_Tile_IsFlippedOnX_" data-uid="MonoGame_LDtk_Importer.Tile.IsFlippedOnX*"></a>
+  <h4 id="MonoGame_LDtk_Importer_Tile_IsFlippedOnX" data-uid="MonoGame_LDtk_Importer.Tile.IsFlippedOnX">IsFlippedOnX</h4>
   <div class="markdown level1 summary"><p>True if the tile is flipped on x axis</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsFlippedOnX { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsFlippedOnX { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,19 +177,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance_IsFlippedOnY.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile_IsFlippedOnY.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile.IsFlippedOnY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L573">View Source</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L979">View Source</a>
   </span>
-  <a id="MonoGame_LDtk_Importer_TileInstance_IsFlippedOnY_" data-uid="MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY*"></a>
-  <h4 id="MonoGame_LDtk_Importer_TileInstance_IsFlippedOnY" data-uid="MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY">IsFlippedOnY</h4>
+  <a id="MonoGame_LDtk_Importer_Tile_IsFlippedOnY_" data-uid="MonoGame_LDtk_Importer.Tile.IsFlippedOnY*"></a>
+  <h4 id="MonoGame_LDtk_Importer_Tile_IsFlippedOnY" data-uid="MonoGame_LDtk_Importer.Tile.IsFlippedOnY">IsFlippedOnY</h4>
   <div class="markdown level1 summary"><p>True if the tile is flipped on y axis</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsFlippedOnY { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsFlippedOnY { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,19 +208,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance_Source.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile_Source.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L581">View Source</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L987">View Source</a>
   </span>
-  <a id="MonoGame_LDtk_Importer_TileInstance_Source_" data-uid="MonoGame_LDtk_Importer.TileInstance.Source*"></a>
-  <h4 id="MonoGame_LDtk_Importer_TileInstance_Source" data-uid="MonoGame_LDtk_Importer.TileInstance.Source">Source</h4>
+  <a id="MonoGame_LDtk_Importer_Tile_Source_" data-uid="MonoGame_LDtk_Importer.Tile.Source*"></a>
+  <h4 id="MonoGame_LDtk_Importer_Tile_Source" data-uid="MonoGame_LDtk_Importer.Tile.Source">Source</h4>
   <div class="markdown level1 summary"><p>Pixel coordinates of the tile in the <strong>tileset</strong></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Vector2 Source { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Vector2 Source { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,26 +232,26 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Vector2</span></td>
+        <td><span class="xref">Microsoft.Xna.Framework.Vector2</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance_TileId.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance.TileId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile_TileId.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile.TileId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L585">View Source</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L991">View Source</a>
   </span>
-  <a id="MonoGame_LDtk_Importer_TileInstance_TileId_" data-uid="MonoGame_LDtk_Importer.TileInstance.TileId*"></a>
-  <h4 id="MonoGame_LDtk_Importer_TileInstance_TileId" data-uid="MonoGame_LDtk_Importer.TileInstance.TileId">TileId</h4>
+  <a id="MonoGame_LDtk_Importer_Tile_TileId_" data-uid="MonoGame_LDtk_Importer.Tile.TileId*"></a>
+  <h4 id="MonoGame_LDtk_Importer_Tile_TileId" data-uid="MonoGame_LDtk_Importer.Tile.TileId">TileId</h4>
   <div class="markdown level1 summary"><p>The <em>Tile ID</em> in the corresponding tileset.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int TileId { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public int TileId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -243,18 +272,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance_LoadTiles_JsonProperty_.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance.LoadTiles(JsonProperty)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile_LoadTiles_System_Text_Json_JsonElement_.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile.LoadTiles(System.Text.Json.JsonElement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L587">View Source</a>
+    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L993">View Source</a>
   </span>
-  <a id="MonoGame_LDtk_Importer_TileInstance_LoadTiles_" data-uid="MonoGame_LDtk_Importer.TileInstance.LoadTiles*"></a>
-  <h4 id="MonoGame_LDtk_Importer_TileInstance_LoadTiles_JsonProperty_" data-uid="MonoGame_LDtk_Importer.TileInstance.LoadTiles(JsonProperty)">LoadTiles(JsonProperty)</h4>
+  <a id="MonoGame_LDtk_Importer_Tile_LoadTiles_" data-uid="MonoGame_LDtk_Importer.Tile.LoadTiles*"></a>
+  <h4 id="MonoGame_LDtk_Importer_Tile_LoadTiles_System_Text_Json_JsonElement_" data-uid="MonoGame_LDtk_Importer.Tile.LoadTiles(System.Text.Json.JsonElement)">LoadTiles(JsonElement)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static List&lt;TileInstance&gt; LoadTiles(JsonProperty jsonProperty)</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;Tile&gt; LoadTiles(JsonElement element)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -267,8 +296,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">JsonProperty</span></td>
-        <td><span class="parametername">jsonProperty</span></td>
+        <td><span class="xref">System.Text.Json.JsonElement</span></td>
+        <td><span class="parametername">element</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -283,7 +312,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MonoGame_LDtk_Importer.TileInstance.html">TileInstance</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="MonoGame_LDtk_Importer.Tile.html">Tile</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -296,10 +325,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/main/apiSpec/new?filename=MonoGame_LDtk_Importer_TileInstance.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.TileInstance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/new/dev/apiSpec/new?filename=MonoGame_LDtk_Importer_Tile.md&amp;value=---%0Auid%3A%20MonoGame_LDtk_Importer.Tile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/MonoGame LDtk Importer/LDtkProject.cs/#L564" class="contribution-link">View Source</a>
+                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/MonoGame LDtk Importer/LDtkProject.cs/#L970" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

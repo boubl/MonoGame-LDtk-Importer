@@ -1,39 +1,15 @@
 {
   "homepages": [],
-  "source_base_path": "/Users/AlexisNicolas/Documents/GitHub/MonoGame-LDtk-Importer/docfx_project",
+  "source_base_path": "C:/Users/Boubli/Documents/GitHub/MonoGame-LDtk-Importer/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Importer.Importer.yml",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.AutoLayer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Importer.Importer.html",
-          "hash": "PnhvQoj+g/E8uYEBSe9OA4/F0gS/cjBbvmvSbzQrEsc="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Importer.Reader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Importer.Reader.html",
-          "hash": "rymmyDthe9oT9zqtzXbdwvR6FsoAzD1fSaFpnJhMQDQ="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/Importer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Importer.html",
-          "hash": "AHFutkvnsQYspLadeqU8aJYUkgMcI0qhqgZkb1UF8h4="
+          "relative_path": "api/MonoGame_LDtk_Importer.AutoLayer.html",
+          "hash": "Ey16FoshvGPxa3y0OyKih1IvRBDPEuwSFA4KVI6BQjk="
         }
       },
       "is_incremental": true,
@@ -45,7 +21,31 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.BackgroundPosition.html",
-          "hash": "7+Y9fSZNm663LyeA1SBCMXB1jNyk+xyX86EZFXFWdNI="
+          "hash": "TJV0b1W1aLq9SZkNgNcqBdCKZ0olfXEZoTSPxoTz9tE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.BoolField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.BoolField.html",
+          "hash": "HMU9TLKkbrUc+Rbvz8oaQOjFkub7k366G517uwn8GTw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.ColorField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.ColorField.html",
+          "hash": "rgLnHuBmnLdZkQnWDNvgi0TL+FJclQr0IWwybSZwFIc="
         }
       },
       "is_incremental": true,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.Definitions.html",
-          "hash": "PtTPLnyYMnbkeSCb0ahO0gwfS0qJm1T4pdYVxw5qS0M="
+          "hash": "BIqhdsDpJd1zov/Rnhn00Rc+TkunyEOdJPNysrYiHpc="
         }
       },
       "is_incremental": true,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EntitieDef.html",
-          "hash": "u230czAvJw+UgAp9iRH1NMrqA0m2BupoyfAc0HT8h5I="
+          "hash": "5endoWLcClMnLFXy/7FDEoJvvrb4OoY9uJ9zuLKTcLE="
         }
       },
       "is_incremental": true,
@@ -77,11 +77,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MonoGame_LDtk_Importer.EntityInstance.yml",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.EntitieLayer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MonoGame_LDtk_Importer.EntityInstance.html",
-          "hash": "2xKq2IMFLOWCYL/5njj0NoT3kYk3T76yyV1gx7DGrsM="
+          "relative_path": "api/MonoGame_LDtk_Importer.EntitieLayer.html",
+          "hash": "MHuEtOa4pAriAK53Uiy4RuS/CMJv766yH4lLOYJAQzQ="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.Entity.html",
+          "hash": "+c1/6bfuv88VsVSBrr2Ih07H0PgQnBXPgf0z3SA/Od4="
         }
       },
       "is_incremental": true,
@@ -93,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EntityTile.html",
-          "hash": "s65Vujhph+bqMvHdi2CZSUHmjwbmItcWaIbMtojgpF8="
+          "hash": "V4tsOsO28tHbmKP9MO0ynf14IOZRTQKuT5kd4y2au5E="
         }
       },
       "is_incremental": true,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EnumDef.html",
-          "hash": "SxTomGOsWTKv8Wl8U08scBuWMxSfIZuWkhAqfsHT+KU="
+          "hash": "bbMROWqS8vxemq68njGG3dQMNOw9CBCNmq7syN/BzaI="
         }
       },
       "is_incremental": true,
@@ -117,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.EnumValueDef.html",
-          "hash": "Xv88DGx7JMFQ63vraNoWTzGMMCzYN+zhsg7ZD26s+gY="
+          "hash": "FlQ7SNt379pfYxpxtxFHpW7fUDh67ug1C1iZvALgzEU="
         }
       },
       "is_incremental": true,
@@ -125,11 +137,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MonoGame_LDtk_Importer.FieldInstance.yml",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.Field.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MonoGame_LDtk_Importer.FieldInstance.html",
-          "hash": "SPa+J2nCSGXpgua8XXuQ5Z8hdOOYlqmN6UB4k5nHB24="
+          "relative_path": "api/MonoGame_LDtk_Importer.Field.html",
+          "hash": "H5/DT9pspfhlyxyAq9ksViPS228BVJpgQ7qVhXCbEig="
         }
       },
       "is_incremental": true,
@@ -141,7 +153,43 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.FieldType.html",
-          "hash": "QJhw+lYw6IeXI07o/PPRs95Kx+3Qyjow7cHWamAxruI="
+          "hash": "tYJgpXAvlj5zuugOY60Sz2oCGWu5K7tfQVp2GhJmFb0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.FloatField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.FloatField.html",
+          "hash": "bvWFvSRh9REUeyKNOu032EihZdPrqcjqzOryUGK7Ctk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.IntField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.IntField.html",
+          "hash": "5IrU885L3w17GnAAXd3YX62LsWwhrppBzx5hVWP7/NI="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.IntGridLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.IntGridLayer.html",
+          "hash": "XpqlWYvb+v/UbEY+T7tVNbs99tARDQrJ4llt3bw+HMY="
         }
       },
       "is_incremental": true,
@@ -153,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.IntGridValueDef.html",
-          "hash": "Cr3dy9x9EkR/BAiwGJIbMIxcZe88Awalc/B/QJlBSZI="
+          "hash": "0GHhNIQpbVzoauC0EbxbtufN74MC1jAdHk/2CTznb+U="
         }
       },
       "is_incremental": true,
@@ -165,7 +213,19 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LDtkProject.html",
-          "hash": "TcOqIbjTJmIZT3KXehGNfxXG2nJ8UMvtyoM/WaWT8Sw="
+          "hash": "mRzpZkl0qJIPncUx59sCGy6DRFK7x1XUDkKwlElFME4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.Layer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.Layer.html",
+          "hash": "T9ozYnKG5sj0WkppDSk9T0SZsRmzWKn/WrHY4++T/xU="
         }
       },
       "is_incremental": true,
@@ -177,19 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LayerDef.html",
-          "hash": "pVDMw6qHs3s0X9I0Uf8E2Is3L9iqMhZexnPdtsxGTnM="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/MonoGame_LDtk_Importer.LayerInstance.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/MonoGame_LDtk_Importer.LayerInstance.html",
-          "hash": "FLdNrmjg/ZNu81Quh8f+b8Le9otTIobbXExt/mIEla4="
+          "hash": "cVEGXTx5AUqUtYSBYncVUyUrv4t1ci/Osoj7xKCxfA0="
         }
       },
       "is_incremental": true,
@@ -201,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LayerType.html",
-          "hash": "WXGZ4h4aGsQ2Vvd5YKSX1No/gYe/jNwf7D4LuvvjUM8="
+          "hash": "dva8RAyCZbSzuhQChoHRf/1321ahSfA2O4dO4nELEUI="
         }
       },
       "is_incremental": true,
@@ -213,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.Level.html",
-          "hash": "VBfQptyWrzEV/fXE79vyEtt+GN19Csv1nlDRW82tmHA="
+          "hash": "3ioI1shA1D+ahof6cDnMmT1doESBybsqzjbmPBEjb4w="
         }
       },
       "is_incremental": true,
@@ -225,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.LevelNeighbour.html",
-          "hash": "neUdUlbR208tpHMEe8QUlIjuSasOf9zKQ/pyvISc6Fs="
+          "hash": "0cdxsdYUTyx4MqQjIeUoE6ZXB42wSjyVhwsmPYrzZyk="
         }
       },
       "is_incremental": true,
@@ -237,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.NeighbourDirection.html",
-          "hash": "4Hbj+elRZOQx/2PGKurnmp66UCanIn7OaXzRZBw8L/k="
+          "hash": "OcIKNyhsCGJm7922H+pBmTCXqvyhbZ7EUQHOTNgi9Fg="
         }
       },
       "is_incremental": true,
@@ -245,11 +293,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MonoGame_LDtk_Importer.TileInstance.yml",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.PointField.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MonoGame_LDtk_Importer.TileInstance.html",
-          "hash": "2F/u9BBcBr13yq8eqkAfsn9npo7quKbGWSErCuc48sg="
+          "relative_path": "api/MonoGame_LDtk_Importer.PointField.html",
+          "hash": "1aPAc8tEts6VjptzIgfGgbRPnAxG23tURuDgLkH2Dws="
         }
       },
       "is_incremental": true,
@@ -257,11 +305,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MonoGame_LDtk_Importer.Tileset.yml",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.StringField.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MonoGame_LDtk_Importer.Tileset.html",
-          "hash": "x2dok5O8yhC8M47YsvZQjp2n+VIgoc+SiJM3lXRX90U="
+          "relative_path": "api/MonoGame_LDtk_Importer.StringField.html",
+          "hash": "9rziN4pq7oBbNefhu/fKfISiX2KJJmHnFtDY2pX3JL0="
         }
       },
       "is_incremental": true,
@@ -269,11 +317,71 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MonoGame_LDtk_Importer.worldLayoutTypes.yml",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.Tile.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MonoGame_LDtk_Importer.worldLayoutTypes.html",
-          "hash": "FFoLoCaDwSKZJ2fptF9WMEKyFFptllM/7M9elU2rQCU="
+          "relative_path": "api/MonoGame_LDtk_Importer.Tile.html",
+          "hash": "khoKpjP5uehLLRmS7Aq7+CJs4q6qG3wF1fPplY3lIMw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.TileLayer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.TileLayer.html",
+          "hash": "L9BAj5xc8MwGK7icDMEgKP2GgOafXD6PNlkdO/edNds="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.TileMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.TileMetadata.html",
+          "hash": "r9IkdNkHHam1OsNNLdbf4zQ4Iqo11EVWy08P99iopNc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.TilesetDef.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.TilesetDef.html",
+          "hash": "sID8oSzxFCbcixh5F37D9L2TqZlmyRreyTHCyMyDVwg="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.TilesetTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.TilesetTag.html",
+          "hash": "/K3yRzh8SDXyHO058KSS8oal00UbvOaDMvRvvXGJcag="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MonoGame_LDtk_Importer.WorldLayoutTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MonoGame_LDtk_Importer.WorldLayoutTypes.html",
+          "hash": "hu7/nEqh9FyNxsqksKtLxjxrDirIg8++TUG7R5BHSSs="
         }
       },
       "is_incremental": true,
@@ -285,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/MonoGame_LDtk_Importer.html",
-          "hash": "TZJVuZi9GIItjDywd8391r0aYeqP2MDQuS6eu7iQxrk="
+          "hash": "xpjQwSAHjikS1swXmZtSXtc7lIxccYHQOnh0QVFSl50="
         }
       },
       "is_incremental": true,
@@ -297,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "llV5VIaCP9t4wZVQu3ZHm9Siiurk2ou+cwVmb9Mm1co="
+          "hash": "X7V24iJLLYE4An8azblRwDH7owOb7GHF3BfX/qwnJLo="
         }
       },
       "is_incremental": true,
@@ -309,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "4YND3buIiqemJNH7Q5kBptNbK8FmMR19kdBAwgdlTfU="
+          "hash": "TtDkWu82TgrQ2Uxm6xckAN7Q1vDYCCGtKRrNphZndXs="
         }
       },
       "is_incremental": false,
@@ -321,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/how_to_use.html",
-          "hash": "IU1d7VNhbBkSDGKmadnCVq5RRY4RLqiwsd9N9kCkCxI="
+          "hash": "U7m4rPgYZ9TyBM4kSMSskQl22CWQaRWleag+kAR/FXI="
         }
       },
       "is_incremental": true,
@@ -333,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/index.html",
-          "hash": "S3m1n2eYf+fZ11ZswI8o8IDXI3IgbsCw8BYSN0HMiFs="
+          "hash": "F+35FPgi+9BOK4lJFRyJOP5950dZ4bw8EkV4S12S7co="
         }
       },
       "is_incremental": true,
@@ -345,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/install.html",
-          "hash": "y0q2DVoefuAz53iRYM0DuSRMEq1XXSGk8IUZOmHUtRw="
+          "hash": "hUDUeC1YcxQgLSRpUI02J4UaKPhGxE+Hz2L9RyIQ0Ls="
         }
       },
       "is_incremental": true,
@@ -357,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/notfinished.html",
-          "hash": "BCHYaTpyqyk/4iFF7RFi7iOcZgq7eFfj6bsUXR4KX4U="
+          "hash": "GxHw6GDEcgp/Dw1iZusvJh7VCCOabyd/eVFjuc6rbmA="
         }
       },
       "is_incremental": true,
@@ -431,23 +539,12 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "images/mgcb_editor_example.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/mgcb_editor_example.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "AMbX0xE0ZBYWBwKdg7q4FPTpQ/0nmrGTemTQ1roT2NA="
+          "hash": "auYxym6MPx5OuaBYHaDgrm+OpCRMmdu9sya/8cgvLCs="
         }
       },
       "is_incremental": true,
@@ -484,8 +581,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 24,
-          "skipped_file_count": 24
+          "total_file_count": 33,
+          "skipped_file_count": 33
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

@@ -3,26 +3,33 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    
+
+    <Title>MonoGame LDtk Importer</Title>
     <Authors>chamalowmoelleux</Authors>
     <Product>MonoGame LDtk Importer</Product>
     <PackageId>Monogame-LDtk-Importer</PackageId>
-    <PackageVersion>1.2.1</PackageVersion>
-    <Description>Monogame custom importer for the LDtk app by Deepnight</Description>
+    <PackageVersion>2.0.0</PackageVersion>
+    <Description>Monogame importer for the LDtk app by Deepnight</Description>
     <PackageProjectUrl>https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/</RepositoryUrl>
     <PackageTags>LDtk, Monogame, Level-Editor</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Added support for 9.0, and externals levels. (and remove unused depedencies)</PackageReleaseNotes>
+    <PackageReleaseNotes>Removed support for MonoGame Pipeline. Added some useful methods.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyName>MonoGame LDtk Importer</AssemblyName>
-    
+    <PackageIcon>icon.png</PackageIcon>
+
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.0.1641" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
-    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    <PackageReference Include="System.Text.Json" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\docfx_project\images\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

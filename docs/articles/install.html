@@ -71,7 +71,7 @@
 
 <h3 id="manually">Manually</h3>
 <p><a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/releases">Download</a> the latest version of the <code>MonoGame_LDtk_Importer.dll</code> file and place it in your project (or somewhere you can find it easily).</p>
-<p>Add the  <code>MonoGame_LDtk_Importer.dll</code> to your project references, and to your <code>Content.mgcb</code> file (<a href="#add-the-importer-to-the-pipeline">here</a> is an explanation of how to add references to your <code>Content.mgcb</code> file).</p>
+<p>Add the  <code>MonoGame_LDtk_Importer.dll</code> to your project references</p>
 <h3 id="with-nuget">With NuGet</h3>
 <p>Add the package to your project with the Package Manager Console using this command:</p>
 <pre><code class="lang-txt">Install-Package MonoGame_LDtk_Importer
@@ -83,36 +83,10 @@
 <h3 id="compiling">Compiling</h3>
 <p>This importer need the following packages:</p>
 <ul>
-<li><code>MonoGame.Framework.Content.Pipeline v3.8.0.*</code></li>
 <li><code>MonoGame.Framework.DesktopGL v3.8.0.*</code></li>
-<li><code>System.Drawing.Common v5.*</code></li>
-<li><code>System.Text.Json v4.7.2</code> <em><strong>Don't install v5 !!! MonoGame Pipeline don't support it</strong></em></li>
+<li><code>System.Text.Json v5.0.2</code></li>
 </ul>
-<p>Also, let the project in the <code>netcoreapp3.1</code> framework target, don't change it.</p>
-<p>Compile the project with Visual Studio and do the steps listed in the <a href="#manually">Manually</a> installation but with your compiled version.</p>
-<h2 id="add-the-importer-to-the-pipeline">Add the importer to the Pipeline</h2>
-<p>You can do it manually by editing the file, or with the MGCB Editor</p>
-<h4 id="manually-1">Manually</h4>
-<p>Simply add this line in your file under the <strong>References</strong> tab:</p>
-<pre><code class="lang-txt">/reference:path\to\the\ddl\file.dll
-</code></pre>
-<p>It should look like this:</p>
-<pre><code class="lang-txt">#----------------------------- Global Properties ----------------------------#
-some stuff
-
-#-------------------------------- References --------------------------------#
-/reference:path\to\the\ddl\file.dll
-
-#---------------------------------- Content ---------------------------------#
-some stuff
-
-</code></pre>
-<p>You can add your <code>.ldtk</code> files to you <code>Content.mgcb</code> file, the MGCB should use the custom importer automatically.</p>
-<h4 id="using-the-mgcb-editor">Using the MGCB Editor</h4>
-<p>Open your <code>Content.mgcb</code> file and select the root of your project (usually called Content), and in the Properties go all way down to <code>References</code>. Click on it and a window should open:</p>
-<img src="../images/mgcb_editor_example.png" alt="Example" style="zoom:80%;">
-<p>Click on the <code>Add</code> button and find the <code>MonoGame_LDtk_Importer.ddl</code> file of the Importer (if you installed it with NuGet, you should find it) in this folder in your project folder <code>packages/MonoGame_LDtk_Importer.1.0.0/lib/net5/MonoGame_LDtk_Importer.dll</code>.</p>
-<p>And that's it, you can now add your LDtk projects files to your <code>Content.mgcb</code> file.</p>
+<p>Compile the library with Visual Studio, and add it to your project.</p>
 </article>
           </div>
           
@@ -121,7 +95,7 @@ some stuff
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/main/docfx_project/articles/install.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/blob/dev/docfx_project/articles/install.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
