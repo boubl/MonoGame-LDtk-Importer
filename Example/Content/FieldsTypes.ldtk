@@ -1,0 +1,683 @@
+{
+	"__header__": {
+		"fileType": "LDtk Project JSON",
+		"app": "LDtk",
+		"doc": "https://ldtk.io/json",
+		"schema": "https://ldtk.io/files/JSON_SCHEMA.json",
+		"appAuthor": "Sebastien 'deepnight' Benard",
+		"appVersion": "0.9.3",
+		"url": "https://ldtk.io"
+	},
+	"jsonVersion": "0.9.3",
+	"nextUid": 23,
+	"worldLayout": "Free",
+	"worldGridWidth": 256,
+	"worldGridHeight": 256,
+	"defaultPivotX": 0,
+	"defaultPivotY": 0,
+	"defaultGridSize": 16,
+	"defaultLevelWidth": 256,
+	"defaultLevelHeight": 256,
+	"bgColor": "#40465B",
+	"defaultLevelBgColor": "#696A79",
+	"minifyJson": false,
+	"externalLevels": false,
+	"exportTiled": false,
+	"imageExportMode": "None",
+	"pngFilePattern": null,
+	"backupOnSave": false,
+	"backupLimit": 10,
+	"levelNamePattern": "Level_%idx",
+	"flags": [],
+	"defs": { "layers": [
+		{
+			"__type": "Entities",
+			"identifier": "Entities",
+			"type": "Entities",
+			"uid": 22,
+			"gridSize": 16,
+			"displayOpacity": 1,
+			"pxOffsetX": 0,
+			"pxOffsetY": 0,
+			"requiredTags": [],
+			"excludedTags": [],
+			"intGridValues": [{ "value": 1, "identifier": null, "color": "#000000" }],
+			"autoTilesetDefUid": null,
+			"autoRuleGroups": [],
+			"autoSourceLayerDefUid": null,
+			"tilesetDefUid": null,
+			"tilePivotX": 0,
+			"tilePivotY": 0
+		}
+	], "entities": [
+		{
+			"identifier": "Entity",
+			"uid": 19,
+			"tags": [],
+			"width": 16,
+			"height": 16,
+			"resizableX": false,
+			"resizableY": false,
+			"keepAspectRatio": false,
+			"fillOpacity": 1,
+			"lineOpacity": 1,
+			"hollow": false,
+			"color": "#94D9B3",
+			"renderMode": "Rectangle",
+			"showName": true,
+			"tilesetId": null,
+			"tileId": null,
+			"tileRenderMode": "FitInside",
+			"maxCount": 0,
+			"limitScope": "PerLevel",
+			"limitBehavior": "MoveLastOne",
+			"pivotX": 0,
+			"pivotY": 0,
+			"fieldDefs": [
+				{
+					"identifier": "Point",
+					"__type": "Point",
+					"uid": 20,
+					"type": "F_Point",
+					"isArray": false,
+					"canBeNull": true,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null
+				},
+				{
+					"identifier": "Point2",
+					"__type": "Array<Point>",
+					"uid": 21,
+					"type": "F_Point",
+					"isArray": true,
+					"canBeNull": false,
+					"arrayMinLength": null,
+					"arrayMaxLength": null,
+					"editorDisplayMode": "Hidden",
+					"editorDisplayPos": "Above",
+					"editorAlwaysShow": false,
+					"editorCutLongValues": true,
+					"min": null,
+					"max": null,
+					"regex": null,
+					"acceptFileTypes": null,
+					"defaultOverride": null,
+					"textLanguageMode": null
+				}
+			]
+		}
+	], "tilesets": [], "enums": [{ "identifier": "SomeEnum", "uid": 16, "values": [{ "id": "Gne", "tileId": null, "color": 0, "__tileSrcRect": null }], "iconTilesetUid": null, "externalRelPath": null, "externalFileChecksum": null }], "externalEnums": [], "levelFields": [
+		{
+			"identifier": "Integer",
+			"__type": "Int",
+			"uid": 2,
+			"type": "F_Int",
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Float",
+			"__type": "Float",
+			"uid": 3,
+			"type": "F_Float",
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Boolean",
+			"__type": "Bool",
+			"uid": 4,
+			"type": "F_Bool",
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "String",
+			"__type": "String",
+			"uid": 5,
+			"type": "F_String",
+			"isArray": false,
+			"canBeNull": true,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Multilines",
+			"__type": "String",
+			"uid": 6,
+			"type": "F_Text",
+			"isArray": false,
+			"canBeNull": true,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "File_path",
+			"__type": "FilePath",
+			"uid": 7,
+			"type": "F_Path",
+			"isArray": false,
+			"canBeNull": true,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Color",
+			"__type": "Color",
+			"uid": 8,
+			"type": "F_Color",
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "SomeEnum",
+			"__type": "LocalEnum.SomeEnum",
+			"uid": 18,
+			"type": { "id": "F_Enum", "params": [16] },
+			"isArray": false,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Integer2",
+			"__type": "Array<Int>",
+			"uid": 9,
+			"type": "F_Int",
+			"isArray": true,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Float2",
+			"__type": "Array<Float>",
+			"uid": 10,
+			"type": "F_Float",
+			"isArray": true,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Boolean2",
+			"__type": "Array<Bool>",
+			"uid": 11,
+			"type": "F_Bool",
+			"isArray": true,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "String2",
+			"__type": "Array<String>",
+			"uid": 12,
+			"type": "F_String",
+			"isArray": true,
+			"canBeNull": true,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Multilines2",
+			"__type": "Array<String>",
+			"uid": 13,
+			"type": "F_Text",
+			"isArray": true,
+			"canBeNull": true,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "File_path2",
+			"__type": "Array<FilePath>",
+			"uid": 14,
+			"type": "F_Path",
+			"isArray": true,
+			"canBeNull": true,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "Color2",
+			"__type": "Array<Color>",
+			"uid": 15,
+			"type": "F_Color",
+			"isArray": true,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		},
+		{
+			"identifier": "SomeEnum2",
+			"__type": "Array<LocalEnum.SomeEnum>",
+			"uid": 17,
+			"type": { "id": "F_Enum", "params": [16] },
+			"isArray": true,
+			"canBeNull": false,
+			"arrayMinLength": null,
+			"arrayMaxLength": null,
+			"editorDisplayMode": "NameAndValue",
+			"editorDisplayPos": "Above",
+			"editorAlwaysShow": false,
+			"editorCutLongValues": true,
+			"min": null,
+			"max": null,
+			"regex": null,
+			"acceptFileTypes": null,
+			"defaultOverride": null,
+			"textLanguageMode": null
+		}
+	] },
+	"levels": [
+		{
+			"identifier": "Level_0",
+			"uid": 0,
+			"worldX": 0,
+			"worldY": 0,
+			"pxWid": 256,
+			"pxHei": 256,
+			"__bgColor": "#696A79",
+			"bgColor": null,
+			"useAutoIdentifier": true,
+			"bgRelPath": null,
+			"bgPos": null,
+			"bgPivotX": 0.5,
+			"bgPivotY": 0.5,
+			"__bgPos": null,
+			"externalRelPath": null,
+			"fieldInstances": [
+				{
+					"__identifier": "Integer",
+					"__value": 141,
+					"__type": "Int",
+					"defUid": 2,
+					"realEditorValues": [{ "id": "V_Int", "params": [141] }]
+				},
+				{
+					"__identifier": "Float",
+					"__value": 1.5,
+					"__type": "Float",
+					"defUid": 3,
+					"realEditorValues": [{ "id": "V_Float", "params": [1.5] }]
+				},
+				{
+					"__identifier": "Boolean",
+					"__value": true,
+					"__type": "Bool",
+					"defUid": 4,
+					"realEditorValues": [{
+						"id": "V_Bool",
+						"params": [ true ]
+					}]
+				},
+				{
+					"__identifier": "String",
+					"__value": "this is a string",
+					"__type": "String",
+					"defUid": 5,
+					"realEditorValues": [{
+						"id": "V_String",
+						"params": ["this is a string"]
+					}]
+				},
+				{
+					"__identifier": "Multilines",
+					"__value": "This\nis a multiline string",
+					"__type": "String",
+					"defUid": 6,
+					"realEditorValues": [{
+						"id": "V_String",
+						"params": ["This\nis a multiline string"]
+					}]
+				},
+				{
+					"__identifier": "File_path",
+					"__value": "README.md",
+					"__type": "FilePath",
+					"defUid": 7,
+					"realEditorValues": [{
+						"id": "V_String",
+						"params": ["README.md"]
+					}]
+				},
+				{
+					"__identifier": "Color",
+					"__value": "#A75454",
+					"__type": "Color",
+					"defUid": 8,
+					"realEditorValues": [{ "id": "V_Int", "params": [10966100] }]
+				},
+				{
+					"__identifier": "Integer2",
+					"__value": [123,152],
+					"__type": "Array<Int>",
+					"defUid": 9,
+					"realEditorValues": [ { "id": "V_Int", "params": [123] }, { "id": "V_Int", "params": [152] } ]
+				},
+				{
+					"__identifier": "Float2",
+					"__value": [1.2,1.5],
+					"__type": "Array<Float>",
+					"defUid": 10,
+					"realEditorValues": [ { "id": "V_Float", "params": [1.2] }, { "id": "V_Float", "params": [1.5] } ]
+				},
+				{
+					"__identifier": "Boolean2",
+					"__value": [ true, false ],
+					"__type": "Array<Bool>",
+					"defUid": 11,
+					"realEditorValues": [ {
+						"id": "V_Bool",
+						"params": [ true ]
+					}, {
+						"id": "V_Bool",
+						"params": [ false ]
+					} ]
+				},
+				{
+					"__identifier": "String2",
+					"__value": [ "string1", "string2" ],
+					"__type": "Array<String>",
+					"defUid": 12,
+					"realEditorValues": [ {
+						"id": "V_String",
+						"params": ["string1"]
+					}, {
+						"id": "V_String",
+						"params": ["string2"]
+					} ]
+				},
+				{
+					"__identifier": "Multilines2",
+					"__value": [ "multi\nline", "line\nmulti" ],
+					"__type": "Array<String>",
+					"defUid": 13,
+					"realEditorValues": [ {
+						"id": "V_String",
+						"params": ["multi\nline"]
+					}, {
+						"id": "V_String",
+						"params": ["line\nmulti"]
+					} ]
+				},
+				{
+					"__identifier": "File_path2",
+					"__value": [ "README.md", "Beach by deepnight.png" ],
+					"__type": "Array<FilePath>",
+					"defUid": 14,
+					"realEditorValues": [ {
+						"id": "V_String",
+						"params": ["README.md"]
+					}, {
+						"id": "V_String",
+						"params": ["Beach by deepnight.png"]
+					} ]
+				},
+				{
+					"__identifier": "Color2",
+					"__value": [ "#530C0C", "#D6A1A1" ],
+					"__type": "Array<Color>",
+					"defUid": 15,
+					"realEditorValues": [ { "id": "V_Int", "params": [5442572] }, { "id": "V_Int", "params": [14066081] } ]
+				},
+				{
+					"__identifier": "SomeEnum2",
+					"__value": [ "Gne", "Gne" ],
+					"__type": "Array<LocalEnum.SomeEnum>",
+					"defUid": 17,
+					"realEditorValues": [ {
+						"id": "V_String",
+						"params": ["Gne"]
+					}, {
+						"id": "V_String",
+						"params": ["Gne"]
+					} ]
+				},
+				{
+					"__identifier": "SomeEnum",
+					"__value": "Gne",
+					"__type": "LocalEnum.SomeEnum",
+					"defUid": 18,
+					"realEditorValues": [{
+						"id": "V_String",
+						"params": ["Gne"]
+					}]
+				}
+			],
+			"layerInstances": [
+				{
+					"__identifier": "Entities",
+					"__type": "Entities",
+					"__cWid": 16,
+					"__cHei": 16,
+					"__gridSize": 16,
+					"__opacity": 1,
+					"__pxTotalOffsetX": 0,
+					"__pxTotalOffsetY": 0,
+					"__tilesetDefUid": null,
+					"__tilesetRelPath": null,
+					"levelId": 0,
+					"layerDefUid": 22,
+					"pxOffsetX": 0,
+					"pxOffsetY": 0,
+					"visible": true,
+					"optionalRules": [],
+					"intGrid": [],
+					"intGridCsv": [],
+					"autoLayerTiles": [],
+					"seed": 684823,
+					"overrideTilesetUid": null,
+					"gridTiles": [],
+					"entityInstances": [
+						{
+							"__identifier": "Entity",
+							"__grid": [5,5],
+							"__pivot": [0,0],
+							"__tile": null,
+							"width": 16,
+							"height": 16,
+							"defUid": 19,
+							"px": [80,80],
+							"fieldInstances": [
+								{
+									"__identifier": "Point",
+									"__value": { "cx": 1, "cy": 1 },
+									"__type": "Point",
+									"defUid": 20,
+									"realEditorValues": [{
+										"id": "V_String",
+										"params": ["1,1"]
+									}]
+								},
+								{
+									"__identifier": "Point2",
+									"__value": [ { "cx": 9, "cy": 12 }, { "cx": 3, "cy": 12 } ],
+									"__type": "Array<Point>",
+									"defUid": 21,
+									"realEditorValues": [ {
+										"id": "V_String",
+										"params": ["9,12"]
+									}, {
+										"id": "V_String",
+										"params": ["3,12"]
+									} ]
+								}
+							]
+						}
+					]
+				}
+			],
+			"__neighbours": []
+		}
+	]
+}

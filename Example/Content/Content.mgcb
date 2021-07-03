@@ -10,7 +10,6 @@
 
 #-------------------------------- References --------------------------------#
 
-/reference:..\..\MonoGame LDtk Importer\bin\Debug\netcoreapp3.1\MonoGame LDtk Importer.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -44,14 +43,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:RPG Graphics Icons by 7Soul's.png
-
-#begin SeparateLevelFiles.ldtk
-/importer:Importer
-/processor:Processor
-/build:SeparateLevelFiles.ldtk
-
-#begin Test_file_for_API_showing_all_features.ldtk
-/importer:Importer
-/processor:Processor
-/build:Test_file_for_API_showing_all_features.ldtk
 

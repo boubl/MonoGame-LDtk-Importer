@@ -1,75 +1,128 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Importer
-  name: Importer
-  href: api/Importer.html
-  commentId: N:Importer
-  fullName: Importer
-  nameWithType: Importer
-- uid: Importer.Importer
-  name: Importer
-  href: api/Importer.Importer.html
-  commentId: T:Importer.Importer
-  fullName: Importer.Importer
-  nameWithType: Importer
-- uid: Importer.Importer.Import(System.String,Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)
-  name: Import(String, ContentImporterContext)
-  href: api/Importer.Importer.html#Importer_Importer_Import_System_String_Microsoft_Xna_Framework_Content_Pipeline_ContentImporterContext_
-  commentId: M:Importer.Importer.Import(System.String,Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)
-  fullName: Importer.Importer.Import(System.String, Microsoft.Xna.Framework.Content.Pipeline.ContentImporterContext)
-  nameWithType: Importer.Import(String, ContentImporterContext)
-- uid: Importer.Importer.Import*
-  name: Import
-  href: api/Importer.Importer.html#Importer_Importer_Import_
-  commentId: Overload:Importer.Importer.Import
-  isSpec: "True"
-  fullName: Importer.Importer.Import
-  nameWithType: Importer.Import
-- uid: Importer.Reader
-  name: Reader
-  href: api/Importer.Reader.html
-  commentId: T:Importer.Reader
-  fullName: Importer.Reader
-  nameWithType: Reader
-- uid: Importer.Reader.Read(Microsoft.Xna.Framework.Content.ContentReader,MonoGame_LDtk_Importer.LDtkProject)
-  name: Read(ContentReader, LDtkProject)
-  href: api/Importer.Reader.html#Importer_Reader_Read_Microsoft_Xna_Framework_Content_ContentReader_MonoGame_LDtk_Importer_LDtkProject_
-  commentId: M:Importer.Reader.Read(Microsoft.Xna.Framework.Content.ContentReader,MonoGame_LDtk_Importer.LDtkProject)
-  fullName: Importer.Reader.Read(Microsoft.Xna.Framework.Content.ContentReader, MonoGame_LDtk_Importer.LDtkProject)
-  nameWithType: Reader.Read(ContentReader, LDtkProject)
-- uid: Importer.Reader.Read*
-  name: Read
-  href: api/Importer.Reader.html#Importer_Reader_Read_
-  commentId: Overload:Importer.Reader.Read
-  isSpec: "True"
-  fullName: Importer.Reader.Read
-  nameWithType: Reader.Read
 - uid: MonoGame_LDtk_Importer
   name: MonoGame_LDtk_Importer
   href: api/MonoGame_LDtk_Importer.html
   commentId: N:MonoGame_LDtk_Importer
   fullName: MonoGame_LDtk_Importer
   nameWithType: MonoGame_LDtk_Importer
+- uid: MonoGame_LDtk_Importer.AutoLayer
+  name: AutoLayer
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html
+  commentId: T:MonoGame_LDtk_Importer.AutoLayer
+  fullName: MonoGame_LDtk_Importer.AutoLayer
+  nameWithType: AutoLayer
+- uid: MonoGame_LDtk_Importer.AutoLayer.AutoLayerTiles
+  name: AutoLayerTiles
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_AutoLayerTiles
+  commentId: P:MonoGame_LDtk_Importer.AutoLayer.AutoLayerTiles
+  fullName: MonoGame_LDtk_Importer.AutoLayer.AutoLayerTiles
+  nameWithType: AutoLayer.AutoLayerTiles
+- uid: MonoGame_LDtk_Importer.AutoLayer.AutoLayerTiles*
+  name: AutoLayerTiles
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_AutoLayerTiles_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.AutoLayerTiles
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.AutoLayerTiles
+  nameWithType: AutoLayer.AutoLayerTiles
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetPointsByTileId(System.Int32)
+  name: GetPointsByTileId(Int32)
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetPointsByTileId_System_Int32_
+  commentId: M:MonoGame_LDtk_Importer.AutoLayer.GetPointsByTileId(System.Int32)
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetPointsByTileId(System.Int32)
+  nameWithType: AutoLayer.GetPointsByTileId(Int32)
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetPointsByTileId*
+  name: GetPointsByTileId
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetPointsByTileId_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.GetPointsByTileId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetPointsByTileId
+  nameWithType: AutoLayer.GetPointsByTileId
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetTileAt(Microsoft.Xna.Framework.Point)
+  name: GetTileAt(Point)
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetTileAt_Microsoft_Xna_Framework_Point_
+  commentId: M:MonoGame_LDtk_Importer.AutoLayer.GetTileAt(Microsoft.Xna.Framework.Point)
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetTileAt(Microsoft.Xna.Framework.Point)
+  nameWithType: AutoLayer.GetTileAt(Point)
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetTileAt*
+  name: GetTileAt
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetTileAt_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.GetTileAt
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetTileAt
+  nameWithType: AutoLayer.GetTileAt
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetTilesetTexture(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetTilesetTexture_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.AutoLayer.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: AutoLayer.GetTilesetTexture(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetTilesetTexture*
+  name: GetTilesetTexture
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetTilesetTexture_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.GetTilesetTexture
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetTilesetTexture
+  nameWithType: AutoLayer.GetTilesetTexture
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetUsedTileIds
+  name: GetUsedTileIds()
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetUsedTileIds
+  commentId: M:MonoGame_LDtk_Importer.AutoLayer.GetUsedTileIds
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetUsedTileIds()
+  nameWithType: AutoLayer.GetUsedTileIds()
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetUsedTileIds*
+  name: GetUsedTileIds
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetUsedTileIds_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.GetUsedTileIds
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetUsedTileIds
+  nameWithType: AutoLayer.GetUsedTileIds
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetUsedTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetUsedTilesTextures(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetUsedTilesTextures_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.AutoLayer.GetUsedTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetUsedTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: AutoLayer.GetUsedTilesTextures(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.AutoLayer.GetUsedTilesTextures*
+  name: GetUsedTilesTextures
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_GetUsedTilesTextures_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.GetUsedTilesTextures
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.GetUsedTilesTextures
+  nameWithType: AutoLayer.GetUsedTilesTextures
+- uid: MonoGame_LDtk_Importer.AutoLayer.TilesetDefUid
+  name: TilesetDefUid
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_TilesetDefUid
+  commentId: P:MonoGame_LDtk_Importer.AutoLayer.TilesetDefUid
+  fullName: MonoGame_LDtk_Importer.AutoLayer.TilesetDefUid
+  nameWithType: AutoLayer.TilesetDefUid
+- uid: MonoGame_LDtk_Importer.AutoLayer.TilesetDefUid*
+  name: TilesetDefUid
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_TilesetDefUid_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.TilesetDefUid
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.TilesetDefUid
+  nameWithType: AutoLayer.TilesetDefUid
+- uid: MonoGame_LDtk_Importer.AutoLayer.TilesetRelPath
+  name: TilesetRelPath
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_TilesetRelPath
+  commentId: P:MonoGame_LDtk_Importer.AutoLayer.TilesetRelPath
+  fullName: MonoGame_LDtk_Importer.AutoLayer.TilesetRelPath
+  nameWithType: AutoLayer.TilesetRelPath
+- uid: MonoGame_LDtk_Importer.AutoLayer.TilesetRelPath*
+  name: TilesetRelPath
+  href: api/MonoGame_LDtk_Importer.AutoLayer.html#MonoGame_LDtk_Importer_AutoLayer_TilesetRelPath_
+  commentId: Overload:MonoGame_LDtk_Importer.AutoLayer.TilesetRelPath
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.AutoLayer.TilesetRelPath
+  nameWithType: AutoLayer.TilesetRelPath
 - uid: MonoGame_LDtk_Importer.BackgroundPosition
   name: BackgroundPosition
   href: api/MonoGame_LDtk_Importer.BackgroundPosition.html
   commentId: T:MonoGame_LDtk_Importer.BackgroundPosition
   fullName: MonoGame_LDtk_Importer.BackgroundPosition
   nameWithType: BackgroundPosition
-- uid: MonoGame_LDtk_Importer.BackgroundPosition.#ctor(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
-  name: BackgroundPosition(Rectangle, Vector2, Vector2)
-  href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition__ctor_Microsoft_Xna_Framework_Rectangle_Microsoft_Xna_Framework_Vector2_Microsoft_Xna_Framework_Vector2_
-  commentId: M:MonoGame_LDtk_Importer.BackgroundPosition.#ctor(Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2)
-  fullName: MonoGame_LDtk_Importer.BackgroundPosition.BackgroundPosition(Microsoft.Xna.Framework.Rectangle, Microsoft.Xna.Framework.Vector2, Microsoft.Xna.Framework.Vector2)
-  nameWithType: BackgroundPosition.BackgroundPosition(Rectangle, Vector2, Vector2)
-- uid: MonoGame_LDtk_Importer.BackgroundPosition.#ctor*
-  name: BackgroundPosition
-  href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition__ctor_
-  commentId: Overload:MonoGame_LDtk_Importer.BackgroundPosition.#ctor
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.BackgroundPosition.BackgroundPosition
-  nameWithType: BackgroundPosition.BackgroundPosition
 - uid: MonoGame_LDtk_Importer.BackgroundPosition.Coordinates
   name: Coordinates
   href: api/MonoGame_LDtk_Importer.BackgroundPosition.html#MonoGame_LDtk_Importer_BackgroundPosition_Coordinates
@@ -122,6 +175,44 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.BackgroundPosition.Scale
   nameWithType: BackgroundPosition.Scale
+- uid: MonoGame_LDtk_Importer.BoolField
+  name: BoolField
+  href: api/MonoGame_LDtk_Importer.BoolField.html
+  commentId: T:MonoGame_LDtk_Importer.BoolField
+  fullName: MonoGame_LDtk_Importer.BoolField
+  nameWithType: BoolField
+- uid: MonoGame_LDtk_Importer.BoolField.Value
+  name: Value
+  href: api/MonoGame_LDtk_Importer.BoolField.html#MonoGame_LDtk_Importer_BoolField_Value
+  commentId: P:MonoGame_LDtk_Importer.BoolField.Value
+  fullName: MonoGame_LDtk_Importer.BoolField.Value
+  nameWithType: BoolField.Value
+- uid: MonoGame_LDtk_Importer.BoolField.Value*
+  name: Value
+  href: api/MonoGame_LDtk_Importer.BoolField.html#MonoGame_LDtk_Importer_BoolField_Value_
+  commentId: Overload:MonoGame_LDtk_Importer.BoolField.Value
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.BoolField.Value
+  nameWithType: BoolField.Value
+- uid: MonoGame_LDtk_Importer.ColorField
+  name: ColorField
+  href: api/MonoGame_LDtk_Importer.ColorField.html
+  commentId: T:MonoGame_LDtk_Importer.ColorField
+  fullName: MonoGame_LDtk_Importer.ColorField
+  nameWithType: ColorField
+- uid: MonoGame_LDtk_Importer.ColorField.Value
+  name: Value
+  href: api/MonoGame_LDtk_Importer.ColorField.html#MonoGame_LDtk_Importer_ColorField_Value
+  commentId: P:MonoGame_LDtk_Importer.ColorField.Value
+  fullName: MonoGame_LDtk_Importer.ColorField.Value
+  nameWithType: ColorField.Value
+- uid: MonoGame_LDtk_Importer.ColorField.Value*
+  name: Value
+  href: api/MonoGame_LDtk_Importer.ColorField.html#MonoGame_LDtk_Importer_ColorField_Value_
+  commentId: Overload:MonoGame_LDtk_Importer.ColorField.Value
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.ColorField.Value
+  nameWithType: ColorField.Value
 - uid: MonoGame_LDtk_Importer.Definitions
   name: Definitions
   href: api/MonoGame_LDtk_Importer.Definitions.html
@@ -167,6 +258,71 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Definitions.ExternalEnums
   nameWithType: Definitions.ExternalEnums
+- uid: MonoGame_LDtk_Importer.Definitions.GetEntitieDefById(System.String)
+  name: GetEntitieDefById(String)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetEntitieDefById_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.GetEntitieDefById(System.String)
+  fullName: MonoGame_LDtk_Importer.Definitions.GetEntitieDefById(System.String)
+  nameWithType: Definitions.GetEntitieDefById(String)
+- uid: MonoGame_LDtk_Importer.Definitions.GetEntitieDefById*
+  name: GetEntitieDefById
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetEntitieDefById_
+  commentId: Overload:MonoGame_LDtk_Importer.Definitions.GetEntitieDefById
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Definitions.GetEntitieDefById
+  nameWithType: Definitions.GetEntitieDefById
+- uid: MonoGame_LDtk_Importer.Definitions.GetEnumDefById(System.String)
+  name: GetEnumDefById(String)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetEnumDefById_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.GetEnumDefById(System.String)
+  fullName: MonoGame_LDtk_Importer.Definitions.GetEnumDefById(System.String)
+  nameWithType: Definitions.GetEnumDefById(String)
+- uid: MonoGame_LDtk_Importer.Definitions.GetEnumDefById*
+  name: GetEnumDefById
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetEnumDefById_
+  commentId: Overload:MonoGame_LDtk_Importer.Definitions.GetEnumDefById
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Definitions.GetEnumDefById
+  nameWithType: Definitions.GetEnumDefById
+- uid: MonoGame_LDtk_Importer.Definitions.GetExtEnumDefById(System.String)
+  name: GetExtEnumDefById(String)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetExtEnumDefById_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.GetExtEnumDefById(System.String)
+  fullName: MonoGame_LDtk_Importer.Definitions.GetExtEnumDefById(System.String)
+  nameWithType: Definitions.GetExtEnumDefById(String)
+- uid: MonoGame_LDtk_Importer.Definitions.GetExtEnumDefById*
+  name: GetExtEnumDefById
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetExtEnumDefById_
+  commentId: Overload:MonoGame_LDtk_Importer.Definitions.GetExtEnumDefById
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Definitions.GetExtEnumDefById
+  nameWithType: Definitions.GetExtEnumDefById
+- uid: MonoGame_LDtk_Importer.Definitions.GetLayerDefById(System.String)
+  name: GetLayerDefById(String)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetLayerDefById_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.GetLayerDefById(System.String)
+  fullName: MonoGame_LDtk_Importer.Definitions.GetLayerDefById(System.String)
+  nameWithType: Definitions.GetLayerDefById(String)
+- uid: MonoGame_LDtk_Importer.Definitions.GetLayerDefById*
+  name: GetLayerDefById
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetLayerDefById_
+  commentId: Overload:MonoGame_LDtk_Importer.Definitions.GetLayerDefById
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Definitions.GetLayerDefById
+  nameWithType: Definitions.GetLayerDefById
+- uid: MonoGame_LDtk_Importer.Definitions.GetTilesetDefById(System.String)
+  name: GetTilesetDefById(String)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetTilesetDefById_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.GetTilesetDefById(System.String)
+  fullName: MonoGame_LDtk_Importer.Definitions.GetTilesetDefById(System.String)
+  nameWithType: Definitions.GetTilesetDefById(String)
+- uid: MonoGame_LDtk_Importer.Definitions.GetTilesetDefById*
+  name: GetTilesetDefById
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_GetTilesetDefById_
+  commentId: Overload:MonoGame_LDtk_Importer.Definitions.GetTilesetDefById
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Definitions.GetTilesetDefById
+  nameWithType: Definitions.GetTilesetDefById
 - uid: MonoGame_LDtk_Importer.Definitions.Layers
   name: Layers
   href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_Layers
@@ -180,12 +336,12 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Definitions.Layers
   nameWithType: Definitions.Layers
-- uid: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty)
-  name: LoadDefinitions(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_LoadDefinitions_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty)
-  nameWithType: Definitions.LoadDefinitions(JsonProperty)
+- uid: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty,System.String)
+  name: LoadDefinitions(JsonProperty, String)
+  href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_LoadDefinitions_System_Text_Json_JsonProperty_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty,System.String)
+  fullName: MonoGame_LDtk_Importer.Definitions.LoadDefinitions(System.Text.Json.JsonProperty, System.String)
+  nameWithType: Definitions.LoadDefinitions(JsonProperty, String)
 - uid: MonoGame_LDtk_Importer.Definitions.LoadDefinitions*
   name: LoadDefinitions
   href: api/MonoGame_LDtk_Importer.Definitions.html#MonoGame_LDtk_Importer_Definitions_LoadDefinitions_
@@ -329,142 +485,187 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EntitieDef.Width
   nameWithType: EntitieDef.Width
-- uid: MonoGame_LDtk_Importer.EntityInstance
-  name: EntityInstance
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html
-  commentId: T:MonoGame_LDtk_Importer.EntityInstance
-  fullName: MonoGame_LDtk_Importer.EntityInstance
-  nameWithType: EntityInstance
-- uid: MonoGame_LDtk_Importer.EntityInstance.Coordinates
+- uid: MonoGame_LDtk_Importer.EntitieLayer
+  name: EntitieLayer
+  href: api/MonoGame_LDtk_Importer.EntitieLayer.html
+  commentId: T:MonoGame_LDtk_Importer.EntitieLayer
+  fullName: MonoGame_LDtk_Importer.EntitieLayer
+  nameWithType: EntitieLayer
+- uid: MonoGame_LDtk_Importer.EntitieLayer.EntityInstances
+  name: EntityInstances
+  href: api/MonoGame_LDtk_Importer.EntitieLayer.html#MonoGame_LDtk_Importer_EntitieLayer_EntityInstances
+  commentId: P:MonoGame_LDtk_Importer.EntitieLayer.EntityInstances
+  fullName: MonoGame_LDtk_Importer.EntitieLayer.EntityInstances
+  nameWithType: EntitieLayer.EntityInstances
+- uid: MonoGame_LDtk_Importer.EntitieLayer.EntityInstances*
+  name: EntityInstances
+  href: api/MonoGame_LDtk_Importer.EntitieLayer.html#MonoGame_LDtk_Importer_EntitieLayer_EntityInstances_
+  commentId: Overload:MonoGame_LDtk_Importer.EntitieLayer.EntityInstances
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.EntitieLayer.EntityInstances
+  nameWithType: EntitieLayer.EntityInstances
+- uid: MonoGame_LDtk_Importer.EntitieLayer.GetEntitiesByIdentifier(System.String)
+  name: GetEntitiesByIdentifier(String)
+  href: api/MonoGame_LDtk_Importer.EntitieLayer.html#MonoGame_LDtk_Importer_EntitieLayer_GetEntitiesByIdentifier_System_String_
+  commentId: M:MonoGame_LDtk_Importer.EntitieLayer.GetEntitiesByIdentifier(System.String)
+  fullName: MonoGame_LDtk_Importer.EntitieLayer.GetEntitiesByIdentifier(System.String)
+  nameWithType: EntitieLayer.GetEntitiesByIdentifier(String)
+- uid: MonoGame_LDtk_Importer.EntitieLayer.GetEntitiesByIdentifier*
+  name: GetEntitiesByIdentifier
+  href: api/MonoGame_LDtk_Importer.EntitieLayer.html#MonoGame_LDtk_Importer_EntitieLayer_GetEntitiesByIdentifier_
+  commentId: Overload:MonoGame_LDtk_Importer.EntitieLayer.GetEntitiesByIdentifier
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.EntitieLayer.GetEntitiesByIdentifier
+  nameWithType: EntitieLayer.GetEntitiesByIdentifier
+- uid: MonoGame_LDtk_Importer.Entity
+  name: Entity
+  href: api/MonoGame_LDtk_Importer.Entity.html
+  commentId: T:MonoGame_LDtk_Importer.Entity
+  fullName: MonoGame_LDtk_Importer.Entity
+  nameWithType: Entity
+- uid: MonoGame_LDtk_Importer.Entity.Coordinates
   name: Coordinates
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Coordinates
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.Coordinates
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Coordinates
-  nameWithType: EntityInstance.Coordinates
-- uid: MonoGame_LDtk_Importer.EntityInstance.Coordinates*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Coordinates
+  commentId: P:MonoGame_LDtk_Importer.Entity.Coordinates
+  fullName: MonoGame_LDtk_Importer.Entity.Coordinates
+  nameWithType: Entity.Coordinates
+- uid: MonoGame_LDtk_Importer.Entity.Coordinates*
   name: Coordinates
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Coordinates_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.Coordinates
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Coordinates_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.Coordinates
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Coordinates
-  nameWithType: EntityInstance.Coordinates
-- uid: MonoGame_LDtk_Importer.EntityInstance.DefUid
+  fullName: MonoGame_LDtk_Importer.Entity.Coordinates
+  nameWithType: Entity.Coordinates
+- uid: MonoGame_LDtk_Importer.Entity.DefUid
   name: DefUid
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_DefUid
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.DefUid
-  fullName: MonoGame_LDtk_Importer.EntityInstance.DefUid
-  nameWithType: EntityInstance.DefUid
-- uid: MonoGame_LDtk_Importer.EntityInstance.DefUid*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_DefUid
+  commentId: P:MonoGame_LDtk_Importer.Entity.DefUid
+  fullName: MonoGame_LDtk_Importer.Entity.DefUid
+  nameWithType: Entity.DefUid
+- uid: MonoGame_LDtk_Importer.Entity.DefUid*
   name: DefUid
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_DefUid_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.DefUid
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_DefUid_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.DefUid
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.DefUid
-  nameWithType: EntityInstance.DefUid
-- uid: MonoGame_LDtk_Importer.EntityInstance.FieldInstances
+  fullName: MonoGame_LDtk_Importer.Entity.DefUid
+  nameWithType: Entity.DefUid
+- uid: MonoGame_LDtk_Importer.Entity.FieldInstances
   name: FieldInstances
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_FieldInstances
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.FieldInstances
-  fullName: MonoGame_LDtk_Importer.EntityInstance.FieldInstances
-  nameWithType: EntityInstance.FieldInstances
-- uid: MonoGame_LDtk_Importer.EntityInstance.FieldInstances*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_FieldInstances
+  commentId: P:MonoGame_LDtk_Importer.Entity.FieldInstances
+  fullName: MonoGame_LDtk_Importer.Entity.FieldInstances
+  nameWithType: Entity.FieldInstances
+- uid: MonoGame_LDtk_Importer.Entity.FieldInstances*
   name: FieldInstances
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_FieldInstances_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.FieldInstances
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_FieldInstances_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.FieldInstances
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.FieldInstances
-  nameWithType: EntityInstance.FieldInstances
-- uid: MonoGame_LDtk_Importer.EntityInstance.GridCoordinates
+  fullName: MonoGame_LDtk_Importer.Entity.FieldInstances
+  nameWithType: Entity.FieldInstances
+- uid: MonoGame_LDtk_Importer.Entity.GetFieldsByType(MonoGame_LDtk_Importer.FieldType)
+  name: GetFieldsByType(FieldType)
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_GetFieldsByType_MonoGame_LDtk_Importer_FieldType_
+  commentId: M:MonoGame_LDtk_Importer.Entity.GetFieldsByType(MonoGame_LDtk_Importer.FieldType)
+  fullName: MonoGame_LDtk_Importer.Entity.GetFieldsByType(MonoGame_LDtk_Importer.FieldType)
+  nameWithType: Entity.GetFieldsByType(FieldType)
+- uid: MonoGame_LDtk_Importer.Entity.GetFieldsByType*
+  name: GetFieldsByType
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_GetFieldsByType_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.GetFieldsByType
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Entity.GetFieldsByType
+  nameWithType: Entity.GetFieldsByType
+- uid: MonoGame_LDtk_Importer.Entity.GridCoordinates
   name: GridCoordinates
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_GridCoordinates
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.GridCoordinates
-  fullName: MonoGame_LDtk_Importer.EntityInstance.GridCoordinates
-  nameWithType: EntityInstance.GridCoordinates
-- uid: MonoGame_LDtk_Importer.EntityInstance.GridCoordinates*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_GridCoordinates
+  commentId: P:MonoGame_LDtk_Importer.Entity.GridCoordinates
+  fullName: MonoGame_LDtk_Importer.Entity.GridCoordinates
+  nameWithType: Entity.GridCoordinates
+- uid: MonoGame_LDtk_Importer.Entity.GridCoordinates*
   name: GridCoordinates
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_GridCoordinates_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.GridCoordinates
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_GridCoordinates_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.GridCoordinates
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.GridCoordinates
-  nameWithType: EntityInstance.GridCoordinates
-- uid: MonoGame_LDtk_Importer.EntityInstance.Height
+  fullName: MonoGame_LDtk_Importer.Entity.GridCoordinates
+  nameWithType: Entity.GridCoordinates
+- uid: MonoGame_LDtk_Importer.Entity.Height
   name: Height
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Height
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.Height
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Height
-  nameWithType: EntityInstance.Height
-- uid: MonoGame_LDtk_Importer.EntityInstance.Height*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Height
+  commentId: P:MonoGame_LDtk_Importer.Entity.Height
+  fullName: MonoGame_LDtk_Importer.Entity.Height
+  nameWithType: Entity.Height
+- uid: MonoGame_LDtk_Importer.Entity.Height*
   name: Height
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Height_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.Height
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Height_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.Height
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Height
-  nameWithType: EntityInstance.Height
-- uid: MonoGame_LDtk_Importer.EntityInstance.Identifier
+  fullName: MonoGame_LDtk_Importer.Entity.Height
+  nameWithType: Entity.Height
+- uid: MonoGame_LDtk_Importer.Entity.Identifier
   name: Identifier
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Identifier
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.Identifier
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Identifier
-  nameWithType: EntityInstance.Identifier
-- uid: MonoGame_LDtk_Importer.EntityInstance.Identifier*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Identifier
+  commentId: P:MonoGame_LDtk_Importer.Entity.Identifier
+  fullName: MonoGame_LDtk_Importer.Entity.Identifier
+  nameWithType: Entity.Identifier
+- uid: MonoGame_LDtk_Importer.Entity.Identifier*
   name: Identifier
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Identifier_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.Identifier
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Identifier_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.Identifier
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Identifier
-  nameWithType: EntityInstance.Identifier
-- uid: MonoGame_LDtk_Importer.EntityInstance.LoadEntities(System.Text.Json.JsonProperty)
-  name: LoadEntities(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_LoadEntities_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.EntityInstance.LoadEntities(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.EntityInstance.LoadEntities(System.Text.Json.JsonProperty)
-  nameWithType: EntityInstance.LoadEntities(JsonProperty)
-- uid: MonoGame_LDtk_Importer.EntityInstance.LoadEntities*
+  fullName: MonoGame_LDtk_Importer.Entity.Identifier
+  nameWithType: Entity.Identifier
+- uid: MonoGame_LDtk_Importer.Entity.LoadEntities(System.Text.Json.JsonElement)
+  name: LoadEntities(JsonElement)
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_LoadEntities_System_Text_Json_JsonElement_
+  commentId: M:MonoGame_LDtk_Importer.Entity.LoadEntities(System.Text.Json.JsonElement)
+  fullName: MonoGame_LDtk_Importer.Entity.LoadEntities(System.Text.Json.JsonElement)
+  nameWithType: Entity.LoadEntities(JsonElement)
+- uid: MonoGame_LDtk_Importer.Entity.LoadEntities*
   name: LoadEntities
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_LoadEntities_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.LoadEntities
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_LoadEntities_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.LoadEntities
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.LoadEntities
-  nameWithType: EntityInstance.LoadEntities
-- uid: MonoGame_LDtk_Importer.EntityInstance.PivotCoordinates
+  fullName: MonoGame_LDtk_Importer.Entity.LoadEntities
+  nameWithType: Entity.LoadEntities
+- uid: MonoGame_LDtk_Importer.Entity.PivotCoordinates
   name: PivotCoordinates
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_PivotCoordinates
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.PivotCoordinates
-  fullName: MonoGame_LDtk_Importer.EntityInstance.PivotCoordinates
-  nameWithType: EntityInstance.PivotCoordinates
-- uid: MonoGame_LDtk_Importer.EntityInstance.PivotCoordinates*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_PivotCoordinates
+  commentId: P:MonoGame_LDtk_Importer.Entity.PivotCoordinates
+  fullName: MonoGame_LDtk_Importer.Entity.PivotCoordinates
+  nameWithType: Entity.PivotCoordinates
+- uid: MonoGame_LDtk_Importer.Entity.PivotCoordinates*
   name: PivotCoordinates
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_PivotCoordinates_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.PivotCoordinates
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_PivotCoordinates_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.PivotCoordinates
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.PivotCoordinates
-  nameWithType: EntityInstance.PivotCoordinates
-- uid: MonoGame_LDtk_Importer.EntityInstance.Tile
+  fullName: MonoGame_LDtk_Importer.Entity.PivotCoordinates
+  nameWithType: Entity.PivotCoordinates
+- uid: MonoGame_LDtk_Importer.Entity.Tile
   name: Tile
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Tile
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.Tile
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Tile
-  nameWithType: EntityInstance.Tile
-- uid: MonoGame_LDtk_Importer.EntityInstance.Tile*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Tile
+  commentId: P:MonoGame_LDtk_Importer.Entity.Tile
+  fullName: MonoGame_LDtk_Importer.Entity.Tile
+  nameWithType: Entity.Tile
+- uid: MonoGame_LDtk_Importer.Entity.Tile*
   name: Tile
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Tile_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.Tile
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Tile_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.Tile
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Tile
-  nameWithType: EntityInstance.Tile
-- uid: MonoGame_LDtk_Importer.EntityInstance.Width
+  fullName: MonoGame_LDtk_Importer.Entity.Tile
+  nameWithType: Entity.Tile
+- uid: MonoGame_LDtk_Importer.Entity.Width
   name: Width
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Width
-  commentId: P:MonoGame_LDtk_Importer.EntityInstance.Width
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Width
-  nameWithType: EntityInstance.Width
-- uid: MonoGame_LDtk_Importer.EntityInstance.Width*
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Width
+  commentId: P:MonoGame_LDtk_Importer.Entity.Width
+  fullName: MonoGame_LDtk_Importer.Entity.Width
+  nameWithType: Entity.Width
+- uid: MonoGame_LDtk_Importer.Entity.Width*
   name: Width
-  href: api/MonoGame_LDtk_Importer.EntityInstance.html#MonoGame_LDtk_Importer_EntityInstance_Width_
-  commentId: Overload:MonoGame_LDtk_Importer.EntityInstance.Width
+  href: api/MonoGame_LDtk_Importer.Entity.html#MonoGame_LDtk_Importer_Entity_Width_
+  commentId: Overload:MonoGame_LDtk_Importer.Entity.Width
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.EntityInstance.Width
-  nameWithType: EntityInstance.Width
+  fullName: MonoGame_LDtk_Importer.Entity.Width
+  nameWithType: Entity.Width
 - uid: MonoGame_LDtk_Importer.EntityTile
   name: EntityTile
   href: api/MonoGame_LDtk_Importer.EntityTile.html
@@ -516,6 +717,19 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EnumDef.ExternalRelPath
   nameWithType: EnumDef.ExternalRelPath
+- uid: MonoGame_LDtk_Importer.EnumDef.GetValueByType(System.String)
+  name: GetValueByType(String)
+  href: api/MonoGame_LDtk_Importer.EnumDef.html#MonoGame_LDtk_Importer_EnumDef_GetValueByType_System_String_
+  commentId: M:MonoGame_LDtk_Importer.EnumDef.GetValueByType(System.String)
+  fullName: MonoGame_LDtk_Importer.EnumDef.GetValueByType(System.String)
+  nameWithType: EnumDef.GetValueByType(String)
+- uid: MonoGame_LDtk_Importer.EnumDef.GetValueByType*
+  name: GetValueByType
+  href: api/MonoGame_LDtk_Importer.EnumDef.html#MonoGame_LDtk_Importer_EnumDef_GetValueByType_
+  commentId: Overload:MonoGame_LDtk_Importer.EnumDef.GetValueByType
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.EnumDef.GetValueByType
+  nameWithType: EnumDef.GetValueByType
 - uid: MonoGame_LDtk_Importer.EnumDef.IconTilesetUid
   name: IconTilesetUid
   href: api/MonoGame_LDtk_Importer.EnumDef.html#MonoGame_LDtk_Importer_EnumDef_IconTilesetUid
@@ -587,6 +801,19 @@ references:
   commentId: T:MonoGame_LDtk_Importer.EnumValueDef
   fullName: MonoGame_LDtk_Importer.EnumValueDef
   nameWithType: EnumValueDef
+- uid: MonoGame_LDtk_Importer.EnumValueDef.Color
+  name: Color
+  href: api/MonoGame_LDtk_Importer.EnumValueDef.html#MonoGame_LDtk_Importer_EnumValueDef_Color
+  commentId: P:MonoGame_LDtk_Importer.EnumValueDef.Color
+  fullName: MonoGame_LDtk_Importer.EnumValueDef.Color
+  nameWithType: EnumValueDef.Color
+- uid: MonoGame_LDtk_Importer.EnumValueDef.Color*
+  name: Color
+  href: api/MonoGame_LDtk_Importer.EnumValueDef.html#MonoGame_LDtk_Importer_EnumValueDef_Color_
+  commentId: Overload:MonoGame_LDtk_Importer.EnumValueDef.Color
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.EnumValueDef.Color
+  nameWithType: EnumValueDef.Color
 - uid: MonoGame_LDtk_Importer.EnumValueDef.Id
   name: Id
   href: api/MonoGame_LDtk_Importer.EnumValueDef.html#MonoGame_LDtk_Importer_EnumValueDef_Id
@@ -639,103 +866,90 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.EnumValueDef.TileSourceRectangle
   nameWithType: EnumValueDef.TileSourceRectangle
-- uid: MonoGame_LDtk_Importer.FieldInstance
-  name: FieldInstance
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html
-  commentId: T:MonoGame_LDtk_Importer.FieldInstance
-  fullName: MonoGame_LDtk_Importer.FieldInstance
-  nameWithType: FieldInstance
-- uid: MonoGame_LDtk_Importer.FieldInstance.DefUid
+- uid: MonoGame_LDtk_Importer.Field
+  name: Field
+  href: api/MonoGame_LDtk_Importer.Field.html
+  commentId: T:MonoGame_LDtk_Importer.Field
+  fullName: MonoGame_LDtk_Importer.Field
+  nameWithType: Field
+- uid: MonoGame_LDtk_Importer.Field.DefUid
   name: DefUid
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_DefUid
-  commentId: P:MonoGame_LDtk_Importer.FieldInstance.DefUid
-  fullName: MonoGame_LDtk_Importer.FieldInstance.DefUid
-  nameWithType: FieldInstance.DefUid
-- uid: MonoGame_LDtk_Importer.FieldInstance.DefUid*
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_DefUid
+  commentId: P:MonoGame_LDtk_Importer.Field.DefUid
+  fullName: MonoGame_LDtk_Importer.Field.DefUid
+  nameWithType: Field.DefUid
+- uid: MonoGame_LDtk_Importer.Field.DefUid*
   name: DefUid
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_DefUid_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.DefUid
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_DefUid_
+  commentId: Overload:MonoGame_LDtk_Importer.Field.DefUid
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.DefUid
-  nameWithType: FieldInstance.DefUid
-- uid: MonoGame_LDtk_Importer.FieldInstance.EnumName
+  fullName: MonoGame_LDtk_Importer.Field.DefUid
+  nameWithType: Field.DefUid
+- uid: MonoGame_LDtk_Importer.Field.EnumName
   name: EnumName
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_EnumName
-  commentId: P:MonoGame_LDtk_Importer.FieldInstance.EnumName
-  fullName: MonoGame_LDtk_Importer.FieldInstance.EnumName
-  nameWithType: FieldInstance.EnumName
-- uid: MonoGame_LDtk_Importer.FieldInstance.EnumName*
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_EnumName
+  commentId: P:MonoGame_LDtk_Importer.Field.EnumName
+  fullName: MonoGame_LDtk_Importer.Field.EnumName
+  nameWithType: Field.EnumName
+- uid: MonoGame_LDtk_Importer.Field.EnumName*
   name: EnumName
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_EnumName_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.EnumName
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_EnumName_
+  commentId: Overload:MonoGame_LDtk_Importer.Field.EnumName
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.EnumName
-  nameWithType: FieldInstance.EnumName
-- uid: MonoGame_LDtk_Importer.FieldInstance.Identifier
+  fullName: MonoGame_LDtk_Importer.Field.EnumName
+  nameWithType: Field.EnumName
+- uid: MonoGame_LDtk_Importer.Field.Identifier
   name: Identifier
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_Identifier
-  commentId: P:MonoGame_LDtk_Importer.FieldInstance.Identifier
-  fullName: MonoGame_LDtk_Importer.FieldInstance.Identifier
-  nameWithType: FieldInstance.Identifier
-- uid: MonoGame_LDtk_Importer.FieldInstance.Identifier*
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_Identifier
+  commentId: P:MonoGame_LDtk_Importer.Field.Identifier
+  fullName: MonoGame_LDtk_Importer.Field.Identifier
+  nameWithType: Field.Identifier
+- uid: MonoGame_LDtk_Importer.Field.Identifier*
   name: Identifier
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_Identifier_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.Identifier
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_Identifier_
+  commentId: Overload:MonoGame_LDtk_Importer.Field.Identifier
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.Identifier
-  nameWithType: FieldInstance.Identifier
-- uid: MonoGame_LDtk_Importer.FieldInstance.IsArray
+  fullName: MonoGame_LDtk_Importer.Field.Identifier
+  nameWithType: Field.Identifier
+- uid: MonoGame_LDtk_Importer.Field.IsArray
   name: IsArray
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_IsArray
-  commentId: P:MonoGame_LDtk_Importer.FieldInstance.IsArray
-  fullName: MonoGame_LDtk_Importer.FieldInstance.IsArray
-  nameWithType: FieldInstance.IsArray
-- uid: MonoGame_LDtk_Importer.FieldInstance.IsArray*
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_IsArray
+  commentId: P:MonoGame_LDtk_Importer.Field.IsArray
+  fullName: MonoGame_LDtk_Importer.Field.IsArray
+  nameWithType: Field.IsArray
+- uid: MonoGame_LDtk_Importer.Field.IsArray*
   name: IsArray
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_IsArray_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.IsArray
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_IsArray_
+  commentId: Overload:MonoGame_LDtk_Importer.Field.IsArray
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.IsArray
-  nameWithType: FieldInstance.IsArray
-- uid: MonoGame_LDtk_Importer.FieldInstance.LoadFields(System.Text.Json.JsonProperty)
+  fullName: MonoGame_LDtk_Importer.Field.IsArray
+  nameWithType: Field.IsArray
+- uid: MonoGame_LDtk_Importer.Field.LoadFields(System.Text.Json.JsonProperty)
   name: LoadFields(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_LoadFields_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.FieldInstance.LoadFields(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.FieldInstance.LoadFields(System.Text.Json.JsonProperty)
-  nameWithType: FieldInstance.LoadFields(JsonProperty)
-- uid: MonoGame_LDtk_Importer.FieldInstance.LoadFields*
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_LoadFields_System_Text_Json_JsonProperty_
+  commentId: M:MonoGame_LDtk_Importer.Field.LoadFields(System.Text.Json.JsonProperty)
+  fullName: MonoGame_LDtk_Importer.Field.LoadFields(System.Text.Json.JsonProperty)
+  nameWithType: Field.LoadFields(JsonProperty)
+- uid: MonoGame_LDtk_Importer.Field.LoadFields*
   name: LoadFields
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_LoadFields_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.LoadFields
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_LoadFields_
+  commentId: Overload:MonoGame_LDtk_Importer.Field.LoadFields
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.LoadFields
-  nameWithType: FieldInstance.LoadFields
-- uid: MonoGame_LDtk_Importer.FieldInstance.Type
+  fullName: MonoGame_LDtk_Importer.Field.LoadFields
+  nameWithType: Field.LoadFields
+- uid: MonoGame_LDtk_Importer.Field.Type
   name: Type
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_Type
-  commentId: P:MonoGame_LDtk_Importer.FieldInstance.Type
-  fullName: MonoGame_LDtk_Importer.FieldInstance.Type
-  nameWithType: FieldInstance.Type
-- uid: MonoGame_LDtk_Importer.FieldInstance.Type*
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_Type
+  commentId: P:MonoGame_LDtk_Importer.Field.Type
+  fullName: MonoGame_LDtk_Importer.Field.Type
+  nameWithType: Field.Type
+- uid: MonoGame_LDtk_Importer.Field.Type*
   name: Type
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_Type_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.Type
+  href: api/MonoGame_LDtk_Importer.Field.html#MonoGame_LDtk_Importer_Field_Type_
+  commentId: Overload:MonoGame_LDtk_Importer.Field.Type
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.Type
-  nameWithType: FieldInstance.Type
-- uid: MonoGame_LDtk_Importer.FieldInstance.Value
-  name: Value
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_Value
-  commentId: P:MonoGame_LDtk_Importer.FieldInstance.Value
-  fullName: MonoGame_LDtk_Importer.FieldInstance.Value
-  nameWithType: FieldInstance.Value
-- uid: MonoGame_LDtk_Importer.FieldInstance.Value*
-  name: Value
-  href: api/MonoGame_LDtk_Importer.FieldInstance.html#MonoGame_LDtk_Importer_FieldInstance_Value_
-  commentId: Overload:MonoGame_LDtk_Importer.FieldInstance.Value
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.FieldInstance.Value
-  nameWithType: FieldInstance.Value
+  fullName: MonoGame_LDtk_Importer.Field.Type
+  nameWithType: Field.Type
 - uid: MonoGame_LDtk_Importer.FieldType
   name: FieldType
   href: api/MonoGame_LDtk_Importer.FieldType.html
@@ -790,12 +1004,89 @@ references:
   commentId: F:MonoGame_LDtk_Importer.FieldType.String
   fullName: MonoGame_LDtk_Importer.FieldType.String
   nameWithType: FieldType.String
-- uid: MonoGame_LDtk_Importer.FieldType.Text
-  name: Text
-  href: api/MonoGame_LDtk_Importer.FieldType.html#MonoGame_LDtk_Importer_FieldType_Text
-  commentId: F:MonoGame_LDtk_Importer.FieldType.Text
-  fullName: MonoGame_LDtk_Importer.FieldType.Text
-  nameWithType: FieldType.Text
+- uid: MonoGame_LDtk_Importer.FloatField
+  name: FloatField
+  href: api/MonoGame_LDtk_Importer.FloatField.html
+  commentId: T:MonoGame_LDtk_Importer.FloatField
+  fullName: MonoGame_LDtk_Importer.FloatField
+  nameWithType: FloatField
+- uid: MonoGame_LDtk_Importer.FloatField.Value
+  name: Value
+  href: api/MonoGame_LDtk_Importer.FloatField.html#MonoGame_LDtk_Importer_FloatField_Value
+  commentId: P:MonoGame_LDtk_Importer.FloatField.Value
+  fullName: MonoGame_LDtk_Importer.FloatField.Value
+  nameWithType: FloatField.Value
+- uid: MonoGame_LDtk_Importer.FloatField.Value*
+  name: Value
+  href: api/MonoGame_LDtk_Importer.FloatField.html#MonoGame_LDtk_Importer_FloatField_Value_
+  commentId: Overload:MonoGame_LDtk_Importer.FloatField.Value
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.FloatField.Value
+  nameWithType: FloatField.Value
+- uid: MonoGame_LDtk_Importer.IntField
+  name: IntField
+  href: api/MonoGame_LDtk_Importer.IntField.html
+  commentId: T:MonoGame_LDtk_Importer.IntField
+  fullName: MonoGame_LDtk_Importer.IntField
+  nameWithType: IntField
+- uid: MonoGame_LDtk_Importer.IntField.Value
+  name: Value
+  href: api/MonoGame_LDtk_Importer.IntField.html#MonoGame_LDtk_Importer_IntField_Value
+  commentId: P:MonoGame_LDtk_Importer.IntField.Value
+  fullName: MonoGame_LDtk_Importer.IntField.Value
+  nameWithType: IntField.Value
+- uid: MonoGame_LDtk_Importer.IntField.Value*
+  name: Value
+  href: api/MonoGame_LDtk_Importer.IntField.html#MonoGame_LDtk_Importer_IntField_Value_
+  commentId: Overload:MonoGame_LDtk_Importer.IntField.Value
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.IntField.Value
+  nameWithType: IntField.Value
+- uid: MonoGame_LDtk_Importer.IntGridLayer
+  name: IntGridLayer
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html
+  commentId: T:MonoGame_LDtk_Importer.IntGridLayer
+  fullName: MonoGame_LDtk_Importer.IntGridLayer
+  nameWithType: IntGridLayer
+- uid: MonoGame_LDtk_Importer.IntGridLayer.GetPointsByValue(System.Int32)
+  name: GetPointsByValue(Int32)
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html#MonoGame_LDtk_Importer_IntGridLayer_GetPointsByValue_System_Int32_
+  commentId: M:MonoGame_LDtk_Importer.IntGridLayer.GetPointsByValue(System.Int32)
+  fullName: MonoGame_LDtk_Importer.IntGridLayer.GetPointsByValue(System.Int32)
+  nameWithType: IntGridLayer.GetPointsByValue(Int32)
+- uid: MonoGame_LDtk_Importer.IntGridLayer.GetPointsByValue*
+  name: GetPointsByValue
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html#MonoGame_LDtk_Importer_IntGridLayer_GetPointsByValue_
+  commentId: Overload:MonoGame_LDtk_Importer.IntGridLayer.GetPointsByValue
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.IntGridLayer.GetPointsByValue
+  nameWithType: IntGridLayer.GetPointsByValue
+- uid: MonoGame_LDtk_Importer.IntGridLayer.GetValueAt(Microsoft.Xna.Framework.Point)
+  name: GetValueAt(Point)
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html#MonoGame_LDtk_Importer_IntGridLayer_GetValueAt_Microsoft_Xna_Framework_Point_
+  commentId: M:MonoGame_LDtk_Importer.IntGridLayer.GetValueAt(Microsoft.Xna.Framework.Point)
+  fullName: MonoGame_LDtk_Importer.IntGridLayer.GetValueAt(Microsoft.Xna.Framework.Point)
+  nameWithType: IntGridLayer.GetValueAt(Point)
+- uid: MonoGame_LDtk_Importer.IntGridLayer.GetValueAt*
+  name: GetValueAt
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html#MonoGame_LDtk_Importer_IntGridLayer_GetValueAt_
+  commentId: Overload:MonoGame_LDtk_Importer.IntGridLayer.GetValueAt
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.IntGridLayer.GetValueAt
+  nameWithType: IntGridLayer.GetValueAt
+- uid: MonoGame_LDtk_Importer.IntGridLayer.IntGridCsv
+  name: IntGridCsv
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html#MonoGame_LDtk_Importer_IntGridLayer_IntGridCsv
+  commentId: P:MonoGame_LDtk_Importer.IntGridLayer.IntGridCsv
+  fullName: MonoGame_LDtk_Importer.IntGridLayer.IntGridCsv
+  nameWithType: IntGridLayer.IntGridCsv
+- uid: MonoGame_LDtk_Importer.IntGridLayer.IntGridCsv*
+  name: IntGridCsv
+  href: api/MonoGame_LDtk_Importer.IntGridLayer.html#MonoGame_LDtk_Importer_IntGridLayer_IntGridCsv_
+  commentId: Overload:MonoGame_LDtk_Importer.IntGridLayer.IntGridCsv
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.IntGridLayer.IntGridCsv
+  nameWithType: IntGridLayer.IntGridCsv
 - uid: MonoGame_LDtk_Importer.IntGridValueDef
   name: IntGridValueDef
   href: api/MonoGame_LDtk_Importer.IntGridValueDef.html
@@ -854,6 +1145,168 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.IntGridValueDef.Value
   nameWithType: IntGridValueDef.Value
+- uid: MonoGame_LDtk_Importer.Layer
+  name: Layer
+  href: api/MonoGame_LDtk_Importer.Layer.html
+  commentId: T:MonoGame_LDtk_Importer.Layer
+  fullName: MonoGame_LDtk_Importer.Layer
+  nameWithType: Layer
+- uid: MonoGame_LDtk_Importer.Layer.GridSize
+  name: GridSize
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_GridSize
+  commentId: P:MonoGame_LDtk_Importer.Layer.GridSize
+  fullName: MonoGame_LDtk_Importer.Layer.GridSize
+  nameWithType: Layer.GridSize
+- uid: MonoGame_LDtk_Importer.Layer.GridSize*
+  name: GridSize
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_GridSize_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.GridSize
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.GridSize
+  nameWithType: Layer.GridSize
+- uid: MonoGame_LDtk_Importer.Layer.Height
+  name: Height
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Height
+  commentId: P:MonoGame_LDtk_Importer.Layer.Height
+  fullName: MonoGame_LDtk_Importer.Layer.Height
+  nameWithType: Layer.Height
+- uid: MonoGame_LDtk_Importer.Layer.Height*
+  name: Height
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Height_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.Height
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.Height
+  nameWithType: Layer.Height
+- uid: MonoGame_LDtk_Importer.Layer.Identifier
+  name: Identifier
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Identifier
+  commentId: P:MonoGame_LDtk_Importer.Layer.Identifier
+  fullName: MonoGame_LDtk_Importer.Layer.Identifier
+  nameWithType: Layer.Identifier
+- uid: MonoGame_LDtk_Importer.Layer.Identifier*
+  name: Identifier
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Identifier_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.Identifier
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.Identifier
+  nameWithType: Layer.Identifier
+- uid: MonoGame_LDtk_Importer.Layer.IsVisible
+  name: IsVisible
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_IsVisible
+  commentId: P:MonoGame_LDtk_Importer.Layer.IsVisible
+  fullName: MonoGame_LDtk_Importer.Layer.IsVisible
+  nameWithType: Layer.IsVisible
+- uid: MonoGame_LDtk_Importer.Layer.IsVisible*
+  name: IsVisible
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_IsVisible_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.IsVisible
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.IsVisible
+  nameWithType: Layer.IsVisible
+- uid: MonoGame_LDtk_Importer.Layer.LayerDefUid
+  name: LayerDefUid
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_LayerDefUid
+  commentId: P:MonoGame_LDtk_Importer.Layer.LayerDefUid
+  fullName: MonoGame_LDtk_Importer.Layer.LayerDefUid
+  nameWithType: Layer.LayerDefUid
+- uid: MonoGame_LDtk_Importer.Layer.LayerDefUid*
+  name: LayerDefUid
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_LayerDefUid_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.LayerDefUid
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.LayerDefUid
+  nameWithType: Layer.LayerDefUid
+- uid: MonoGame_LDtk_Importer.Layer.LevelId
+  name: LevelId
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_LevelId
+  commentId: P:MonoGame_LDtk_Importer.Layer.LevelId
+  fullName: MonoGame_LDtk_Importer.Layer.LevelId
+  nameWithType: Layer.LevelId
+- uid: MonoGame_LDtk_Importer.Layer.LevelId*
+  name: LevelId
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_LevelId_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.LevelId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.LevelId
+  nameWithType: Layer.LevelId
+- uid: MonoGame_LDtk_Importer.Layer.LoadLayers(System.Text.Json.JsonProperty,System.String)
+  name: LoadLayers(JsonProperty, String)
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_LoadLayers_System_Text_Json_JsonProperty_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Layer.LoadLayers(System.Text.Json.JsonProperty,System.String)
+  fullName: MonoGame_LDtk_Importer.Layer.LoadLayers(System.Text.Json.JsonProperty, System.String)
+  nameWithType: Layer.LoadLayers(JsonProperty, String)
+- uid: MonoGame_LDtk_Importer.Layer.LoadLayers*
+  name: LoadLayers
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_LoadLayers_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.LoadLayers
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.LoadLayers
+  nameWithType: Layer.LoadLayers
+- uid: MonoGame_LDtk_Importer.Layer.Offset
+  name: Offset
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Offset
+  commentId: P:MonoGame_LDtk_Importer.Layer.Offset
+  fullName: MonoGame_LDtk_Importer.Layer.Offset
+  nameWithType: Layer.Offset
+- uid: MonoGame_LDtk_Importer.Layer.Offset*
+  name: Offset
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Offset_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.Offset
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.Offset
+  nameWithType: Layer.Offset
+- uid: MonoGame_LDtk_Importer.Layer.Opacity
+  name: Opacity
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Opacity
+  commentId: P:MonoGame_LDtk_Importer.Layer.Opacity
+  fullName: MonoGame_LDtk_Importer.Layer.Opacity
+  nameWithType: Layer.Opacity
+- uid: MonoGame_LDtk_Importer.Layer.Opacity*
+  name: Opacity
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Opacity_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.Opacity
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.Opacity
+  nameWithType: Layer.Opacity
+- uid: MonoGame_LDtk_Importer.Layer.TotalOffset
+  name: TotalOffset
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_TotalOffset
+  commentId: P:MonoGame_LDtk_Importer.Layer.TotalOffset
+  fullName: MonoGame_LDtk_Importer.Layer.TotalOffset
+  nameWithType: Layer.TotalOffset
+- uid: MonoGame_LDtk_Importer.Layer.TotalOffset*
+  name: TotalOffset
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_TotalOffset_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.TotalOffset
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.TotalOffset
+  nameWithType: Layer.TotalOffset
+- uid: MonoGame_LDtk_Importer.Layer.Type
+  name: Type
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Type
+  commentId: P:MonoGame_LDtk_Importer.Layer.Type
+  fullName: MonoGame_LDtk_Importer.Layer.Type
+  nameWithType: Layer.Type
+- uid: MonoGame_LDtk_Importer.Layer.Type*
+  name: Type
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Type_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.Type
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.Type
+  nameWithType: Layer.Type
+- uid: MonoGame_LDtk_Importer.Layer.Width
+  name: Width
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Width
+  commentId: P:MonoGame_LDtk_Importer.Layer.Width
+  fullName: MonoGame_LDtk_Importer.Layer.Width
+  nameWithType: Layer.Width
+- uid: MonoGame_LDtk_Importer.Layer.Width*
+  name: Width
+  href: api/MonoGame_LDtk_Importer.Layer.html#MonoGame_LDtk_Importer_Layer_Width_
+  commentId: Overload:MonoGame_LDtk_Importer.Layer.Width
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Layer.Width
+  nameWithType: Layer.Width
 - uid: MonoGame_LDtk_Importer.LayerDef
   name: LayerDef
   href: api/MonoGame_LDtk_Importer.LayerDef.html
@@ -899,6 +1352,19 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LayerDef.DisplayOpacity
   nameWithType: LayerDef.DisplayOpacity
+- uid: MonoGame_LDtk_Importer.LayerDef.GetIntGridValueById(System.String)
+  name: GetIntGridValueById(String)
+  href: api/MonoGame_LDtk_Importer.LayerDef.html#MonoGame_LDtk_Importer_LayerDef_GetIntGridValueById_System_String_
+  commentId: M:MonoGame_LDtk_Importer.LayerDef.GetIntGridValueById(System.String)
+  fullName: MonoGame_LDtk_Importer.LayerDef.GetIntGridValueById(System.String)
+  nameWithType: LayerDef.GetIntGridValueById(String)
+- uid: MonoGame_LDtk_Importer.LayerDef.GetIntGridValueById*
+  name: GetIntGridValueById
+  href: api/MonoGame_LDtk_Importer.LayerDef.html#MonoGame_LDtk_Importer_LayerDef_GetIntGridValueById_
+  commentId: Overload:MonoGame_LDtk_Importer.LayerDef.GetIntGridValueById
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.LayerDef.GetIntGridValueById
+  nameWithType: LayerDef.GetIntGridValueById
 - uid: MonoGame_LDtk_Importer.LayerDef.GridSize
   name: GridSize
   href: api/MonoGame_LDtk_Importer.LayerDef.html#MonoGame_LDtk_Importer_LayerDef_GridSize
@@ -1003,259 +1469,6 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LayerDef.Uid
   nameWithType: LayerDef.Uid
-- uid: MonoGame_LDtk_Importer.LayerInstance
-  name: LayerInstance
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html
-  commentId: T:MonoGame_LDtk_Importer.LayerInstance
-  fullName: MonoGame_LDtk_Importer.LayerInstance
-  nameWithType: LayerInstance
-- uid: MonoGame_LDtk_Importer.LayerInstance.AutoLayerTiles
-  name: AutoLayerTiles
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_AutoLayerTiles
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.AutoLayerTiles
-  fullName: MonoGame_LDtk_Importer.LayerInstance.AutoLayerTiles
-  nameWithType: LayerInstance.AutoLayerTiles
-- uid: MonoGame_LDtk_Importer.LayerInstance.AutoLayerTiles*
-  name: AutoLayerTiles
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_AutoLayerTiles_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.AutoLayerTiles
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.AutoLayerTiles
-  nameWithType: LayerInstance.AutoLayerTiles
-- uid: MonoGame_LDtk_Importer.LayerInstance.EntityInstances
-  name: EntityInstances
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_EntityInstances
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.EntityInstances
-  fullName: MonoGame_LDtk_Importer.LayerInstance.EntityInstances
-  nameWithType: LayerInstance.EntityInstances
-- uid: MonoGame_LDtk_Importer.LayerInstance.EntityInstances*
-  name: EntityInstances
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_EntityInstances_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.EntityInstances
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.EntityInstances
-  nameWithType: LayerInstance.EntityInstances
-- uid: MonoGame_LDtk_Importer.LayerInstance.GridSize
-  name: GridSize
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_GridSize
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.GridSize
-  fullName: MonoGame_LDtk_Importer.LayerInstance.GridSize
-  nameWithType: LayerInstance.GridSize
-- uid: MonoGame_LDtk_Importer.LayerInstance.GridSize*
-  name: GridSize
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_GridSize_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.GridSize
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.GridSize
-  nameWithType: LayerInstance.GridSize
-- uid: MonoGame_LDtk_Importer.LayerInstance.GridTilesInstances
-  name: GridTilesInstances
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_GridTilesInstances
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.GridTilesInstances
-  fullName: MonoGame_LDtk_Importer.LayerInstance.GridTilesInstances
-  nameWithType: LayerInstance.GridTilesInstances
-- uid: MonoGame_LDtk_Importer.LayerInstance.GridTilesInstances*
-  name: GridTilesInstances
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_GridTilesInstances_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.GridTilesInstances
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.GridTilesInstances
-  nameWithType: LayerInstance.GridTilesInstances
-- uid: MonoGame_LDtk_Importer.LayerInstance.Height
-  name: Height
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Height
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.Height
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Height
-  nameWithType: LayerInstance.Height
-- uid: MonoGame_LDtk_Importer.LayerInstance.Height*
-  name: Height
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Height_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.Height
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Height
-  nameWithType: LayerInstance.Height
-- uid: MonoGame_LDtk_Importer.LayerInstance.Identifier
-  name: Identifier
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Identifier
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.Identifier
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Identifier
-  nameWithType: LayerInstance.Identifier
-- uid: MonoGame_LDtk_Importer.LayerInstance.Identifier*
-  name: Identifier
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Identifier_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.Identifier
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Identifier
-  nameWithType: LayerInstance.Identifier
-- uid: MonoGame_LDtk_Importer.LayerInstance.IntGridCsv
-  name: IntGridCsv
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_IntGridCsv
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.IntGridCsv
-  fullName: MonoGame_LDtk_Importer.LayerInstance.IntGridCsv
-  nameWithType: LayerInstance.IntGridCsv
-- uid: MonoGame_LDtk_Importer.LayerInstance.IntGridCsv*
-  name: IntGridCsv
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_IntGridCsv_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.IntGridCsv
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.IntGridCsv
-  nameWithType: LayerInstance.IntGridCsv
-- uid: MonoGame_LDtk_Importer.LayerInstance.IsVisible
-  name: IsVisible
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_IsVisible
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.IsVisible
-  fullName: MonoGame_LDtk_Importer.LayerInstance.IsVisible
-  nameWithType: LayerInstance.IsVisible
-- uid: MonoGame_LDtk_Importer.LayerInstance.IsVisible*
-  name: IsVisible
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_IsVisible_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.IsVisible
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.IsVisible
-  nameWithType: LayerInstance.IsVisible
-- uid: MonoGame_LDtk_Importer.LayerInstance.LayerDefUid
-  name: LayerDefUid
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LayerDefUid
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.LayerDefUid
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LayerDefUid
-  nameWithType: LayerInstance.LayerDefUid
-- uid: MonoGame_LDtk_Importer.LayerInstance.LayerDefUid*
-  name: LayerDefUid
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LayerDefUid_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.LayerDefUid
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LayerDefUid
-  nameWithType: LayerInstance.LayerDefUid
-- uid: MonoGame_LDtk_Importer.LayerInstance.LevelId
-  name: LevelId
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LevelId
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.LevelId
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LevelId
-  nameWithType: LayerInstance.LevelId
-- uid: MonoGame_LDtk_Importer.LayerInstance.LevelId*
-  name: LevelId
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LevelId_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.LevelId
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LevelId
-  nameWithType: LayerInstance.LevelId
-- uid: MonoGame_LDtk_Importer.LayerInstance.LoadLayers(System.Text.Json.JsonProperty)
-  name: LoadLayers(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LoadLayers_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.LayerInstance.LoadLayers(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LoadLayers(System.Text.Json.JsonProperty)
-  nameWithType: LayerInstance.LoadLayers(JsonProperty)
-- uid: MonoGame_LDtk_Importer.LayerInstance.LoadLayers*
-  name: LoadLayers
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_LoadLayers_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.LoadLayers
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.LoadLayers
-  nameWithType: LayerInstance.LoadLayers
-- uid: MonoGame_LDtk_Importer.LayerInstance.Offset
-  name: Offset
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Offset
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.Offset
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Offset
-  nameWithType: LayerInstance.Offset
-- uid: MonoGame_LDtk_Importer.LayerInstance.Offset*
-  name: Offset
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Offset_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.Offset
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Offset
-  nameWithType: LayerInstance.Offset
-- uid: MonoGame_LDtk_Importer.LayerInstance.Opacity
-  name: Opacity
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Opacity
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.Opacity
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Opacity
-  nameWithType: LayerInstance.Opacity
-- uid: MonoGame_LDtk_Importer.LayerInstance.Opacity*
-  name: Opacity
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Opacity_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.Opacity
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Opacity
-  nameWithType: LayerInstance.Opacity
-- uid: MonoGame_LDtk_Importer.LayerInstance.OverrideTilesetUid
-  name: OverrideTilesetUid
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_OverrideTilesetUid
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.OverrideTilesetUid
-  fullName: MonoGame_LDtk_Importer.LayerInstance.OverrideTilesetUid
-  nameWithType: LayerInstance.OverrideTilesetUid
-- uid: MonoGame_LDtk_Importer.LayerInstance.OverrideTilesetUid*
-  name: OverrideTilesetUid
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_OverrideTilesetUid_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.OverrideTilesetUid
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.OverrideTilesetUid
-  nameWithType: LayerInstance.OverrideTilesetUid
-- uid: MonoGame_LDtk_Importer.LayerInstance.TilesetDefUid
-  name: TilesetDefUid
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_TilesetDefUid
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.TilesetDefUid
-  fullName: MonoGame_LDtk_Importer.LayerInstance.TilesetDefUid
-  nameWithType: LayerInstance.TilesetDefUid
-- uid: MonoGame_LDtk_Importer.LayerInstance.TilesetDefUid*
-  name: TilesetDefUid
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_TilesetDefUid_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.TilesetDefUid
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.TilesetDefUid
-  nameWithType: LayerInstance.TilesetDefUid
-- uid: MonoGame_LDtk_Importer.LayerInstance.TilesetRelPath
-  name: TilesetRelPath
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_TilesetRelPath
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.TilesetRelPath
-  fullName: MonoGame_LDtk_Importer.LayerInstance.TilesetRelPath
-  nameWithType: LayerInstance.TilesetRelPath
-- uid: MonoGame_LDtk_Importer.LayerInstance.TilesetRelPath*
-  name: TilesetRelPath
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_TilesetRelPath_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.TilesetRelPath
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.TilesetRelPath
-  nameWithType: LayerInstance.TilesetRelPath
-- uid: MonoGame_LDtk_Importer.LayerInstance.TotalOffset
-  name: TotalOffset
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_TotalOffset
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.TotalOffset
-  fullName: MonoGame_LDtk_Importer.LayerInstance.TotalOffset
-  nameWithType: LayerInstance.TotalOffset
-- uid: MonoGame_LDtk_Importer.LayerInstance.TotalOffset*
-  name: TotalOffset
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_TotalOffset_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.TotalOffset
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.TotalOffset
-  nameWithType: LayerInstance.TotalOffset
-- uid: MonoGame_LDtk_Importer.LayerInstance.Type
-  name: Type
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Type
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.Type
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Type
-  nameWithType: LayerInstance.Type
-- uid: MonoGame_LDtk_Importer.LayerInstance.Type*
-  name: Type
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Type_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.Type
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Type
-  nameWithType: LayerInstance.Type
-- uid: MonoGame_LDtk_Importer.LayerInstance.Width
-  name: Width
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Width
-  commentId: P:MonoGame_LDtk_Importer.LayerInstance.Width
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Width
-  nameWithType: LayerInstance.Width
-- uid: MonoGame_LDtk_Importer.LayerInstance.Width*
-  name: Width
-  href: api/MonoGame_LDtk_Importer.LayerInstance.html#MonoGame_LDtk_Importer_LayerInstance_Width_
-  commentId: Overload:MonoGame_LDtk_Importer.LayerInstance.Width
-  isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.LayerInstance.Width
-  nameWithType: LayerInstance.Width
 - uid: MonoGame_LDtk_Importer.LayerType
   name: LayerType
   href: api/MonoGame_LDtk_Importer.LayerType.html
@@ -1292,6 +1505,25 @@ references:
   commentId: T:MonoGame_LDtk_Importer.LDtkProject
   fullName: MonoGame_LDtk_Importer.LDtkProject
   nameWithType: LDtkProject
+- uid: MonoGame_LDtk_Importer.LDtkProject.#ctor
+  name: LDtkProject()
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject__ctor
+  commentId: M:MonoGame_LDtk_Importer.LDtkProject.#ctor
+  fullName: MonoGame_LDtk_Importer.LDtkProject.LDtkProject()
+  nameWithType: LDtkProject.LDtkProject()
+- uid: MonoGame_LDtk_Importer.LDtkProject.#ctor(System.String)
+  name: LDtkProject(String)
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject__ctor_System_String_
+  commentId: M:MonoGame_LDtk_Importer.LDtkProject.#ctor(System.String)
+  fullName: MonoGame_LDtk_Importer.LDtkProject.LDtkProject(System.String)
+  nameWithType: LDtkProject.LDtkProject(String)
+- uid: MonoGame_LDtk_Importer.LDtkProject.#ctor*
+  name: LDtkProject
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject__ctor_
+  commentId: Overload:MonoGame_LDtk_Importer.LDtkProject.#ctor
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.LDtkProject.LDtkProject
+  nameWithType: LDtkProject.LDtkProject
 - uid: MonoGame_LDtk_Importer.LDtkProject.BackgroundColor
   name: BackgroundColor
   href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_BackgroundColor
@@ -1318,6 +1550,19 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LDtkProject.Definitions
   nameWithType: LDtkProject.Definitions
+- uid: MonoGame_LDtk_Importer.LDtkProject.GetLevelByIdentifier(System.String)
+  name: GetLevelByIdentifier(String)
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_GetLevelByIdentifier_System_String_
+  commentId: M:MonoGame_LDtk_Importer.LDtkProject.GetLevelByIdentifier(System.String)
+  fullName: MonoGame_LDtk_Importer.LDtkProject.GetLevelByIdentifier(System.String)
+  nameWithType: LDtkProject.GetLevelByIdentifier(String)
+- uid: MonoGame_LDtk_Importer.LDtkProject.GetLevelByIdentifier*
+  name: GetLevelByIdentifier
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_GetLevelByIdentifier_
+  commentId: Overload:MonoGame_LDtk_Importer.LDtkProject.GetLevelByIdentifier
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.LDtkProject.GetLevelByIdentifier
+  nameWithType: LDtkProject.GetLevelByIdentifier
 - uid: MonoGame_LDtk_Importer.LDtkProject.Levels
   name: Levels
   href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_Levels
@@ -1331,12 +1576,12 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.LDtkProject.Levels
   nameWithType: LDtkProject.Levels
-- uid: MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement)
-  name: LoadProject(JsonElement)
-  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_LoadProject_System_Text_Json_JsonElement_
-  commentId: M:MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement)
-  fullName: MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement)
-  nameWithType: LDtkProject.LoadProject(JsonElement)
+- uid: MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement,System.String)
+  name: LoadProject(JsonElement, String)
+  href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_LoadProject_System_Text_Json_JsonElement_System_String_
+  commentId: M:MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement,System.String)
+  fullName: MonoGame_LDtk_Importer.LDtkProject.LoadProject(System.Text.Json.JsonElement, System.String)
+  nameWithType: LDtkProject.LoadProject(JsonElement, String)
 - uid: MonoGame_LDtk_Importer.LDtkProject.LoadProject*
   name: LoadProject
   href: api/MonoGame_LDtk_Importer.LDtkProject.html#MonoGame_LDtk_Importer_LDtkProject_LoadProject_
@@ -1441,6 +1686,45 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Level.FieldInstances
   nameWithType: Level.FieldInstances
+- uid: MonoGame_LDtk_Importer.Level.GetCroppedBackground(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetCroppedBackground(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_GetCroppedBackground_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.Level.GetCroppedBackground(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.Level.GetCroppedBackground(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: Level.GetCroppedBackground(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.Level.GetCroppedBackground*
+  name: GetCroppedBackground
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_GetCroppedBackground_
+  commentId: Overload:MonoGame_LDtk_Importer.Level.GetCroppedBackground
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Level.GetCroppedBackground
+  nameWithType: Level.GetCroppedBackground
+- uid: MonoGame_LDtk_Importer.Level.GetFieldsByType(MonoGame_LDtk_Importer.FieldType)
+  name: GetFieldsByType(FieldType)
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_GetFieldsByType_MonoGame_LDtk_Importer_FieldType_
+  commentId: M:MonoGame_LDtk_Importer.Level.GetFieldsByType(MonoGame_LDtk_Importer.FieldType)
+  fullName: MonoGame_LDtk_Importer.Level.GetFieldsByType(MonoGame_LDtk_Importer.FieldType)
+  nameWithType: Level.GetFieldsByType(FieldType)
+- uid: MonoGame_LDtk_Importer.Level.GetFieldsByType*
+  name: GetFieldsByType
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_GetFieldsByType_
+  commentId: Overload:MonoGame_LDtk_Importer.Level.GetFieldsByType
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Level.GetFieldsByType
+  nameWithType: Level.GetFieldsByType
+- uid: MonoGame_LDtk_Importer.Level.GetLayersByType(MonoGame_LDtk_Importer.LayerType)
+  name: GetLayersByType(LayerType)
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_GetLayersByType_MonoGame_LDtk_Importer_LayerType_
+  commentId: M:MonoGame_LDtk_Importer.Level.GetLayersByType(MonoGame_LDtk_Importer.LayerType)
+  fullName: MonoGame_LDtk_Importer.Level.GetLayersByType(MonoGame_LDtk_Importer.LayerType)
+  nameWithType: Level.GetLayersByType(LayerType)
+- uid: MonoGame_LDtk_Importer.Level.GetLayersByType*
+  name: GetLayersByType
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_GetLayersByType_
+  commentId: Overload:MonoGame_LDtk_Importer.Level.GetLayersByType
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.Level.GetLayersByType
+  nameWithType: Level.GetLayersByType
 - uid: MonoGame_LDtk_Importer.Level.Height
   name: Height
   href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_Height
@@ -1480,12 +1764,12 @@ references:
   isSpec: "True"
   fullName: MonoGame_LDtk_Importer.Level.LayerInstances
   nameWithType: Level.LayerInstances
-- uid: MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty)
-  name: LoadLevels(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_LoadLevels_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty)
-  nameWithType: Level.LoadLevels(JsonProperty)
+- uid: MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty,System.Boolean,System.String)
+  name: LoadLevels(JsonProperty, Boolean, String)
+  href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_LoadLevels_System_Text_Json_JsonProperty_System_Boolean_System_String_
+  commentId: M:MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty,System.Boolean,System.String)
+  fullName: MonoGame_LDtk_Importer.Level.LoadLevels(System.Text.Json.JsonProperty, System.Boolean, System.String)
+  nameWithType: Level.LoadLevels(JsonProperty, Boolean, String)
 - uid: MonoGame_LDtk_Importer.Level.LoadLevels*
   name: LoadLevels
   href: api/MonoGame_LDtk_Importer.Level.html#MonoGame_LDtk_Importer_Level_LoadLevels_
@@ -1620,240 +1904,621 @@ references:
   commentId: F:MonoGame_LDtk_Importer.NeighbourDirection.West
   fullName: MonoGame_LDtk_Importer.NeighbourDirection.West
   nameWithType: NeighbourDirection.West
-- uid: MonoGame_LDtk_Importer.TileInstance
-  name: TileInstance
-  href: api/MonoGame_LDtk_Importer.TileInstance.html
-  commentId: T:MonoGame_LDtk_Importer.TileInstance
-  fullName: MonoGame_LDtk_Importer.TileInstance
-  nameWithType: TileInstance
-- uid: MonoGame_LDtk_Importer.TileInstance.Coordinates
+- uid: MonoGame_LDtk_Importer.PointField
+  name: PointField
+  href: api/MonoGame_LDtk_Importer.PointField.html
+  commentId: T:MonoGame_LDtk_Importer.PointField
+  fullName: MonoGame_LDtk_Importer.PointField
+  nameWithType: PointField
+- uid: MonoGame_LDtk_Importer.PointField.Value
+  name: Value
+  href: api/MonoGame_LDtk_Importer.PointField.html#MonoGame_LDtk_Importer_PointField_Value
+  commentId: P:MonoGame_LDtk_Importer.PointField.Value
+  fullName: MonoGame_LDtk_Importer.PointField.Value
+  nameWithType: PointField.Value
+- uid: MonoGame_LDtk_Importer.PointField.Value*
+  name: Value
+  href: api/MonoGame_LDtk_Importer.PointField.html#MonoGame_LDtk_Importer_PointField_Value_
+  commentId: Overload:MonoGame_LDtk_Importer.PointField.Value
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.PointField.Value
+  nameWithType: PointField.Value
+- uid: MonoGame_LDtk_Importer.StringField
+  name: StringField
+  href: api/MonoGame_LDtk_Importer.StringField.html
+  commentId: T:MonoGame_LDtk_Importer.StringField
+  fullName: MonoGame_LDtk_Importer.StringField
+  nameWithType: StringField
+- uid: MonoGame_LDtk_Importer.StringField.Value
+  name: Value
+  href: api/MonoGame_LDtk_Importer.StringField.html#MonoGame_LDtk_Importer_StringField_Value
+  commentId: P:MonoGame_LDtk_Importer.StringField.Value
+  fullName: MonoGame_LDtk_Importer.StringField.Value
+  nameWithType: StringField.Value
+- uid: MonoGame_LDtk_Importer.StringField.Value*
+  name: Value
+  href: api/MonoGame_LDtk_Importer.StringField.html#MonoGame_LDtk_Importer_StringField_Value_
+  commentId: Overload:MonoGame_LDtk_Importer.StringField.Value
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.StringField.Value
+  nameWithType: StringField.Value
+- uid: MonoGame_LDtk_Importer.Tile
+  name: Tile
+  href: api/MonoGame_LDtk_Importer.Tile.html
+  commentId: T:MonoGame_LDtk_Importer.Tile
+  fullName: MonoGame_LDtk_Importer.Tile
+  nameWithType: Tile
+- uid: MonoGame_LDtk_Importer.Tile.Coordinates
   name: Coordinates
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_Coordinates
-  commentId: P:MonoGame_LDtk_Importer.TileInstance.Coordinates
-  fullName: MonoGame_LDtk_Importer.TileInstance.Coordinates
-  nameWithType: TileInstance.Coordinates
-- uid: MonoGame_LDtk_Importer.TileInstance.Coordinates*
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_Coordinates
+  commentId: P:MonoGame_LDtk_Importer.Tile.Coordinates
+  fullName: MonoGame_LDtk_Importer.Tile.Coordinates
+  nameWithType: Tile.Coordinates
+- uid: MonoGame_LDtk_Importer.Tile.Coordinates*
   name: Coordinates
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_Coordinates_
-  commentId: Overload:MonoGame_LDtk_Importer.TileInstance.Coordinates
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_Coordinates_
+  commentId: Overload:MonoGame_LDtk_Importer.Tile.Coordinates
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.TileInstance.Coordinates
-  nameWithType: TileInstance.Coordinates
-- uid: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX
+  fullName: MonoGame_LDtk_Importer.Tile.Coordinates
+  nameWithType: Tile.Coordinates
+- uid: MonoGame_LDtk_Importer.Tile.IsFlippedOnX
   name: IsFlippedOnX
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_IsFlippedOnX
-  commentId: P:MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX
-  fullName: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX
-  nameWithType: TileInstance.IsFlippedOnX
-- uid: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX*
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_IsFlippedOnX
+  commentId: P:MonoGame_LDtk_Importer.Tile.IsFlippedOnX
+  fullName: MonoGame_LDtk_Importer.Tile.IsFlippedOnX
+  nameWithType: Tile.IsFlippedOnX
+- uid: MonoGame_LDtk_Importer.Tile.IsFlippedOnX*
   name: IsFlippedOnX
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_IsFlippedOnX_
-  commentId: Overload:MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_IsFlippedOnX_
+  commentId: Overload:MonoGame_LDtk_Importer.Tile.IsFlippedOnX
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnX
-  nameWithType: TileInstance.IsFlippedOnX
-- uid: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY
+  fullName: MonoGame_LDtk_Importer.Tile.IsFlippedOnX
+  nameWithType: Tile.IsFlippedOnX
+- uid: MonoGame_LDtk_Importer.Tile.IsFlippedOnY
   name: IsFlippedOnY
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_IsFlippedOnY
-  commentId: P:MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY
-  fullName: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY
-  nameWithType: TileInstance.IsFlippedOnY
-- uid: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY*
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_IsFlippedOnY
+  commentId: P:MonoGame_LDtk_Importer.Tile.IsFlippedOnY
+  fullName: MonoGame_LDtk_Importer.Tile.IsFlippedOnY
+  nameWithType: Tile.IsFlippedOnY
+- uid: MonoGame_LDtk_Importer.Tile.IsFlippedOnY*
   name: IsFlippedOnY
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_IsFlippedOnY_
-  commentId: Overload:MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_IsFlippedOnY_
+  commentId: Overload:MonoGame_LDtk_Importer.Tile.IsFlippedOnY
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.TileInstance.IsFlippedOnY
-  nameWithType: TileInstance.IsFlippedOnY
-- uid: MonoGame_LDtk_Importer.TileInstance.LoadTiles(System.Text.Json.JsonProperty)
-  name: LoadTiles(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_LoadTiles_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.TileInstance.LoadTiles(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.TileInstance.LoadTiles(System.Text.Json.JsonProperty)
-  nameWithType: TileInstance.LoadTiles(JsonProperty)
-- uid: MonoGame_LDtk_Importer.TileInstance.LoadTiles*
+  fullName: MonoGame_LDtk_Importer.Tile.IsFlippedOnY
+  nameWithType: Tile.IsFlippedOnY
+- uid: MonoGame_LDtk_Importer.Tile.LoadTiles(System.Text.Json.JsonElement)
+  name: LoadTiles(JsonElement)
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_LoadTiles_System_Text_Json_JsonElement_
+  commentId: M:MonoGame_LDtk_Importer.Tile.LoadTiles(System.Text.Json.JsonElement)
+  fullName: MonoGame_LDtk_Importer.Tile.LoadTiles(System.Text.Json.JsonElement)
+  nameWithType: Tile.LoadTiles(JsonElement)
+- uid: MonoGame_LDtk_Importer.Tile.LoadTiles*
   name: LoadTiles
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_LoadTiles_
-  commentId: Overload:MonoGame_LDtk_Importer.TileInstance.LoadTiles
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_LoadTiles_
+  commentId: Overload:MonoGame_LDtk_Importer.Tile.LoadTiles
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.TileInstance.LoadTiles
-  nameWithType: TileInstance.LoadTiles
-- uid: MonoGame_LDtk_Importer.TileInstance.Source
+  fullName: MonoGame_LDtk_Importer.Tile.LoadTiles
+  nameWithType: Tile.LoadTiles
+- uid: MonoGame_LDtk_Importer.Tile.Source
   name: Source
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_Source
-  commentId: P:MonoGame_LDtk_Importer.TileInstance.Source
-  fullName: MonoGame_LDtk_Importer.TileInstance.Source
-  nameWithType: TileInstance.Source
-- uid: MonoGame_LDtk_Importer.TileInstance.Source*
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_Source
+  commentId: P:MonoGame_LDtk_Importer.Tile.Source
+  fullName: MonoGame_LDtk_Importer.Tile.Source
+  nameWithType: Tile.Source
+- uid: MonoGame_LDtk_Importer.Tile.Source*
   name: Source
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_Source_
-  commentId: Overload:MonoGame_LDtk_Importer.TileInstance.Source
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_Source_
+  commentId: Overload:MonoGame_LDtk_Importer.Tile.Source
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.TileInstance.Source
-  nameWithType: TileInstance.Source
-- uid: MonoGame_LDtk_Importer.TileInstance.TileId
+  fullName: MonoGame_LDtk_Importer.Tile.Source
+  nameWithType: Tile.Source
+- uid: MonoGame_LDtk_Importer.Tile.TileId
   name: TileId
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_TileId
-  commentId: P:MonoGame_LDtk_Importer.TileInstance.TileId
-  fullName: MonoGame_LDtk_Importer.TileInstance.TileId
-  nameWithType: TileInstance.TileId
-- uid: MonoGame_LDtk_Importer.TileInstance.TileId*
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_TileId
+  commentId: P:MonoGame_LDtk_Importer.Tile.TileId
+  fullName: MonoGame_LDtk_Importer.Tile.TileId
+  nameWithType: Tile.TileId
+- uid: MonoGame_LDtk_Importer.Tile.TileId*
   name: TileId
-  href: api/MonoGame_LDtk_Importer.TileInstance.html#MonoGame_LDtk_Importer_TileInstance_TileId_
-  commentId: Overload:MonoGame_LDtk_Importer.TileInstance.TileId
+  href: api/MonoGame_LDtk_Importer.Tile.html#MonoGame_LDtk_Importer_Tile_TileId_
+  commentId: Overload:MonoGame_LDtk_Importer.Tile.TileId
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.TileInstance.TileId
-  nameWithType: TileInstance.TileId
-- uid: MonoGame_LDtk_Importer.Tileset
-  name: Tileset
-  href: api/MonoGame_LDtk_Importer.Tileset.html
-  commentId: T:MonoGame_LDtk_Importer.Tileset
-  fullName: MonoGame_LDtk_Importer.Tileset
-  nameWithType: Tileset
-- uid: MonoGame_LDtk_Importer.Tileset.Height
+  fullName: MonoGame_LDtk_Importer.Tile.TileId
+  nameWithType: Tile.TileId
+- uid: MonoGame_LDtk_Importer.TileLayer
+  name: TileLayer
+  href: api/MonoGame_LDtk_Importer.TileLayer.html
+  commentId: T:MonoGame_LDtk_Importer.TileLayer
+  fullName: MonoGame_LDtk_Importer.TileLayer
+  nameWithType: TileLayer
+- uid: MonoGame_LDtk_Importer.TileLayer.GetPointsByTileId(System.Int32)
+  name: GetPointsByTileId(Int32)
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetPointsByTileId_System_Int32_
+  commentId: M:MonoGame_LDtk_Importer.TileLayer.GetPointsByTileId(System.Int32)
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetPointsByTileId(System.Int32)
+  nameWithType: TileLayer.GetPointsByTileId(Int32)
+- uid: MonoGame_LDtk_Importer.TileLayer.GetPointsByTileId*
+  name: GetPointsByTileId
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetPointsByTileId_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.GetPointsByTileId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetPointsByTileId
+  nameWithType: TileLayer.GetPointsByTileId
+- uid: MonoGame_LDtk_Importer.TileLayer.GetTileAt(Microsoft.Xna.Framework.Point)
+  name: GetTileAt(Point)
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetTileAt_Microsoft_Xna_Framework_Point_
+  commentId: M:MonoGame_LDtk_Importer.TileLayer.GetTileAt(Microsoft.Xna.Framework.Point)
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetTileAt(Microsoft.Xna.Framework.Point)
+  nameWithType: TileLayer.GetTileAt(Point)
+- uid: MonoGame_LDtk_Importer.TileLayer.GetTileAt*
+  name: GetTileAt
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetTileAt_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.GetTileAt
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetTileAt
+  nameWithType: TileLayer.GetTileAt
+- uid: MonoGame_LDtk_Importer.TileLayer.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetTilesetTexture(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetTilesetTexture_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.TileLayer.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: TileLayer.GetTilesetTexture(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.TileLayer.GetTilesetTexture*
+  name: GetTilesetTexture
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetTilesetTexture_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.GetTilesetTexture
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetTilesetTexture
+  nameWithType: TileLayer.GetTilesetTexture
+- uid: MonoGame_LDtk_Importer.TileLayer.GetUsedTileIds
+  name: GetUsedTileIds()
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetUsedTileIds
+  commentId: M:MonoGame_LDtk_Importer.TileLayer.GetUsedTileIds
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetUsedTileIds()
+  nameWithType: TileLayer.GetUsedTileIds()
+- uid: MonoGame_LDtk_Importer.TileLayer.GetUsedTileIds*
+  name: GetUsedTileIds
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetUsedTileIds_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.GetUsedTileIds
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetUsedTileIds
+  nameWithType: TileLayer.GetUsedTileIds
+- uid: MonoGame_LDtk_Importer.TileLayer.GetUsedTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetUsedTilesTextures(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetUsedTilesTextures_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.TileLayer.GetUsedTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetUsedTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: TileLayer.GetUsedTilesTextures(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.TileLayer.GetUsedTilesTextures*
+  name: GetUsedTilesTextures
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GetUsedTilesTextures_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.GetUsedTilesTextures
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.GetUsedTilesTextures
+  nameWithType: TileLayer.GetUsedTilesTextures
+- uid: MonoGame_LDtk_Importer.TileLayer.GridTilesInstances
+  name: GridTilesInstances
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GridTilesInstances
+  commentId: P:MonoGame_LDtk_Importer.TileLayer.GridTilesInstances
+  fullName: MonoGame_LDtk_Importer.TileLayer.GridTilesInstances
+  nameWithType: TileLayer.GridTilesInstances
+- uid: MonoGame_LDtk_Importer.TileLayer.GridTilesInstances*
+  name: GridTilesInstances
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_GridTilesInstances_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.GridTilesInstances
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.GridTilesInstances
+  nameWithType: TileLayer.GridTilesInstances
+- uid: MonoGame_LDtk_Importer.TileLayer.OverrideTilesetUid
+  name: OverrideTilesetUid
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_OverrideTilesetUid
+  commentId: P:MonoGame_LDtk_Importer.TileLayer.OverrideTilesetUid
+  fullName: MonoGame_LDtk_Importer.TileLayer.OverrideTilesetUid
+  nameWithType: TileLayer.OverrideTilesetUid
+- uid: MonoGame_LDtk_Importer.TileLayer.OverrideTilesetUid*
+  name: OverrideTilesetUid
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_OverrideTilesetUid_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.OverrideTilesetUid
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.OverrideTilesetUid
+  nameWithType: TileLayer.OverrideTilesetUid
+- uid: MonoGame_LDtk_Importer.TileLayer.TilesetDefUid
+  name: TilesetDefUid
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_TilesetDefUid
+  commentId: P:MonoGame_LDtk_Importer.TileLayer.TilesetDefUid
+  fullName: MonoGame_LDtk_Importer.TileLayer.TilesetDefUid
+  nameWithType: TileLayer.TilesetDefUid
+- uid: MonoGame_LDtk_Importer.TileLayer.TilesetDefUid*
+  name: TilesetDefUid
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_TilesetDefUid_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.TilesetDefUid
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.TilesetDefUid
+  nameWithType: TileLayer.TilesetDefUid
+- uid: MonoGame_LDtk_Importer.TileLayer.TilesetRelPath
+  name: TilesetRelPath
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_TilesetRelPath
+  commentId: P:MonoGame_LDtk_Importer.TileLayer.TilesetRelPath
+  fullName: MonoGame_LDtk_Importer.TileLayer.TilesetRelPath
+  nameWithType: TileLayer.TilesetRelPath
+- uid: MonoGame_LDtk_Importer.TileLayer.TilesetRelPath*
+  name: TilesetRelPath
+  href: api/MonoGame_LDtk_Importer.TileLayer.html#MonoGame_LDtk_Importer_TileLayer_TilesetRelPath_
+  commentId: Overload:MonoGame_LDtk_Importer.TileLayer.TilesetRelPath
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileLayer.TilesetRelPath
+  nameWithType: TileLayer.TilesetRelPath
+- uid: MonoGame_LDtk_Importer.TileMetadata
+  name: TileMetadata
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html
+  commentId: T:MonoGame_LDtk_Importer.TileMetadata
+  fullName: MonoGame_LDtk_Importer.TileMetadata
+  nameWithType: TileMetadata
+- uid: MonoGame_LDtk_Importer.TileMetadata.Data
+  name: Data
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html#MonoGame_LDtk_Importer_TileMetadata_Data
+  commentId: P:MonoGame_LDtk_Importer.TileMetadata.Data
+  fullName: MonoGame_LDtk_Importer.TileMetadata.Data
+  nameWithType: TileMetadata.Data
+- uid: MonoGame_LDtk_Importer.TileMetadata.Data*
+  name: Data
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html#MonoGame_LDtk_Importer_TileMetadata_Data_
+  commentId: Overload:MonoGame_LDtk_Importer.TileMetadata.Data
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileMetadata.Data
+  nameWithType: TileMetadata.Data
+- uid: MonoGame_LDtk_Importer.TileMetadata.LoadTileMetadatas(System.Text.Json.JsonElement)
+  name: LoadTileMetadatas(JsonElement)
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html#MonoGame_LDtk_Importer_TileMetadata_LoadTileMetadatas_System_Text_Json_JsonElement_
+  commentId: M:MonoGame_LDtk_Importer.TileMetadata.LoadTileMetadatas(System.Text.Json.JsonElement)
+  fullName: MonoGame_LDtk_Importer.TileMetadata.LoadTileMetadatas(System.Text.Json.JsonElement)
+  nameWithType: TileMetadata.LoadTileMetadatas(JsonElement)
+- uid: MonoGame_LDtk_Importer.TileMetadata.LoadTileMetadatas*
+  name: LoadTileMetadatas
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html#MonoGame_LDtk_Importer_TileMetadata_LoadTileMetadatas_
+  commentId: Overload:MonoGame_LDtk_Importer.TileMetadata.LoadTileMetadatas
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileMetadata.LoadTileMetadatas
+  nameWithType: TileMetadata.LoadTileMetadatas
+- uid: MonoGame_LDtk_Importer.TileMetadata.TileId
+  name: TileId
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html#MonoGame_LDtk_Importer_TileMetadata_TileId
+  commentId: P:MonoGame_LDtk_Importer.TileMetadata.TileId
+  fullName: MonoGame_LDtk_Importer.TileMetadata.TileId
+  nameWithType: TileMetadata.TileId
+- uid: MonoGame_LDtk_Importer.TileMetadata.TileId*
+  name: TileId
+  href: api/MonoGame_LDtk_Importer.TileMetadata.html#MonoGame_LDtk_Importer_TileMetadata_TileId_
+  commentId: Overload:MonoGame_LDtk_Importer.TileMetadata.TileId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TileMetadata.TileId
+  nameWithType: TileMetadata.TileId
+- uid: MonoGame_LDtk_Importer.TilesetDef
+  name: TilesetDef
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html
+  commentId: T:MonoGame_LDtk_Importer.TilesetDef
+  fullName: MonoGame_LDtk_Importer.TilesetDef
+  nameWithType: TilesetDef
+- uid: MonoGame_LDtk_Importer.TilesetDef.CustomData
+  name: CustomData
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_CustomData
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.CustomData
+  fullName: MonoGame_LDtk_Importer.TilesetDef.CustomData
+  nameWithType: TilesetDef.CustomData
+- uid: MonoGame_LDtk_Importer.TilesetDef.CustomData*
+  name: CustomData
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_CustomData_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.CustomData
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.CustomData
+  nameWithType: TilesetDef.CustomData
+- uid: MonoGame_LDtk_Importer.TilesetDef.EnumTags
+  name: EnumTags
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_EnumTags
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.EnumTags
+  fullName: MonoGame_LDtk_Importer.TilesetDef.EnumTags
+  nameWithType: TilesetDef.EnumTags
+- uid: MonoGame_LDtk_Importer.TilesetDef.EnumTags*
+  name: EnumTags
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_EnumTags_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.EnumTags
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.EnumTags
+  nameWithType: TilesetDef.EnumTags
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetEnumValueIdsByTileId(System.Int32)
+  name: GetEnumValueIdsByTileId(Int32)
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetEnumValueIdsByTileId_System_Int32_
+  commentId: M:MonoGame_LDtk_Importer.TilesetDef.GetEnumValueIdsByTileId(System.Int32)
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetEnumValueIdsByTileId(System.Int32)
+  nameWithType: TilesetDef.GetEnumValueIdsByTileId(Int32)
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetEnumValueIdsByTileId*
+  name: GetEnumValueIdsByTileId
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetEnumValueIdsByTileId_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GetEnumValueIdsByTileId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetEnumValueIdsByTileId
+  nameWithType: TilesetDef.GetEnumValueIdsByTileId
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTileMetadataByTileId(System.Int32)
+  name: GetTileMetadataByTileId(Int32)
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTileMetadataByTileId_System_Int32_
+  commentId: M:MonoGame_LDtk_Importer.TilesetDef.GetTileMetadataByTileId(System.Int32)
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTileMetadataByTileId(System.Int32)
+  nameWithType: TilesetDef.GetTileMetadataByTileId(Int32)
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTileMetadataByTileId*
+  name: GetTileMetadataByTileId
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTileMetadataByTileId_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GetTileMetadataByTileId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTileMetadataByTileId
+  nameWithType: TilesetDef.GetTileMetadataByTileId
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTagByEnumValueId(System.String)
+  name: GetTilesetTagByEnumValueId(String)
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTilesetTagByEnumValueId_System_String_
+  commentId: M:MonoGame_LDtk_Importer.TilesetDef.GetTilesetTagByEnumValueId(System.String)
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTagByEnumValueId(System.String)
+  nameWithType: TilesetDef.GetTilesetTagByEnumValueId(String)
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTagByEnumValueId*
+  name: GetTilesetTagByEnumValueId
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTilesetTagByEnumValueId_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GetTilesetTagByEnumValueId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTagByEnumValueId
+  nameWithType: TilesetDef.GetTilesetTagByEnumValueId
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetTilesetTexture(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTilesetTexture_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.TilesetDef.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTexture(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: TilesetDef.GetTilesetTexture(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTexture*
+  name: GetTilesetTexture
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTilesetTexture_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GetTilesetTexture
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTilesetTexture
+  nameWithType: TilesetDef.GetTilesetTexture
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  name: GetTilesTextures(GraphicsDevice)
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTilesTextures_Microsoft_Xna_Framework_Graphics_GraphicsDevice_
+  commentId: M:MonoGame_LDtk_Importer.TilesetDef.GetTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTilesTextures(Microsoft.Xna.Framework.Graphics.GraphicsDevice)
+  nameWithType: TilesetDef.GetTilesTextures(GraphicsDevice)
+- uid: MonoGame_LDtk_Importer.TilesetDef.GetTilesTextures*
+  name: GetTilesTextures
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GetTilesTextures_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GetTilesTextures
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GetTilesTextures
+  nameWithType: TilesetDef.GetTilesTextures
+- uid: MonoGame_LDtk_Importer.TilesetDef.GridHeight
+  name: GridHeight
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GridHeight
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.GridHeight
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GridHeight
+  nameWithType: TilesetDef.GridHeight
+- uid: MonoGame_LDtk_Importer.TilesetDef.GridHeight*
+  name: GridHeight
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GridHeight_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GridHeight
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GridHeight
+  nameWithType: TilesetDef.GridHeight
+- uid: MonoGame_LDtk_Importer.TilesetDef.GridWidth
+  name: GridWidth
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GridWidth
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.GridWidth
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GridWidth
+  nameWithType: TilesetDef.GridWidth
+- uid: MonoGame_LDtk_Importer.TilesetDef.GridWidth*
+  name: GridWidth
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_GridWidth_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.GridWidth
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.GridWidth
+  nameWithType: TilesetDef.GridWidth
+- uid: MonoGame_LDtk_Importer.TilesetDef.Height
   name: Height
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Height
-  commentId: P:MonoGame_LDtk_Importer.Tileset.Height
-  fullName: MonoGame_LDtk_Importer.Tileset.Height
-  nameWithType: Tileset.Height
-- uid: MonoGame_LDtk_Importer.Tileset.Height*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Height
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.Height
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Height
+  nameWithType: TilesetDef.Height
+- uid: MonoGame_LDtk_Importer.TilesetDef.Height*
   name: Height
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Height_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.Height
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Height_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.Height
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.Height
-  nameWithType: Tileset.Height
-- uid: MonoGame_LDtk_Importer.Tileset.Identifier
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Height
+  nameWithType: TilesetDef.Height
+- uid: MonoGame_LDtk_Importer.TilesetDef.Identifier
   name: Identifier
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Identifier
-  commentId: P:MonoGame_LDtk_Importer.Tileset.Identifier
-  fullName: MonoGame_LDtk_Importer.Tileset.Identifier
-  nameWithType: Tileset.Identifier
-- uid: MonoGame_LDtk_Importer.Tileset.Identifier*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Identifier
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.Identifier
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Identifier
+  nameWithType: TilesetDef.Identifier
+- uid: MonoGame_LDtk_Importer.TilesetDef.Identifier*
   name: Identifier
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Identifier_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.Identifier
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Identifier_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.Identifier
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.Identifier
-  nameWithType: Tileset.Identifier
-- uid: MonoGame_LDtk_Importer.Tileset.LoadTilesets(System.Text.Json.JsonProperty)
-  name: LoadTilesets(JsonProperty)
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_LoadTilesets_System_Text_Json_JsonProperty_
-  commentId: M:MonoGame_LDtk_Importer.Tileset.LoadTilesets(System.Text.Json.JsonProperty)
-  fullName: MonoGame_LDtk_Importer.Tileset.LoadTilesets(System.Text.Json.JsonProperty)
-  nameWithType: Tileset.LoadTilesets(JsonProperty)
-- uid: MonoGame_LDtk_Importer.Tileset.LoadTilesets*
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Identifier
+  nameWithType: TilesetDef.Identifier
+- uid: MonoGame_LDtk_Importer.TilesetDef.LoadTilesets(System.Text.Json.JsonProperty,System.String)
+  name: LoadTilesets(JsonProperty, String)
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_LoadTilesets_System_Text_Json_JsonProperty_System_String_
+  commentId: M:MonoGame_LDtk_Importer.TilesetDef.LoadTilesets(System.Text.Json.JsonProperty,System.String)
+  fullName: MonoGame_LDtk_Importer.TilesetDef.LoadTilesets(System.Text.Json.JsonProperty, System.String)
+  nameWithType: TilesetDef.LoadTilesets(JsonProperty, String)
+- uid: MonoGame_LDtk_Importer.TilesetDef.LoadTilesets*
   name: LoadTilesets
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_LoadTilesets_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.LoadTilesets
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_LoadTilesets_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.LoadTilesets
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.LoadTilesets
-  nameWithType: Tileset.LoadTilesets
-- uid: MonoGame_LDtk_Importer.Tileset.Padding
+  fullName: MonoGame_LDtk_Importer.TilesetDef.LoadTilesets
+  nameWithType: TilesetDef.LoadTilesets
+- uid: MonoGame_LDtk_Importer.TilesetDef.Padding
   name: Padding
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Padding
-  commentId: P:MonoGame_LDtk_Importer.Tileset.Padding
-  fullName: MonoGame_LDtk_Importer.Tileset.Padding
-  nameWithType: Tileset.Padding
-- uid: MonoGame_LDtk_Importer.Tileset.Padding*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Padding
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.Padding
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Padding
+  nameWithType: TilesetDef.Padding
+- uid: MonoGame_LDtk_Importer.TilesetDef.Padding*
   name: Padding
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Padding_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.Padding
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Padding_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.Padding
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.Padding
-  nameWithType: Tileset.Padding
-- uid: MonoGame_LDtk_Importer.Tileset.RelPath
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Padding
+  nameWithType: TilesetDef.Padding
+- uid: MonoGame_LDtk_Importer.TilesetDef.RelPath
   name: RelPath
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_RelPath
-  commentId: P:MonoGame_LDtk_Importer.Tileset.RelPath
-  fullName: MonoGame_LDtk_Importer.Tileset.RelPath
-  nameWithType: Tileset.RelPath
-- uid: MonoGame_LDtk_Importer.Tileset.RelPath*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_RelPath
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.RelPath
+  fullName: MonoGame_LDtk_Importer.TilesetDef.RelPath
+  nameWithType: TilesetDef.RelPath
+- uid: MonoGame_LDtk_Importer.TilesetDef.RelPath*
   name: RelPath
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_RelPath_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.RelPath
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_RelPath_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.RelPath
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.RelPath
-  nameWithType: Tileset.RelPath
-- uid: MonoGame_LDtk_Importer.Tileset.Spacing
+  fullName: MonoGame_LDtk_Importer.TilesetDef.RelPath
+  nameWithType: TilesetDef.RelPath
+- uid: MonoGame_LDtk_Importer.TilesetDef.Spacing
   name: Spacing
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Spacing
-  commentId: P:MonoGame_LDtk_Importer.Tileset.Spacing
-  fullName: MonoGame_LDtk_Importer.Tileset.Spacing
-  nameWithType: Tileset.Spacing
-- uid: MonoGame_LDtk_Importer.Tileset.Spacing*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Spacing
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.Spacing
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Spacing
+  nameWithType: TilesetDef.Spacing
+- uid: MonoGame_LDtk_Importer.TilesetDef.Spacing*
   name: Spacing
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Spacing_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.Spacing
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Spacing_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.Spacing
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.Spacing
-  nameWithType: Tileset.Spacing
-- uid: MonoGame_LDtk_Importer.Tileset.TileGridSize
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Spacing
+  nameWithType: TilesetDef.Spacing
+- uid: MonoGame_LDtk_Importer.TilesetDef.TagSourceEnumUid
+  name: TagSourceEnumUid
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_TagSourceEnumUid
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.TagSourceEnumUid
+  fullName: MonoGame_LDtk_Importer.TilesetDef.TagSourceEnumUid
+  nameWithType: TilesetDef.TagSourceEnumUid
+- uid: MonoGame_LDtk_Importer.TilesetDef.TagSourceEnumUid*
+  name: TagSourceEnumUid
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_TagSourceEnumUid_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.TagSourceEnumUid
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetDef.TagSourceEnumUid
+  nameWithType: TilesetDef.TagSourceEnumUid
+- uid: MonoGame_LDtk_Importer.TilesetDef.TileGridSize
   name: TileGridSize
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_TileGridSize
-  commentId: P:MonoGame_LDtk_Importer.Tileset.TileGridSize
-  fullName: MonoGame_LDtk_Importer.Tileset.TileGridSize
-  nameWithType: Tileset.TileGridSize
-- uid: MonoGame_LDtk_Importer.Tileset.TileGridSize*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_TileGridSize
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.TileGridSize
+  fullName: MonoGame_LDtk_Importer.TilesetDef.TileGridSize
+  nameWithType: TilesetDef.TileGridSize
+- uid: MonoGame_LDtk_Importer.TilesetDef.TileGridSize*
   name: TileGridSize
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_TileGridSize_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.TileGridSize
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_TileGridSize_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.TileGridSize
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.TileGridSize
-  nameWithType: Tileset.TileGridSize
-- uid: MonoGame_LDtk_Importer.Tileset.Uid
+  fullName: MonoGame_LDtk_Importer.TilesetDef.TileGridSize
+  nameWithType: TilesetDef.TileGridSize
+- uid: MonoGame_LDtk_Importer.TilesetDef.Uid
   name: Uid
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Uid
-  commentId: P:MonoGame_LDtk_Importer.Tileset.Uid
-  fullName: MonoGame_LDtk_Importer.Tileset.Uid
-  nameWithType: Tileset.Uid
-- uid: MonoGame_LDtk_Importer.Tileset.Uid*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Uid
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.Uid
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Uid
+  nameWithType: TilesetDef.Uid
+- uid: MonoGame_LDtk_Importer.TilesetDef.Uid*
   name: Uid
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Uid_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.Uid
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Uid_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.Uid
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.Uid
-  nameWithType: Tileset.Uid
-- uid: MonoGame_LDtk_Importer.Tileset.Width
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Uid
+  nameWithType: TilesetDef.Uid
+- uid: MonoGame_LDtk_Importer.TilesetDef.Width
   name: Width
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Width
-  commentId: P:MonoGame_LDtk_Importer.Tileset.Width
-  fullName: MonoGame_LDtk_Importer.Tileset.Width
-  nameWithType: Tileset.Width
-- uid: MonoGame_LDtk_Importer.Tileset.Width*
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Width
+  commentId: P:MonoGame_LDtk_Importer.TilesetDef.Width
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Width
+  nameWithType: TilesetDef.Width
+- uid: MonoGame_LDtk_Importer.TilesetDef.Width*
   name: Width
-  href: api/MonoGame_LDtk_Importer.Tileset.html#MonoGame_LDtk_Importer_Tileset_Width_
-  commentId: Overload:MonoGame_LDtk_Importer.Tileset.Width
+  href: api/MonoGame_LDtk_Importer.TilesetDef.html#MonoGame_LDtk_Importer_TilesetDef_Width_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetDef.Width
   isSpec: "True"
-  fullName: MonoGame_LDtk_Importer.Tileset.Width
-  nameWithType: Tileset.Width
-- uid: MonoGame_LDtk_Importer.worldLayoutTypes
-  name: worldLayoutTypes
-  href: api/MonoGame_LDtk_Importer.worldLayoutTypes.html
-  commentId: T:MonoGame_LDtk_Importer.worldLayoutTypes
-  fullName: MonoGame_LDtk_Importer.worldLayoutTypes
-  nameWithType: worldLayoutTypes
-- uid: MonoGame_LDtk_Importer.worldLayoutTypes.Free
+  fullName: MonoGame_LDtk_Importer.TilesetDef.Width
+  nameWithType: TilesetDef.Width
+- uid: MonoGame_LDtk_Importer.TilesetTag
+  name: TilesetTag
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html
+  commentId: T:MonoGame_LDtk_Importer.TilesetTag
+  fullName: MonoGame_LDtk_Importer.TilesetTag
+  nameWithType: TilesetTag
+- uid: MonoGame_LDtk_Importer.TilesetTag.EnumValueId
+  name: EnumValueId
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html#MonoGame_LDtk_Importer_TilesetTag_EnumValueId
+  commentId: P:MonoGame_LDtk_Importer.TilesetTag.EnumValueId
+  fullName: MonoGame_LDtk_Importer.TilesetTag.EnumValueId
+  nameWithType: TilesetTag.EnumValueId
+- uid: MonoGame_LDtk_Importer.TilesetTag.EnumValueId*
+  name: EnumValueId
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html#MonoGame_LDtk_Importer_TilesetTag_EnumValueId_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetTag.EnumValueId
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetTag.EnumValueId
+  nameWithType: TilesetTag.EnumValueId
+- uid: MonoGame_LDtk_Importer.TilesetTag.LoadTilesetTags(System.Text.Json.JsonElement)
+  name: LoadTilesetTags(JsonElement)
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html#MonoGame_LDtk_Importer_TilesetTag_LoadTilesetTags_System_Text_Json_JsonElement_
+  commentId: M:MonoGame_LDtk_Importer.TilesetTag.LoadTilesetTags(System.Text.Json.JsonElement)
+  fullName: MonoGame_LDtk_Importer.TilesetTag.LoadTilesetTags(System.Text.Json.JsonElement)
+  nameWithType: TilesetTag.LoadTilesetTags(JsonElement)
+- uid: MonoGame_LDtk_Importer.TilesetTag.LoadTilesetTags*
+  name: LoadTilesetTags
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html#MonoGame_LDtk_Importer_TilesetTag_LoadTilesetTags_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetTag.LoadTilesetTags
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetTag.LoadTilesetTags
+  nameWithType: TilesetTag.LoadTilesetTags
+- uid: MonoGame_LDtk_Importer.TilesetTag.TileIds
+  name: TileIds
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html#MonoGame_LDtk_Importer_TilesetTag_TileIds
+  commentId: P:MonoGame_LDtk_Importer.TilesetTag.TileIds
+  fullName: MonoGame_LDtk_Importer.TilesetTag.TileIds
+  nameWithType: TilesetTag.TileIds
+- uid: MonoGame_LDtk_Importer.TilesetTag.TileIds*
+  name: TileIds
+  href: api/MonoGame_LDtk_Importer.TilesetTag.html#MonoGame_LDtk_Importer_TilesetTag_TileIds_
+  commentId: Overload:MonoGame_LDtk_Importer.TilesetTag.TileIds
+  isSpec: "True"
+  fullName: MonoGame_LDtk_Importer.TilesetTag.TileIds
+  nameWithType: TilesetTag.TileIds
+- uid: MonoGame_LDtk_Importer.WorldLayoutTypes
+  name: WorldLayoutTypes
+  href: api/MonoGame_LDtk_Importer.WorldLayoutTypes.html
+  commentId: T:MonoGame_LDtk_Importer.WorldLayoutTypes
+  fullName: MonoGame_LDtk_Importer.WorldLayoutTypes
+  nameWithType: WorldLayoutTypes
+- uid: MonoGame_LDtk_Importer.WorldLayoutTypes.Free
   name: Free
-  href: api/MonoGame_LDtk_Importer.worldLayoutTypes.html#MonoGame_LDtk_Importer_worldLayoutTypes_Free
-  commentId: F:MonoGame_LDtk_Importer.worldLayoutTypes.Free
-  fullName: MonoGame_LDtk_Importer.worldLayoutTypes.Free
-  nameWithType: worldLayoutTypes.Free
-- uid: MonoGame_LDtk_Importer.worldLayoutTypes.GridVania
+  href: api/MonoGame_LDtk_Importer.WorldLayoutTypes.html#MonoGame_LDtk_Importer_WorldLayoutTypes_Free
+  commentId: F:MonoGame_LDtk_Importer.WorldLayoutTypes.Free
+  fullName: MonoGame_LDtk_Importer.WorldLayoutTypes.Free
+  nameWithType: WorldLayoutTypes.Free
+- uid: MonoGame_LDtk_Importer.WorldLayoutTypes.GridVania
   name: GridVania
-  href: api/MonoGame_LDtk_Importer.worldLayoutTypes.html#MonoGame_LDtk_Importer_worldLayoutTypes_GridVania
-  commentId: F:MonoGame_LDtk_Importer.worldLayoutTypes.GridVania
-  fullName: MonoGame_LDtk_Importer.worldLayoutTypes.GridVania
-  nameWithType: worldLayoutTypes.GridVania
-- uid: MonoGame_LDtk_Importer.worldLayoutTypes.LinearHorizontal
+  href: api/MonoGame_LDtk_Importer.WorldLayoutTypes.html#MonoGame_LDtk_Importer_WorldLayoutTypes_GridVania
+  commentId: F:MonoGame_LDtk_Importer.WorldLayoutTypes.GridVania
+  fullName: MonoGame_LDtk_Importer.WorldLayoutTypes.GridVania
+  nameWithType: WorldLayoutTypes.GridVania
+- uid: MonoGame_LDtk_Importer.WorldLayoutTypes.LinearHorizontal
   name: LinearHorizontal
-  href: api/MonoGame_LDtk_Importer.worldLayoutTypes.html#MonoGame_LDtk_Importer_worldLayoutTypes_LinearHorizontal
-  commentId: F:MonoGame_LDtk_Importer.worldLayoutTypes.LinearHorizontal
-  fullName: MonoGame_LDtk_Importer.worldLayoutTypes.LinearHorizontal
-  nameWithType: worldLayoutTypes.LinearHorizontal
-- uid: MonoGame_LDtk_Importer.worldLayoutTypes.LinearVertical
+  href: api/MonoGame_LDtk_Importer.WorldLayoutTypes.html#MonoGame_LDtk_Importer_WorldLayoutTypes_LinearHorizontal
+  commentId: F:MonoGame_LDtk_Importer.WorldLayoutTypes.LinearHorizontal
+  fullName: MonoGame_LDtk_Importer.WorldLayoutTypes.LinearHorizontal
+  nameWithType: WorldLayoutTypes.LinearHorizontal
+- uid: MonoGame_LDtk_Importer.WorldLayoutTypes.LinearVertical
   name: LinearVertical
-  href: api/MonoGame_LDtk_Importer.worldLayoutTypes.html#MonoGame_LDtk_Importer_worldLayoutTypes_LinearVertical
-  commentId: F:MonoGame_LDtk_Importer.worldLayoutTypes.LinearVertical
-  fullName: MonoGame_LDtk_Importer.worldLayoutTypes.LinearVertical
-  nameWithType: worldLayoutTypes.LinearVertical
+  href: api/MonoGame_LDtk_Importer.WorldLayoutTypes.html#MonoGame_LDtk_Importer_WorldLayoutTypes_LinearVertical
+  commentId: F:MonoGame_LDtk_Importer.WorldLayoutTypes.LinearVertical
+  fullName: MonoGame_LDtk_Importer.WorldLayoutTypes.LinearVertical
+  nameWithType: WorldLayoutTypes.LinearVertical

@@ -9,7 +9,6 @@
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "disableDefaultFilter": false
     }
   ],
   "build": {
