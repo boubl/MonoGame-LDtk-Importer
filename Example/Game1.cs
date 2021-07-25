@@ -79,7 +79,7 @@ namespace Example
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            project = new LDtkProject(@"C:\Users\Cookky\Documents\GitHub\MonoGame-LDtk-Importer\Example\Content\Test_file_for_API_showing_all_features.ldtk");
+            project = new LDtkProject(@"C:\Users\Boubli\Documents\GitHub\MonoGame-LDtk-Importer\Example\Content\Typical_TopDown_example.ldtk");
             project2 = new LDtkProject(@"C:\Users\Cookky\Documents\GitHub\MonoGame-LDtk-Importer\Example\Content\FieldsTypes.ldtk");
             project3 = new LDtkProject(@"C:\Users\Cookky\Documents\GitHub\MonoGame-LDtk-Importer\Example\Content\SeparateLevelFiles.ldtk");
             font = Content.Load<SpriteFont>("font");
