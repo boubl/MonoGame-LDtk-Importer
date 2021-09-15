@@ -26,7 +26,7 @@ namespace MonoGame_LDtk_Importer
 
         /// <summary>
         /// All levels. The order of this array is only relevant in LinearHorizontal and
-        /// linearVertical world layouts (see worldLayout value).
+        /// linearVertical world layouts (see worldLayout value).<br/>
         /// Otherwise, you should refer to the worldX, worldY coordinates of each Level.
         /// </summary>
         public List<Level> Levels { get; set; }
@@ -39,7 +39,7 @@ namespace MonoGame_LDtk_Importer
         /// </summary>
         public int WorldGridWidth { get; set; }
         /// <summary>
-        /// An enum that describes how levels are organized in this project (ie. linearly or in a 2D space).
+        /// An enum that describes how levels are organized in this project (ie. linearly or in a 2D space).<br/>
         /// Possible values are: Free, GridVania, LinearHorizontal and LinearVertical.
         /// </summary>
         public WorldLayoutTypes WorldLayout { get; set; }
@@ -214,17 +214,14 @@ namespace MonoGame_LDtk_Importer
                 {
                     if (property.Value.ValueKind != JsonValueKind.Null)
                     {
-                        if (property.Name == "_bgcolor")
+                        if (property.Name == "__bgColor")
                         {
-                            level.BackgroundColor = new Color(
-                                System.Drawing.ColorTranslator.FromHtml(property.Value.GetString()).R,
-                                System.Drawing.ColorTranslator.FromHtml(property.Value.GetString()).G,
-                                System.Drawing.ColorTranslator.FromHtml(property.Value.GetString()).B
-                                );
+                            System.Drawing.Color color = System.Drawing.ColorTranslator.FromHtml(property.Value.GetString());
+                            level.BackgroundColor = new Color(color.R, color.G, color.B, color.A);
                         }
                         if (property.Name == "__bgPos")
                         {
-                            level.BackgroundPosition = MonoGame_LDtk_Importer.BackgroundPosition.LoadBackgroundPos(property);
+                            level.BackgroundPosition = BackgroundPosition.LoadBackgroundPos(property);
                         }
                         else if (property.Name == "__neighbours")
                         {

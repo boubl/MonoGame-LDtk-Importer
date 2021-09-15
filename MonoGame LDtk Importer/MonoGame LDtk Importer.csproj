@@ -8,14 +8,14 @@
     <Authors>chamalowmoelleux</Authors>
     <Product>MonoGame LDtk Importer</Product>
     <PackageId>Monogame-LDtk-Importer</PackageId>
-    <PackageVersion>2.0.0</PackageVersion>
+    <PackageVersion>2.0.1</PackageVersion>
     <Description>Monogame importer for the LDtk app by Deepnight</Description>
     <PackageProjectUrl>https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/</RepositoryUrl>
     <PackageTags>LDtk, Monogame, Level-Editor</PackageTags>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Removed support for MonoGame Pipeline. Added some useful methods.</PackageReleaseNotes>
+    <PackageReleaseNotes>Bug fixes and other littles things.</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyName>MonoGame LDtk Importer</AssemblyName>
