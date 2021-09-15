@@ -4,4 +4,4 @@ This is a MonoGame importer for [Ldtk](https://ldtk.io/) by [Deepnight](https://
 
 **This is not a renderer!** It's only a loader.
 
-You can find a [documentation](https://chamalowmoelleux.github.io/MonoGame-LDtk-Importer) here (not finished yet)
+You can find a [documentation](https://realboubli.github.io/MonoGame-LDtk-Importer) here (not finished yet)
