@@ -79,6 +79,7 @@ namespace Example
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
+            
             project = new LDtkProject(@"Content\Test_file_for_API_showing_all_features.ldtk");
             project2 = new LDtkProject(@"Content\FieldsTypes.ldtk");
             project3 = new LDtkProject(@"Content\SeparateLevelFiles.ldtk");
