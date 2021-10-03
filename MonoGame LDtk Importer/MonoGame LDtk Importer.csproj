@@ -5,17 +5,27 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 
     <Title>MonoGame LDtk Importer</Title>
-    <Authors>chamalowmoelleux</Authors>
+    <Authors>realBoubli</Authors>
     <Product>MonoGame LDtk Importer</Product>
     <PackageId>Monogame-LDtk-Importer</PackageId>
+<<<<<<< Updated upstream
     <PackageVersion>2.0.1</PackageVersion>
     <Description>Monogame importer for the LDtk app by Deepnight</Description>
     <PackageProjectUrl>https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/</PackageProjectUrl>
+=======
+    <PackageVersion>2.0.3</PackageVersion>
+    <Description>MonoGame importer for the LDtk app by Deepnight</Description>
+    <PackageProjectUrl>https://github.com/realBoubli/MonoGame-LDtk-Importer/</PackageProjectUrl>
+>>>>>>> Stashed changes
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <RepositoryUrl>https://github.com/chamalowmoelleux/MonoGame-LDtk-Importer/</RepositoryUrl>
+    <RepositoryUrl>https://github.com/realBoubli/MonoGame-LDtk-Importer/</RepositoryUrl>
     <PackageTags>LDtk, Monogame, Level-Editor</PackageTags>
     <RepositoryType>git</RepositoryType>
+<<<<<<< Updated upstream
     <PackageReleaseNotes>Bug fixes and other littles things.</PackageReleaseNotes>
+=======
+    <PackageReleaseNotes>Added a method, and changed author's name</PackageReleaseNotes>
+>>>>>>> Stashed changes
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <AssemblyName>MonoGame LDtk Importer</AssemblyName>

@@ -304,6 +304,23 @@ namespace MonoGame_LDtk_Importer
         }
 
         /// <summary>
+        /// Return the unique layer corresponding to the given identifier
+        /// <br/> Return null if the layer was not found
+        /// </summary>
+        /// <returns></returns>
+        public Layer GetLayerByIdentifier(string identifier)
+        {
+            foreach (Layer layer in LayerInstances)
+            {
+                if (layer.Identifier == identifier)
+                {
+                    return layer;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
         /// Return all the fields of the given type of the level
         /// </summary>
         /// <returns></returns>
